@@ -1,0 +1,106 @@
+name: تحديث مقالات عماد داود
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update-articles:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: تحميل الموقع
+        uses: actions/checkout@v7
+
+      - name: تحديث قائمة المقالات
+        run: |
+          python3 - <<'PY'
+          import urllib.request
+          import urllib.parse
+          import xml.etree.ElementTree as ET
+          import json
+          import os
+          import re
+          from email.utils import parsedate_to_datetime
+
+          queries = [
+              '"عماد داود"',
+              '"عماد داود" كاتب',
+              '"عماد داود" صحفي',
+              '"عماد داود" الأردن'
+          ]
+
+          articles = {}
+
+          for query in queries:
+              url = "https://news.google.com/rss/search?" + urllib.parse.urlencode({
+                  "q": query,
+                  "hl": "ar",
+                  "gl": "JO",
+                  "ceid": "JO:ar"
+              })
+
+              try:
+                  data = urllib.request.urlopen(
+                      urllib.request.Request(
+                          url,
+                          headers={"User-Agent": "Mozilla/5.0"}
+                      ),
+                      timeout=30
+                  ).read()
+
+                  root = ET.fromstring(data)
+
+                  for item in root.findall(".//item"):
+                      title = item.findtext("title", "").strip()
+                      link = item.findtext("link", "").strip()
+                      pubdate = item.findtext("pubDate", "").strip()
+                      source = item.findtext("source", "").strip()
+
+                      if not title or not link:
+                          continue
+
+                      key = re.sub(r"\s+", " ", title).strip().lower()
+
+                      if key not in articles:
+                          articles[key] = {
+                              "title": title,
+                              "link": link,
+                              "source": source,
+                              "date": pubdate
+                          }
+
+              except Exception as e:
+                  print("خطأ في البحث:", query, e)
+
+          result = list(articles.values())
+
+          result.sort(
+              key=lambda x: x.get("date", ""),
+              reverse=True
+          )
+
+          os.makedirs("data", exist_ok=True)
+
+          with open("data/articles.json", "w", encoding="utf-8") as f:
+              json.dump(
+                  result,
+                  f,
+                  ensure_ascii=False,
+                  indent=2
+              )
+
+          print("تم العثور على", len(result), "مقال/خبر.")
+          PY
+
+      - name: حفظ التحديث
+        run: |
+          git config user.name "Emad Dawoud Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/articles.json
+          git diff --cached --quiet || git commit -m "تحديث مقالات عماد داود"
+          git push
