@@ -1,4 +1,4 @@
-name: تحديث مقالات عماد داود
+name: تحديث أرشيف مقالات عماد داود
 
 on:
   workflow_dispatch:
@@ -16,26 +16,104 @@ jobs:
       - name: تحميل الموقع
         uses: actions/checkout@v4
 
-      - name: جمع المقالات
+      - name: إعداد Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: جمع المقالات من نتائج الأخبار
+        shell: bash
         run: |
-          python3 - <<'PY'
+          python3 <<'PY'
           import json
           import os
           import re
           import urllib.parse
           import urllib.request
           import xml.etree.ElementTree as ET
+          from datetime import datetime, timedelta, timezone
 
+          FILE = "data/articles.json"
+
+          # صيغ البحث باسم الكاتب
           queries = [
               '"عماد داود"',
               '"عماد داود" كاتب',
               '"عماد داود" صحفي',
-              '"عماد داود" الأردن'
+              '"عماد داود" الأردن',
+              '"عماد داود" مقال',
+              '"بقلم عماد داود"',
+              '"بقلم: عماد داود"',
+              '"الكاتب عماد داود"',
+              '"الصحفي عماد داود"'
+          ]
+
+          # مصادر ظهرت فيها مقالات الكاتب
+          known_domains = [
+              "khaberni.com",
+              "akhbarna.net",
+              "nabaajordan.com",
+              "panet.com",
+              "ahlan.co.il"
           ]
 
           articles = {}
 
-          for query in queries:
+          # قراءة الأرشيف القديم أولاً
+          if os.path.exists(FILE):
+              try:
+                  with open(FILE, "r", encoding="utf-8") as f:
+                      old = json.load(f)
+
+                  if isinstance(old, list):
+                      for article in old:
+                          if not isinstance(article, dict):
+                              continue
+
+                          title = (article.get("title") or "").strip()
+                          link = (article.get("link") or "").strip()
+
+                          if title and link:
+                              key = re.sub(r"\s+", " ", title).strip().casefold()
+                              articles[key] = article
+
+              except Exception as error:
+                  print("تعذر قراءة الأرشيف القديم:", error)
+
+          def add_article(title, link, source, date=""):
+              title = re.sub(r"\s+", " ", title or "").strip()
+              link = (link or "").strip()
+              source = (source or "").strip()
+              date = (date or "").strip()
+
+              if not title or not link:
+                  return
+
+              # استبعاد نتائج واضحة بأنها ليست مقالات
+              bad_words = [
+                  "وظيفة",
+                  "طقس",
+                  "وفيات",
+                  "نتائج التوجيهي",
+                  "سعر الذهب"
+              ]
+
+              if any(word in title for word in bad_words):
+                  return
+
+              key = title.casefold()
+
+              # منع التكرار حسب العنوان
+              if key not in articles:
+                  articles[key] = {
+                      "title": title,
+                      "link": link,
+                      "source": source,
+                      "date": date,
+                      "author": "عماد داود"
+                  }
+
+          def search_google_news(query):
               url = "https://news.google.com/rss/search?" + urllib.parse.urlencode({
                   "q": query,
                   "hl": "ar",
@@ -57,77 +135,88 @@ jobs:
                   root = ET.fromstring(data)
 
                   for item in root.findall(".//item"):
+                      title = item.findtext("title") or ""
+                      link = item.findtext("link") or ""
+                      date = item.findtext("pubDate") or ""
+                      source = item.findtext("source") or ""
 
-                      title = (item.findtext("title") or "").strip()
-                      link = (item.findtext("link") or "").strip()
-                      date = (item.findtext("pubDate") or "").strip()
-                      source = (item.findtext("source") or "").strip()
-
-                      if not title or not link:
-                          continue
-
-                      key = re.sub(
-                          r"\s+",
-                          " ",
-                          title
-                      ).strip().casefold()
-
-                      articles.setdefault(
-                          key,
-                          {
-                              "title": title,
-                              "link": link,
-                              "source": source,
-                              "date": date
-                          }
+                      add_article(
+                          title,
+                          link,
+                          source,
+                          date
                       )
 
               except Exception as error:
-                  print("تعذر البحث:", query, error)
+                  print("خطأ في Google News:", query, error)
 
+          # البحث العام
+          for query in queries:
+              search_google_news(query)
+
+          # البحث المخصص بالمواقع التي تم اكتشافها
+          for domain in known_domains:
+              for query in [
+                  f'"عماد داود" site:{domain}',
+                  f'"بقلم عماد داود" site:{domain}'
+              ]:
+                  search_google_news(query)
+
+          # تحويل النتائج إلى قائمة
           result = list(articles.values())
 
+          # ترتيب النتائج
           result.sort(
-              key=lambda article: article.get("date", ""),
+              key=lambda article: (
+                  article.get("date") or "",
+                  article.get("title") or ""
+              ),
               reverse=True
           )
 
           os.makedirs("data", exist_ok=True)
 
-          with open(
-              "data/articles.json",
-              "w",
-              encoding="utf-8"
-          ) as file:
+          with open(FILE, "w", encoding="utf-8") as f:
               json.dump(
                   result,
-                  file,
+                  f,
                   ensure_ascii=False,
                   indent=2
               )
 
-          print(
-              "تم إنشاء data/articles.json وعدد النتائج:",
-              len(result)
-          )
+          print("===================================")
+          print("تم تحديث أرشيف عماد داود")
+          print("عدد النتائج:", len(result))
+          print("===================================")
           PY
 
-      - name: التحقق من الملف
+      - name: التحقق من الأرشيف
         run: |
-          test -s data/articles.json
+          test -f data/articles.json
           python3 -m json.tool data/articles.json > /dev/null
-          echo "الملف سليم وجاهز للنشر"
+          echo "✓ articles.json صالح"
 
-      - name: حفظ التحديث في GitHub
+      - name: عرض عدد المقالات
         run: |
-          git config user.name "Emad Dawoud Bot"
+          python3 - <<'PY'
+          import json
+
+          with open("data/articles.json", encoding="utf-8") as f:
+              articles = json.load(f)
+
+          print("عدد المقالات/النتائج المحفوظة:", len(articles))
+          PY
+
+      - name: حفظ التحديث
+        run: |
+          git config user.name "Emad Dawoud Archive Bot"
           git config user.email "actions@users.noreply.github.com"
 
           git add data/articles.json
 
           if git diff --cached --quiet; then
-            echo "لا توجد تغييرات جديدة"
+            echo "لا توجد مقالات جديدة."
           else
-            git commit -m "تحديث مقالات عماد داود"
+            git commit -m "تحديث أرشيف مقالات عماد داود"
             git push
           fi
