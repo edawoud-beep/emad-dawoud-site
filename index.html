@@ -1,178 +1,134 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>عماد داود | الكاتب والصحفي</title>
-    <meta name="description" content="أرشيف كامل لمقالات الكاتب والصحفي الأردني عماد داود." />
-    <meta property="og:title" content="عماد داود | الكاتب والصحفي" />
-    <meta property="og:description" content="أرشيف كامل لمقالات الكاتب والصحفي الأردني عماد داود." />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✍️</text></svg>" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Cairo', sans-serif; background: #f0f4fa; color: #1e2a41; padding: 20px; overflow-x: hidden; }
-        #progress-bar { position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(90deg, #f7c948, #1a3b6b); z-index: 9999; transition: width 0.1s; border-radius: 0 4px 4px 0; box-shadow: 0 0 10px #f7c948; }
-        .container { max-width: 1200px; margin: 0 auto; }
-        .header { background: linear-gradient(135deg, #0a1a3a, #1a3b6b); color: white; padding: 50px 30px 40px; border-radius: 40px; margin-bottom: 40px; box-shadow: 0 25px 40px -15px rgba(10, 26, 58, 0.5); text-align: center; position: relative; overflow: hidden; }
-        .circle { position: absolute; border-radius: 50%; background: rgba(247, 201, 72, 0.08); animation: floatCircle 8s infinite alternate ease-in-out; pointer-events: none; }
-        .circle:nth-child(1) { width: 300px; height: 300px; top: -80px; right: -80px; animation-duration: 10s; background: rgba(255, 255, 255, 0.05); }
-        .circle:nth-child(2) { width: 200px; height: 200px; bottom: -60px; left: -60px; animation-duration: 7s; background: rgba(247, 201, 72, 0.1); }
-        .circle:nth-child(3) { width: 150px; height: 150px; top: 20px; left: 20%; animation-duration: 12s; background: rgba(255, 255, 255, 0.03); }
-        @keyframes floatCircle { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(30px, -30px) scale(1.1); } }
-        .header .content { position: relative; z-index: 2; }
-        .profile-avatar { width: 120px; height: 120px; border-radius: 50%; border: 5px solid #f7c948; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3); margin-bottom: 20px; transition: 0.3s; background: #1a3b6b; }
-        .profile-avatar:hover { transform: scale(1.05) rotate(-3deg); border-color: white; }
-        .header h1 { font-size: 3.8rem; font-weight: 900; letter-spacing: 2px; text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); }
+        body { font-family: 'Cairo', sans-serif; background: #f0f4fa; color: #1e2a41; padding: 20px; }
+        .container { max-width: 1100px; margin: 0 auto; }
+        
+        .header {
+            background: linear-gradient(135deg, #0a1a3a, #1a3b6b);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 30px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .profile-avatar {
+            width: 120px; height: 120px; border-radius: 50%;
+            border: 4px solid #f7c948;
+            margin-bottom: 15px;
+        }
+        .header h1 { font-size: 3rem; }
         .header h1 span { color: #f7c948; }
-        .header .subtitle { font-size: 1.8rem; font-weight: 400; margin-top: 10px; min-height: 70px; display: flex; justify-content: center; align-items: center; gap: 5px; }
-        .header .subtitle i { color: #f7c948; margin-left: 15px; }
-        #typing-text { color: #f7c948; border-left: 3px solid #f7c948; padding-right: 10px; font-weight: 700; }
-        .stats { display: flex; justify-content: center; gap: 50px; background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(12px); padding: 18px 40px; border-radius: 80px; margin: 25px auto 0; max-width: 500px; border: 1px solid rgba(255, 255, 255, 0.15); }
-        .stats div { display: flex; align-items: center; gap: 10px; font-size: 1.2rem; }
-        .stats i { color: #f7c948; }
-        .stats .num { font-weight: 900; font-size: 1.6rem; }
-        .social-bar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); padding: 12px 25px; border-radius: 60px; margin-bottom: 40px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04); border: 1px solid rgba(255, 255, 255, 0.8); }
-        .social-bar .update-time { color: #1a3b6b; font-weight: 700; }
-        .social-bar .update-time i { color: #22c55e; margin-left: 8px; }
-        .social-links a { color: #1a3b6b; background: #fff; width: 42px; height: 42px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; margin: 0 4px; transition: 0.3s ease; text-decoration: none; border: 1px solid #eef2f7; }
-        .social-links a:hover { background: #1a3b6b; color: white; transform: translateY(-5px); border-color: #1a3b6b; }
-        .grid-title { font-size: 2rem; font-weight: 700; margin-bottom: 30px; display: flex; align-items: center; gap: 15px; }
-        .grid-title i { color: #f7c948; background: #0a1a3a; padding: 12px; border-radius: 20px; font-size: 1.3rem; }
-        .articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; }
-        .card { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(8px); border-radius: 28px; padding: 25px; box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05); border: 1px solid rgba(255, 255, 255, 0.7); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); display: flex; flex-direction: column; position: relative; overflow: hidden; }
-        .card::before { content: ''; position: absolute; top: 0; right: 0; width: 5px; height: 100%; background: linear-gradient(180deg, #f7c948, #1a3b6b); opacity: 0; transition: 0.3s; }
-        .card:hover::before { opacity: 1; }
-        .card:hover { transform: translateY(-12px); box-shadow: 0 25px 50px -15px rgba(10, 26, 58, 0.2); border-color: #f7c948; }
-        .card .source-badge { font-size: 0.75rem; background: #0a1a3a; color: #f7c948; padding: 4px 16px; border-radius: 40px; align-self: flex-start; font-weight: 700; margin-bottom: 15px; }
-        .card h3 { font-size: 1.3rem; font-weight: 700; line-height: 1.7; margin-bottom: 12px; flex-grow: 1; }
-        .card h3 a { text-decoration: none; color: #0a1a3a; transition: 0.2s; }
-        .card h3 a:hover { color: #1a3b6b; text-decoration: underline; }
-        .card .card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(0, 0, 0, 0.05); font-size: 0.9rem; color: #64748b; }
-        .card .card-footer .read-more { background: #0a1a3a; color: white; padding: 6px 22px; border-radius: 40px; text-decoration: none; font-weight: 700; font-size: 0.8rem; transition: 0.3s; }
-        .card .card-footer .read-more:hover { background: #f7c948; color: #0a1a3a; }
-        .no-articles { text-align: center; padding: 80px 20px; background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(8px); border-radius: 40px; color: #64748b; grid-column: 1 / -1; }
-        #backToTop { position: fixed; bottom: 30px; left: 30px; width: 55px; height: 55px; background: #0a1a3a; color: #f7c948; border: none; border-radius: 50%; font-size: 1.5rem; cursor: pointer; box-shadow: 0 15px 30px -8px rgba(10, 26, 58, 0.3); transition: all 0.3s; opacity: 0; visibility: hidden; transform: translateY(20px); z-index: 999; }
-        #backToTop.show { opacity: 1; visibility: visible; transform: translateY(0); }
-        #backToTop:hover { background: #f7c948; color: #0a1a3a; transform: scale(1.1); }
-        .footer { margin-top: 60px; text-align: center; padding: 30px; color: #94a3b8; border-top: 1px solid rgba(0, 0, 0, 0.05); }
-        @media (max-width: 600px) { .header h1 { font-size: 2.5rem; } .header .subtitle { font-size: 1.2rem; min-height: 50px; } .stats { gap: 20px; flex-wrap: wrap; padding: 15px 25px; } .social-bar { flex-direction: column; gap: 15px; } .profile-avatar { width: 80px; height: 80px; } }
+        .subtitle { font-size: 1.4rem; color: #ddd; margin-top: 5px; border-top: 2px solid #f7c948; display: inline-block; padding-top: 10px; }
+        .stats { display: flex; justify-content: center; gap: 30px; margin-top: 20px; flex-wrap: wrap; }
+        .stats div { background: rgba(255,255,255,0.1); padding: 8px 20px; border-radius: 40px; }
+
+        .social-bar {
+            background: white; padding: 15px 25px; border-radius: 60px;
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            flex-wrap: wrap;
+        }
+        /* أيقونات التواصل الاجتماعي (نصية ومضمونة الظهور 100%) */
+        .social-links a {
+            background: #f0f4fa; width: 45px; height: 45px;
+            display: inline-flex; align-items: center; justify-content: center;
+            border-radius: 50%; margin: 0 5px; color: #1a3b6b;
+            text-decoration: none; font-size: 1.3rem; font-weight: bold;
+            transition: 0.3s;
+            border: 1px solid #e0e7ef;
+        }
+        .social-links a:hover { background: #1a3b6b; color: white; transform: translateY(-3px); }
+
+        .grid-title { font-size: 1.8rem; font-weight: 700; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+        .grid-title span { background: #1a3b6b; color: #f7c948; padding: 8px 15px; border-radius: 15px; }
+        .articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+
+        .card {
+            background: white; border-radius: 20px; padding: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+            border-right: 5px solid #f7c948;
+            transition: 0.3s;
+        }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
+        .card .source { color: #1a3b6b; font-weight: 700; font-size: 0.85rem; }
+        .card h3 { margin: 10px 0; font-size: 1.2rem; }
+        .card h3 a { text-decoration: none; color: #0a1a3a; }
+        .card .date { color: #94a3b8; font-size: 0.9rem; }
+
+        .footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; color: #94a3b8; }
     </style>
 </head>
 <body>
-    <div id="progress-bar"></div>
-    <button id="backToTop"><i class="fas fa-chevron-up"></i></button>
-    <div class="container">
-        <div class="header">
-            <div class="circle"></div><div class="circle"></div><div class="circle"></div>
-            <div class="content">
-                <img src="https://ui-avatars.com/api/?name=عماد+داود&size=120&background=1a3b6b&color=f7c948&bold=true&font-size=0.5" alt="عماد داود" class="profile-avatar" />
-                <h1>عماد <span>داود</span></h1>
-                <div class="subtitle"><i class="fas fa-feather-alt"></i><span id="typing-text"></span></div>
-                <div class="stats"><div><i class="fas fa-newspaper"></i> <span class="num" id="articleCount">0</span> مقال</div><div><i class="fas fa-calendar-alt"></i> محدث يومياً</div></div>
-            </div>
+<div class="container">
+
+    <div class="header">
+        <img src="https://ui-avatars.com/api/?name=عماد+داود&size=120&background=1a3b6b&color=f7c948&bold=true" alt="عماد داود" class="profile-avatar">
+        <h1>عماد <span>داود</span></h1>
+        <div class="subtitle">✍️ كاتب وصحفي</div>
+        <div class="stats">
+            <div>📰 <span id="countDisplay">5</span> مقال</div>
+            <div>📅 محدث يومياً</div>
         </div>
-        <div class="social-bar" data-aos="fade-up">
-            <div class="update-time"><i class="fas fa-circle" style="color: #22c55e; font-size: 10px;"></i> آخر تحديث: <span id="lastUpdate">جاري التحميل...</span></div>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
-        </div>
-        <div class="grid-title" data-aos="fade-right"><i class="fas fa-archive"></i> أرشيف المقالات</div>
-        <div class="articles-grid" id="articlesContainer">
-            <div class="no-articles"><i class="fas fa-spinner fa-spin fa-3x"></i><p style="margin-top:15px;">جاري تحميل المقالات...</p></div>
-        </div>
-        <div class="footer"><i class="fas fa-crown"></i> عماد داود &bull; جميع الحقوق محفوظة</div>
     </div>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script>
-        AOS.init({ duration: 800, once: true });
-        new Typed('#typing-text', {
-            strings: ['كاتب وصحفي', 'مؤرخ للحدث', 'راصد للحقيقة'],
-            typeSpeed: 80, backSpeed: 50, backDelay: 2000, loop: true
-        });
-        window.addEventListener('scroll', function() {
-            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            document.getElementById('progress-bar').style.width = (winScroll / height) * 100 + '%';
-            let btn = document.getElementById('backToTop');
-            if (winScroll > 300) btn.classList.add('show');
-            else btn.classList.remove('show');
-        });
-        document.getElementById('backToTop').addEventListener('click', function() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
+    <div class="social-bar">
+        <div>🔄 آخر تحديث: <span id="updateDate">اليوم</span></div>
+        <div class="social-links">
+            <a href="#" title="فيسبوك">ف</a>
+            <a href="#" title="تويتر">ت</a>
+            <a href="#" title="إنستغرام">إن</a>
+            <a href="#" title="يوتيوب">ي</a>
+        </div>
+    </div>
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const container = document.getElementById('articlesContainer');
-            const countSpan = document.getElementById('articleCount');
-            const updateSpan = document.getElementById('lastUpdate');
+    <div class="grid-title"><span>📂</span> أرشيف المقالات</div>
+    <div class="articles-grid" id="articlesGrid">
+        <!-- سيتم ملؤها بواسطة الجافا سكريبت -->
+    </div>
 
-            // مقالات افتراضية مضمونة (تظهر حتى لو الملف الخارجي فاشل)
-            const defaultArticles = [
-                { title: "دور الصحافة في نقل الحقيقة", link: "#", source: "مقالات عماد داود", date: "2026-08-24" },
-                { title: "كتابات في الشأن الأردني", link: "#", source: "مقالات عماد داود", date: "2026-08-23" },
-                { title: "أهمية التوثيق الإعلامي", link: "#", source: "مقالات عماد داود", date: "2026-08-22" },
-                { title: "رؤية صحفية حول الأحداث", link: "#", source: "مقالات عماد داود", date: "2026-08-21" },
-                { title: "كلمات في الوطنية والإعلام", link: "#", source: "مقالات عماد داود", date: "2026-08-20" }
-            ];
+    <div class="footer">جميع الحقوق محفوظة © عماد داود</div>
+</div>
 
-            function renderArticles(articles) {
-                container.innerHTML = '';
-                countSpan.textContent = articles.length;
-                const now = new Date();
-                updateSpan.textContent = now.toLocaleDateString('ar-EG', { year: 'numeric', month: 'long', day: 'numeric' });
+<script>
+    // مقالات افتراضية جاهزة (تظهر فوراً بدون أي ملف خارجي)
+    const articles = [
+        { title: "دور الصحافة في نقل الحقيقة", source: "مقالات عماد داود", date: "2026-08-24" },
+        { title: "كتابات في الشأن الأردني", source: "مقالات عماد داود", date: "2026-08-23" },
+        { title: "أهمية التوثيق الإعلامي", source: "مقالات عماد داود", date: "2026-08-22" },
+        { title: "رؤية صحفية حول الأحداث", source: "مقالات عماد داود", date: "2026-08-21" },
+        { title: "كلمات في الوطنية والإعلام", source: "مقالات عماد داود", date: "2026-08-20" }
+    ];
 
-                articles.forEach((article, index) => {
-                    const card = document.createElement('div');
-                    card.className = 'card';
-                    card.setAttribute('data-aos', 'fade-up');
-                    card.setAttribute('data-aos-delay', (index % 5) * 50);
-                    const title = article.title || 'بدون عنوان';
-                    const link = article.link || '#';
-                    const source = article.source || 'مصدر';
-                    let date = article.date || 'تاريخ غير محدد';
-                    try { const d = new Date(date); if (!isNaN(d)) date = d.toLocaleDateString('ar-EG', { year: 'numeric', month: 'short', day: 'numeric' }); } catch (e) {}
-                    card.innerHTML = `
-                        <div class="source-badge"><i class="fas fa-globe"></i> ${source}</div>
-                        <h3><a href="${link}" target="_blank" rel="noopener">${title}</a></h3>
-                        <div class="card-footer">
-                            <span><i class="far fa-calendar-alt"></i> ${date}</span>
-                            <a href="${link}" target="_blank" rel="noopener" class="read-more">قراءة <i class="fas fa-arrow-left"></i></a>
-                        </div>
-                    `;
-                    container.appendChild(card);
-                });
-                AOS.refresh();
-            }
+    const grid = document.getElementById('articlesGrid');
+    const countDisplay = document.getElementById('countDisplay');
+    const updateDate = document.getElementById('updateDate');
 
-            // محاولة جلب المقالات الحقيقية، مع عرض المقالات الافتراضية فوراً (لكن نضيفها بعد 1 ثانية لضمان عدم وجود خطأ)
-            // نعرض الافتراضي أولاً
-            renderArticles(defaultArticles);
+    // عرض التاريخ
+    const now = new Date();
+    updateDate.textContent = now.toLocaleDateString('ar-EG', { year: 'numeric', month: 'long', day: 'numeric' });
 
-            // ثم نحاول جلب الحقيقي لتحديثه
-            fetch('data/articles.json')
-                .then(response => {
-                    if (!response.ok) throw new Error('File not found');
-                    return response.json();
-                })
-                .then(articles => {
-                    if (articles && Array.isArray(articles) && articles.length > 0) {
-                        renderArticles(articles);
-                    }
-                })
-                .catch(() => {});
-        });
-    </script>
+    // عرض عدد المقالات
+    countDisplay.textContent = articles.length;
+
+    // عرض المقالات
+    articles.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+            <div class="source">🌐 ${item.source}</div>
+            <h3><a href="#">${item.title}</a></h3>
+            <div class="date">📅 ${item.date}</div>
+        `;
+        grid.appendChild(card);
+    });
+</script>
 </body>
 </html>
