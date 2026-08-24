@@ -3,1046 +3,547 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عماد داود — كاتب وصحفي</title>
-    <meta name="description" content="عماد داود، كاتب وصحفي عربي. كلمة لا تُستعار، وموقف لا يُشترى بثمن.">
-    <meta name="keywords" content="عماد داود, مقالات سياسية, كاتب عربي, صحافة رأي, تحليل سياسي, أدب عربي">
-    <meta name="author" content="عماد داود">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="عماد داود — كاتب وصحفي">
-    <meta property="og:description" content="كلمة لا تُستعار، وموقف لا يُشترى بثمن.">
-    <meta property="og:locale" content="ar_AR">
-    <meta name="twitter:card" content="summary_large_image">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "عماد داود",
-      "jobTitle": "كاتب وصحفي",
-      "email": "emadawoud@yahoo.com",
-      "url": "https://emadawoud.com"
-    }
-    </script>
-
+    <title>عماد داود | الكاتب والصحفي - أرشيف المقالات</title>
+    <meta name="description" content="أرشيف كامل لمقالات الكاتب والصحفي الأردني عماد داود. أحدث المقالات والكتابات الصحفية محدثة يومياً.">
+    
+    <!-- تحسينات متقدمة لمحركات البحث (SEO) -->
+    <meta property="og:title" content="عماد داود | الكاتب والصحفي" />
+    <meta property="og:description" content="أرشيف كامل لمقالات الكاتب والصحفي الأردني عماد داود." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <!-- الأيقونات (شعار احترافي) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✍️</text></svg>">
+    
+    <!-- الخطوط -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- المكتبات الخارجية (للمؤثرات الاحترافية) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <style>
-        :root {
-            --ink: #0B0E13;
-            --ink-2: #12161D;
-            --parchment: #EDE3CF;
-            --parchment-dim: #C9BFA9;
-            --muted: #8B8474;
-            --gold: #B8863B;
-            --gold-bright: #D6A85C;
-            --crimson: #7A2E2E;
-            --line: #2A2620;
-            --max: 1100px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; }
+
         body {
-            background: var(--ink);
-            color: var(--parchment);
-            font-family: 'Tajawal', sans-serif;
-            line-height: 1.9;
+            font-family: 'Cairo', sans-serif;
+            background: #f0f4fa;
+            color: #1e2a41;
+            padding: 20px;
             overflow-x: hidden;
         }
-        ::selection { background: var(--gold); color: var(--ink); }
-        a { color: inherit; text-decoration: none; }
-        .wrap { max-width: var(--max); margin: 0 auto; padding: 0 28px; }
 
-        body::before {
-            content: "";
+        /* شريط تقدم القراءة (احترافي جداً) */
+        #progress-bar {
             position: fixed;
-            inset: 0;
-            background-image:
-                radial-gradient(circle at 20% 30%, rgba(184,134,59,0.05), transparent 45%),
-                radial-gradient(circle at 80% 70%, rgba(122,46,46,0.06), transparent 50%);
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        header {
-            position: sticky;
             top: 0;
-            z-index: 50;
-            background: rgba(11,14,19,0.85);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--line);
-            padding: 16px 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: linear-gradient(90deg, #f7c948, #1a3b6b);
+            z-index: 9999;
+            transition: width 0.1s;
+            box-shadow: 0 0 10px #f7c948;
+            border-radius: 0 4px 4px 0;
         }
-        nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 74px;
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
         }
-        .wordmark {
-            font-family: 'Aref Ruqaa', serif;
-            font-size: 26px;
-            font-weight: 700;
-            color: var(--parchment);
-            letter-spacing: 1px;
-        }
-        .wordmark span { color: var(--gold); }
-        .nav-links {
-            display: flex;
-            gap: 36px;
-            font-size: 15px;
-            color: var(--parchment-dim);
-        }
-        .nav-links a {
+
+        /* الهيدر الاحترافي مع دوائر متحركة */
+        .header {
+            background: linear-gradient(135deg, #0a1a3a, #1a3b6b);
+            color: white;
+            padding: 60px 30px;
+            border-radius: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 25px 40px -15px rgba(10, 26, 58, 0.5);
+            text-align: center;
             position: relative;
-            padding: 6px 0;
-            transition: color 0.25s;
+            overflow: hidden;
+            isolation: isolate;
         }
-        .nav-links a:hover { color: var(--gold-bright); }
-        .nav-links a::after {
-            content: "";
+
+        /* الدوائر المتحركة في الخلفية */
+        .circle {
             position: absolute;
-            right: 0;
-            bottom: 0;
-            height: 1px;
-            width: 0;
-            background: var(--gold);
-            transition: width 0.3s;
-        }
-        .nav-links a:hover::after { width: 100%; }
-
-        .hero {
-            position: relative;
-            min-height: 92vh;
-            display: flex;
-            align-items: center;
-            padding-top: 60px;
-            z-index: 1;
-        }
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.15fr 0.85fr;
-            gap: 40px;
-            align-items: center;
-            width: 100%;
-        }
-        .eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 13px;
-            color: var(--gold-bright);
-            letter-spacing: 2px;
-            margin-bottom: 26px;
-            text-transform: uppercase;
-        }
-        .eyebrow::before {
-            content: "";
-            width: 26px;
-            height: 1px;
-            background: var(--gold);
-        }
-        h1.hero-title {
-            font-family: 'Aref Ruqaa', serif;
-            font-weight: 700;
-            font-size: clamp(40px, 6vw, 74px);
-            line-height: 1.25;
-            color: var(--parchment);
-            margin-bottom: 26px;
-        }
-        h1.hero-title em {
-            font-style: normal;
-            color: var(--gold-bright);
-        }
-        .hero-sub {
-            font-size: 18px;
-            color: var(--parchment-dim);
-            max-width: 520px;
-            margin-bottom: 38px;
-            font-weight: 300;
-        }
-        .cta-row { display: flex; gap: 18px; flex-wrap: wrap; }
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 15px 30px;
-            border-radius: 2px;
-            font-size: 15px;
-            font-weight: 700;
-            transition: all 0.3s;
-            border: 1px solid transparent;
-            cursor: pointer;
-        }
-        .btn-primary {
-            background: var(--gold);
-            color: var(--ink);
-        }
-        .btn-primary:hover {
-            background: var(--gold-bright);
-            transform: translateY(-2px);
-        }
-        .btn-ghost {
-            border-color: var(--line);
-            color: var(--parchment-dim);
-        }
-        .btn-ghost:hover {
-            border-color: var(--gold);
-            color: var(--gold-bright);
-        }
-
-        .seal-wrap {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-        .seal {
-            width: min(360px, 80vw);
-            height: min(360px, 80vw);
-            animation: sealTurn 90s linear infinite;
-        }
-        @keyframes sealTurn {
-            to { transform: rotate(360deg); }
-        }
-        .seal-center {
-            font-family: 'Aref Ruqaa', serif;
-            font-size: 15px;
-            fill: var(--gold-bright);
-        }
-
-        section {
-            position: relative;
-            z-index: 1;
-            padding: 110px 0;
-        }
-        .section-head {
-            margin-bottom: 60px;
-            max-width: 640px;
-        }
-        .section-num {
-            font-family: 'Tajawal', sans-serif;
-            font-size: 13px;
-            color: var(--gold);
-            letter-spacing: 3px;
-            margin-bottom: 16px;
-            display: block;
-        }
-        h2.section-title {
-            font-family: 'Aref Ruqaa', serif;
-            font-size: clamp(30px, 4vw, 46px);
-            color: var(--parchment);
-            line-height: 1.4;
-        }
-        .divider {
-            height: 1px;
-            background: var(--line);
-            width: 100%;
-            margin: 0;
-        }
-
-        .about {
-            display: grid;
-            grid-template-columns: 0.85fr 1.15fr;
-            gap: 60px;
-            align-items: center;
-        }
-        .about-photo-wrap {
-            position: relative;
-        }
-        .about-photo {
-            width: 100%;
-            aspect-ratio: 4/5;
-            object-fit: cover;
-            border-radius: 4px;
-            filter: grayscale(15%) contrast(1.05);
-            border: 1px solid var(--line);
-            background: #1a1a1a;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Aref Ruqaa', serif;
-            font-size: 28px;
-            color: var(--gold);
-            min-height: 300px;
-        }
-        .about-photo-frame {
-            position: absolute;
-            inset: 14px;
-            border: 1px solid var(--gold);
+            border-radius: 50%;
+            background: rgba(247, 201, 72, 0.08);
+            animation: floatCircle 8s infinite alternate ease-in-out;
+            z-index: 0;
             pointer-events: none;
-            border-radius: 2px;
         }
-        .about-text p {
-            font-size: 19px;
-            color: var(--parchment-dim);
-            margin-bottom: 24px;
-            font-weight: 300;
-        }
-        .about-text strong {
-            color: var(--parchment);
-            font-weight: 500;
-        }
-        .credit-row {
-            display: flex;
-            gap: 14px;
-            flex-wrap: wrap;
-            margin-top: 32px;
-        }
-        .credit-pill {
-            font-size: 13px;
-            padding: 8px 16px;
-            border: 1px solid var(--line);
-            color: var(--muted);
-            border-radius: 20px;
-            transition: border-color 0.25s, color 0.25s;
-            cursor: pointer;
-        }
-        .credit-pill:hover {
-            border-color: var(--gold);
-            color: var(--gold-bright);
+        .circle:nth-child(1) { width: 300px; height: 300px; top: -80px; right: -80px; animation-duration: 10s; background: rgba(255,255,255,0.05); }
+        .circle:nth-child(2) { width: 200px; height: 200px; bottom: -60px; left: -60px; animation-duration: 7s; background: rgba(247, 201, 72, 0.1); }
+        .circle:nth-child(3) { width: 150px; height: 150px; top: 20px; left: 20%; animation-duration: 12s; background: rgba(255,255,255,0.03); }
+
+        @keyframes floatCircle {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(30px, -30px) scale(1.1); }
         }
 
-        .archive-stats {
+        .header .content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .header h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .header h1 span {
+            color: #f7c948;
+        }
+
+        .header .subtitle {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-top: 15px;
+            min-height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+        .header .subtitle i {
+            color: #f7c948;
+            margin-left: 15px;
+        }
+        #typing-text {
+            color: #f7c948;
+            border-left: 3px solid #f7c948;
+            padding-right: 10px;
+            font-weight: 700;
+        }
+
+        /* العدادات الزجاجية */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            padding: 18px 40px;
+            border-radius: 80px;
+            margin: 25px auto 0;
+            max-width: 500px;
+            border: 1px solid rgba(255,255,255,0.15);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+
+        .stats div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.2rem;
+        }
+        .stats i { color: #f7c948; }
+        .stats .num { font-weight: 900; font-size: 1.6rem; }
+
+        /* شريط التواصل */
+        .social-bar {
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 16px;
-            margin: 24px 0 8px;
+            background: rgba(255,255,255,0.7);
+            backdrop-filter: blur(10px);
+            padding: 12px 25px;
+            border-radius: 60px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.04);
+            border: 1px solid rgba(255,255,255,0.8);
         }
-        .stats-count {
-            font-size: 18px;
-            color: var(--gold);
-            font-weight: 500;
+
+        .social-bar .update-time {
+            color: #1a3b6b;
+            font-weight: 700;
         }
-        .stats-count span {
-            font-size: 28px;
-            font-weight: 800;
-            font-family: 'Aref Ruqaa', serif;
+        .social-bar .update-time i { color: #22c55e; margin-left: 8px; }
+
+        .social-links a {
+            color: #1a3b6b;
+            background: #fff;
+            width: 42px;
+            height: 42px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
             margin: 0 4px;
+            transition: 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            text-decoration: none;
+            border: 1px solid #eef2f7;
+        }
+        .social-links a:hover {
+            background: #1a3b6b;
+            color: white;
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 20px -8px #1a3b6b;
+            border-color: #1a3b6b;
         }
 
-        .search-box {
-            width: 100%;
-            max-width: 320px;
-            padding: 10px 18px;
-            border-radius: 30px;
-            border: 1px solid var(--line);
-            background: rgba(255,255,255,0.04);
-            color: var(--parchment);
-            font-size: 15px;
-            font-family: 'Tajawal', sans-serif;
-            transition: all 0.3s;
-            outline: none;
+        .grid-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
-        .search-box::placeholder { color: var(--muted); }
-        .search-box:focus {
-            border-color: var(--gold);
-            background: rgba(255,255,255,0.08);
-            box-shadow: 0 0 20px rgba(212,168,75,0.05);
+        .grid-title i {
+            color: #f7c948;
+            background: #0a1a3a;
+            padding: 12px;
+            border-radius: 20px;
+            font-size: 1.3rem;
+            box-shadow: 0 8px 15px rgba(10,26,58,0.1);
         }
 
-        .archive-subhead {
-            font-family: 'Aref Ruqaa', serif;
-            font-size: 20px;
-            color: var(--gold-bright);
-            margin: 50px 0 10px;
+        /* شبكة البطاقات */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
         }
 
-        .articles-container {
+        /* البطاقة الزجاجية */
+        .card {
+            background: rgba(255,255,255,0.7);
+            backdrop-filter: blur(8px);
+            border-radius: 28px;
+            padding: 25px;
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05);
+            border: 1px solid rgba(255,255,255,0.7);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             display: flex;
             flex-direction: column;
+            position: relative;
+            overflow: hidden;
         }
-        .article-row {
-            display: grid;
-            grid-template-columns: 60px 1fr auto;
-            align-items: center;
-            gap: 24px;
-            padding: 32px 0;
-            border-bottom: 1px solid var(--line);
-            transition: padding-right 0.35s, background 0.35s;
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(180deg, #f7c948, #1a3b6b);
             opacity: 0;
-            animation: fadeUp 0.5s ease forwards;
+            transition: 0.3s;
         }
-        .article-row:nth-child(2) { animation-delay: 0.05s; }
-        .article-row:nth-child(3) { animation-delay: 0.1s; }
-        .article-row:nth-child(4) { animation-delay: 0.15s; }
-        .article-row:nth-child(5) { animation-delay: 0.2s; }
-        .article-row:nth-child(6) { animation-delay: 0.25s; }
-        .article-row:nth-child(7) { animation-delay: 0.3s; }
-        .article-row:nth-child(8) { animation-delay: 0.35s; }
-        .article-row:nth-child(9) { animation-delay: 0.4s; }
-        .article-row:nth-child(10) { animation-delay: 0.45s; }
-        .article-row:nth-child(11) { animation-delay: 0.5s; }
-        .article-row:nth-child(12) { animation-delay: 0.55s; }
-        .article-row:nth-child(13) { animation-delay: 0.6s; }
-        .article-row:nth-child(14) { animation-delay: 0.65s; }
-        .article-row:nth-child(15) { animation-delay: 0.7s; }
-        .article-row:nth-child(16) { animation-delay: 0.75s; }
-        .article-row:nth-child(17) { animation-delay: 0.8s; }
-        .article-row:nth-child(18) { animation-delay: 0.85s; }
-        .article-row:nth-child(19) { animation-delay: 0.9s; }
-        .article-row:nth-child(20) { animation-delay: 0.95s; }
-
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(12px); }
-            to { opacity: 1; transform: translateY(0); }
+        .card:hover::before { opacity: 1; }
+        .card:hover {
+            transform: translateY(-12px) scale(1.01);
+            box-shadow: 0 25px 50px -15px rgba(10, 26, 58, 0.2);
+            border-color: #f7c948;
         }
 
-        .article-row:hover {
-            padding-right: 14px;
-            background: linear-gradient(to left, rgba(184,134,59,0.06), transparent);
-        }
-        .article-row.unpublished {
-            cursor: default;
-            opacity: 0.75;
-        }
-        .article-row.unpublished:hover {
-            background: none;
-            padding-right: 0;
-        }
-        .article-row.hidden { display: none; }
-
-        .article-tag {
-            font-size: 12px;
-            color: var(--gold);
-            border: 1px solid var(--gold);
-            border-radius: 50%;
-            width: 44px;
-            height: 44px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            font-family: 'Aref Ruqaa', serif;
-            flex-shrink: 0;
-        }
-        .article-body h3 {
-            font-family: 'Aref Ruqaa', serif;
-            font-size: 22px;
-            color: var(--parchment);
-            margin-bottom: 8px;
+        .card .source-badge {
+            font-size: 0.75rem;
+            background: #0a1a3a;
+            color: #f7c948;
+            padding: 4px 16px;
+            border-radius: 40px;
+            align-self: flex-start;
             font-weight: 700;
-        }
-        .article-body p {
-            font-size: 14.5px;
-            color: var(--muted);
-            max-width: 520px;
-        }
-        .article-genre {
-            font-size: 12px;
-            color: var(--parchment-dim);
-            white-space: nowrap;
-            border: 1px solid var(--line);
-            padding: 6px 14px;
-            border-radius: 20px;
-        }
-        .article-genre.pending {
-            color: var(--gold-bright);
-            border-color: var(--gold);
+            margin-bottom: 15px;
         }
 
-        .reveal {
-            opacity: 0;
-            transform: translateY(24px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
+        .card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            line-height: 1.7;
+            margin-bottom: 12px;
+            flex-grow: 1;
         }
-        .reveal.in {
+        .card h3 a {
+            text-decoration: none;
+            color: #0a1a3a;
+            transition: 0.2s;
+        }
+        .card h3 a:hover { color: #1a3b6b; text-decoration: underline; }
+
+        .card .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(0,0,0,0.05);
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+        .card .card-footer .read-more {
+            background: #0a1a3a;
+            color: white;
+            padding: 6px 22px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.8rem;
+            transition: 0.3s;
+            border: 1px solid transparent;
+        }
+        .card .card-footer .read-more:hover {
+            background: #f7c948;
+            color: #0a1a3a;
+            border-color: #f7c948;
+        }
+
+        .loading, .no-articles {
+            text-align: center;
+            padding: 80px 20px;
+            background: rgba(255,255,255,0.5);
+            backdrop-filter: blur(8px);
+            border-radius: 40px;
+            color: #64748b;
+            grid-column: 1 / -1;
+        }
+
+        /* زر العودة للأعلى */
+        #backToTop {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 55px;
+            height: 55px;
+            background: #0a1a3a;
+            color: #f7c948;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 15px 30px -8px rgba(10,26,58,0.3);
+            transition: all 0.3s;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            z-index: 999;
+            border: 2px solid rgba(247,201,72,0.2);
+        }
+        #backToTop.show {
             opacity: 1;
+            visibility: visible;
             transform: translateY(0);
         }
+        #backToTop:hover {
+            background: #f7c948;
+            color: #0a1a3a;
+            transform: scale(1.1) rotate(-10deg);
+            border-color: #0a1a3a;
+        }
 
-        .contact-box {
+        .footer {
+            margin-top: 60px;
             text-align: center;
-            padding: 80px 40px;
-            border: 1px solid var(--line);
-            position: relative;
-        }
-        .contact-box::before,
-        .contact-box::after {
-            content: "";
-            position: absolute;
-            width: 22px;
-            height: 22px;
-            border: 1px solid var(--gold);
-        }
-        .contact-box::before {
-            top: -1px;
-            right: -1px;
-            border-left: none;
-            border-bottom: none;
-        }
-        .contact-box::after {
-            bottom: -1px;
-            left: -1px;
-            border-right: none;
-            border-top: none;
-        }
-        .contact-box h2 {
-            font-family: 'Aref Ruqaa', serif;
-            font-size: clamp(28px, 4vw, 44px);
-            margin-bottom: 24px;
-        }
-        .contact-box p {
-            color: var(--parchment-dim);
-            margin-bottom: 36px;
-            font-weight: 300;
-        }
-        .mail-link {
-            font-size: 22px;
-            color: var(--gold-bright);
-            border-bottom: 1px solid var(--gold);
-            padding-bottom: 4px;
-            transition: letter-spacing 0.3s;
-        }
-        .mail-link:hover { letter-spacing: 1px; }
-
-        footer {
-            padding: 40px 0;
-            text-align: center;
-            font-size: 13px;
-            color: var(--muted);
-            border-top: 1px solid var(--line);
+            padding: 30px;
+            color: #94a3b8;
+            border-top: 1px solid rgba(0,0,0,0.05);
         }
 
-        @media (max-width: 860px) {
-            .nav-links { display: none; }
-            .hero-grid { grid-template-columns: 1fr; text-align: center; }
-            .cta-row { justify-content: center; }
-            .eyebrow { justify-content: center; }
-            .about { grid-template-columns: 1fr; }
-            .about-photo-wrap { max-width: 320px; margin: 0 auto; }
-            .article-row { grid-template-columns: 44px 1fr; }
-            .article-genre { display: none; }
-            .search-box { max-width: 100%; }
-            .archive-stats { flex-direction: column; align-items: stretch; }
-        }
-        @media (max-width: 480px) {
-            .wrap { padding: 0 16px; }
-            .hero-title { font-size: 32px; }
-            .hero-sub { font-size: 16px; }
-            .article-body h3 { font-size: 18px; }
-            .article-body p { font-size: 14px; }
+        @media (max-width: 600px) {
+            .header h1 { font-size: 2.5rem; }
+            .header .subtitle { font-size: 1.2rem; min-height: 50px; }
+            .stats { gap: 20px; flex-wrap: wrap; padding: 15px 25px; }
+            .social-bar { flex-direction: column; gap: 15px; }
         }
     </style>
 </head>
 <body>
 
-<header>
-    <nav class="wrap">
-        <a href="#top" class="wordmark">عماد <span>داود</span></a>
-        <div class="nav-links">
-            <a href="#top">الرئيسية</a>
-            <a href="#about">عن الكاتب</a>
-            <a href="#archive">الأرشيف</a>
-            <a href="#contact">تواصل</a>
-        </div>
-    </nav>
-</header>
+    <!-- شريط تقدم القراءة (Reading Progress) -->
+    <div id="progress-bar"></div>
 
-<main id="top">
+    <!-- زر العودة للأعلى -->
+    <button id="backToTop" title="العودة للأعلى"><i class="fas fa-chevron-up"></i></button>
 
-    <section class="hero">
-        <div class="wrap hero-grid">
-            <div>
-                <span class="eyebrow">كاتب وصحفي عربي</span>
-                <h1 class="hero-title">كلمة <em>لا تُستعار</em><br>وموقف لا يُقلَّد</h1>
-                <p class="hero-sub">كلمة لا تُستعار من أحد، وموقف لا يُشترى بثمن. كل نص هنا معركة صغيرة مع النسيان.</p>
-                <div class="cta-row">
-                    <a href="#archive" class="btn btn-primary">اقرأ المقالات</a>
-                    <a href="#about" class="btn btn-ghost">عن الكاتب</a>
+    <div class="container">
+
+        <!-- الهيدر مع الدوائر المتحركة -->
+        <div class="header">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="content">
+                <h1>عماد <span>داود</span></h1>
+                <div class="subtitle">
+                    <i class="fas fa-feather-alt"></i>
+                    <span id="typing-text"></span>
                 </div>
-            </div>
-            <div class="seal-wrap">
-                <svg class="seal" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <filter id="rough">
-                            <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" seed="7" result="noise"/>
-                            <feDisplacementMap in="SourceGraphic" in2="noise" scale="7"/>
-                        </filter>
-                        <path id="circlePath" d="M150,150 m-110,0 a110,110 0 1,1 220,0 a110,110 0 1,1 -220,0"/>
-                    </defs>
-                    <g filter="url(#rough)">
-                        <circle cx="150" cy="150" r="140" fill="none" stroke="#B8863B" stroke-width="2"/>
-                        <circle cx="150" cy="150" r="118" fill="none" stroke="#B8863B" stroke-width="1"/>
-                        <circle cx="150" cy="150" r="60" fill="none" stroke="#B8863B" stroke-width="1.5"/>
-                    </g>
-                    <text class="seal-center" text-anchor="middle">
-                        <textPath href="#circlePath" startOffset="2%">عماد داود • منهج لا يشبه سواه • عماد داود • منهج لا يشبه سواه •</textPath>
-                    </text>
-                    <text x="150" y="158" text-anchor="middle" font-family="Aref Ruqaa" font-size="34" fill="#D6A85C" font-weight="700">ع د</text>
-                </svg>
-            </div>
-        </div>
-    </section>
-
-    <div class="wrap"><div class="divider"></div></div>
-
-    <section id="about">
-        <div class="wrap about reveal">
-            <div class="about-photo-wrap">
-                <div class="about-photo" style="background: #1a1a1a; display: flex; align-items: center; justify-content: center; font-family: 'Aref Ruqaa', serif; font-size: 28px; color: #D6A85C;">
-                    عماد داود
-                </div>
-                <div class="about-photo-frame"></div>
-            </div>
-            <div class="about-text">
-                <span class="section-num">عن الكاتب</span>
-                <p><strong>كلمة لا تُستعار من أحد، وموقف لا يُشترى بثمن.</strong> عماد داود صوت عربي يكتب حين يصمت غيره، ويسمّي الأشياء بأسمائها حين يكتفي الآخرون بالإشارة إليها من بعيد.</p>
-                <p>"الوكيل لا يملك ما يوكَّل فيه، هذه ليست قاعدة قانونية، هي قانون الثقل." هكذا يكتب حين يقرأ سقوط الأنظمة. وحين يكتب عن وطنه يقول: "التراب الذي صمد هكذا لا يُباع، يُورَّث."</p>
-                <div class="credit-row">
-                    <a href="https://www.khaberni.com/search?q=%D8%B9%D9%85%D8%A7%D8%AF+%D8%AF%D8%A7%D9%88%D8%AF" target="_blank" rel="noopener" class="credit-pill">📰 خبرني</a>
-                    <a href="https://www.raialyoum.com/?s=%D8%B9%D9%85%D8%A7%D8%AF+%D8%AF%D8%A7%D9%88%D8%AF" target="_blank" rel="noopener" class="credit-pill">📝 رأي اليوم</a>
-                    <a href="https://nabaajordan.com/?s=%D8%B9%D9%85%D8%A7%D8%AF+%D8%AF%D8%A7%D9%88%D8%AF" target="_blank" rel="noopener" class="credit-pill">📰 نبأ الأردن</a>
-                    <a href="https://akhbarna.net/?s=%D8%B9%D9%85%D8%A7%D8%AF+%D8%AF%D8%A7%D9%88%D8%AF" target="_blank" rel="noopener" class="credit-pill">📰 أخبارنا</a>
+                <div class="stats">
+                    <div><i class="fas fa-newspaper"></i> <span class="num" id="articleCount">0</span> مقال</div>
+                    <div><i class="fas fa-calendar-alt"></i> محدث يومياً</div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <div class="wrap"><div class="divider"></div></div>
-
-    <section id="archive">
-        <div class="wrap">
-            <div class="section-head reveal">
-                <span class="section-num">الأرشيف</span>
-                <h2 class="section-title">مقالات مختارة</h2>
+        <!-- شريط التواصل الاجتماعي -->
+        <div class="social-bar" data-aos="fade-up">
+            <div class="update-time">
+                <i class="fas fa-circle" style="color: #22c55e; font-size: 10px;"></i>
+                آخر تحديث: <span id="lastUpdate">جاري التحميل...</span>
             </div>
-
-            <div class="archive-stats reveal">
-                <div class="stats-count">📚 إجمالي <span id="articleCount">0</span> مقالاً منشوراً</div>
-                <input type="text" id="searchInput" class="search-box" placeholder="🔍 ابحث في المقالات (عنوان أو تصنيف)...">
+            <div class="social-links">
+                <a href="#" target="_blank" title="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank" title="تويتر"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank" title="إنستغرام"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank" title="يوتيوب"><i class="fab fa-youtube"></i></a>
             </div>
-
-            <div class="archive-list reveal">
-                <div class="archive-subhead">منشورة</div>
-                <div class="articles-container" id="articlesList">
-
-                    <!-- ===== جميع المقالات المنشورة (مرتبة من الأحدث للأقدم) ===== -->
-
-                    <!-- 2026-08-14: الأردن بين خصخصتين! (رأي اليوم) -->
-                    <a href="https://www.raialyoum.com/الأردن-بين-خصخصتين/" target="_blank" rel="noopener" class="article-row" data-title="الأردن بين خصخصتين" data-genre="سياسة">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>الأردن بين خصخصتين!</h3>
-                            <p>قراءة في ملف الخصخصة الأردني بين شعارات الحكومة وواقع المواطن.</p>
-                        </div>
-                        <span class="article-genre">سياسة</span>
-                    </a>
-
-                    <!-- 2026-08-11: لو كان التوجيهي رجلا لقتلته! (رأي اليوم) -->
-                    <a href="https://www.raialyoum.com/لو-كان-التوجيهي-رجلا-لقتلته/" target="_blank" rel="noopener" class="article-row" data-title="لو كان التوجيهي رجلا لقتلته" data-genre="اجتماعي">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>لو كان التوجيهي رجلا لقتلته!</h3>
-                            <p>نقد اجتماعي لامتحان التوجيهي وتأثيره على الطلاب والأسر الأردنية.</p>
-                        </div>
-                        <span class="article-genre">اجتماعي</span>
-                    </a>
-
-                    <!-- 2026-07-04: جعفر حسان.. افعلها الآن! (نبأ الأردن) -->
-                    <a href="https://nabaajordan.com/articles/جعفر-حسان-افعلها-الآن/" target="_blank" rel="noopener" class="article-row" data-title="جعفر حسان افعلها الآن" data-genre="سياسة">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>جعفر حسان.. افعلها الآن!</h3>
-                            <p>عشُّ الدبابير لا يُطرَق. يُقتَحَم. أو يظلّ معلقا فوق الرؤوس، يلسع كل من يقترب منه.</p>
-                        </div>
-                        <span class="article-genre">سياسة</span>
-                    </a>
-
-                    <!-- 2026-07-02: بغداد والمغارة... حين أصبحت "سرقة القرن" عقيدة (نبأ الأردن) -->
-                    <a href="https://nabaajordan.com/articles/500345" target="_blank" rel="noopener" class="article-row" data-title="بغداد والمغارة سرقة القرن" data-genre="سياسة">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>بغداد والمغارة... حين أصبحت "سرقة القرن" عقيدة</h3>
-                            <p>قراءة في ملف الفساد العراقي وتداعياته.</p>
-                        </div>
-                        <span class="article-genre">سياسة</span>
-                    </a>
-
-                    <!-- 2026-06-18: الأردن والنشامى... حين نظرنا إلى أنفسنا في العالم! (خبرني) -->
-                    <a href="https://www.khaberni.com/news/الأردن-والنشامى-حين-نظرنا-إلى-أنفسنا-في-العالم" target="_blank" rel="noopener" class="article-row" data-title="الأردن والنشامى حين نظرنا إلى أنفسنا في العالم" data-genre="رياضة">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>الأردن والنشامى... حين نظرنا إلى أنفسنا في العالم!</h3>
-                            <p>تأمل في صورة الأردن عالمياً من خلال الرياضة والإنجازات.</p>
-                        </div>
-                        <span class="article-genre">رياضة</span>
-                    </a>
-
-                    <!-- 2026-06-15: الأردن والنشامى... جرح يُسدِّد! (خبرني) -->
-                    <a href="https://www.khaberni.com/news/الأردن-والنشامى-جرح-يسدد" target="_blank" rel="noopener" class="article-row" data-title="الأردن والنشامى جرح يسدد" data-genre="سياسة">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>الأردن والنشامى... جرح يُسدِّد!</h3>
-                            <p>عن الجرح الوطني الذي يتحول إلى قوة دافعة نحو الأمام.</p>
-                        </div>
-                        <span class="article-genre">سياسة</span>
-                    </a>
-
-                    <!-- 2026-06-15: الأردن في المونديال: الندبة التي ذهبت إلى أمريكا (رأي اليوم) -->
-                    <a href="https://www.raialyoum.com/الأردن-في-المونديال-الندبة/" target="_blank" rel="noopener" class="article-row" data-title="الأردن في المونديال الندبة" data-genre="رياضة">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>الأردن في المونديال: الندبة التي ذهبت إلى أمريكا</h3>
-                            <p>سبعة وسبعون عاماً احتاجها الأردن ليصل إلى أمريكا. بل إلى نفسه.</p>
-                        </div>
-                        <span class="article-genre">رياضة</span>
-                    </a>
-
-                    <!-- 2026-06-14: وطني تحوّل إلى دوائر.. وأنا أحب المثلثات! (خبرني) -->
-                    <a href="https://www.khaberni.com/news/وطني-تحوّل-إلى-دوائر" target="_blank" rel="noopener" class="article-row" data-title="وطني تحول إلى دوائر وأنا أحب المثلثات" data-genre="هوية">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>وطني تحوّل إلى دوائر.. وأنا أحب المثلثات!</h3>
-                            <p>قراءة في رمزية المثلث الأحمر بالعلم الأردني وموقف الوطن الذي يعرف أين رأسه.</p>
-                        </div>
-                        <span class="article-genre">هوية</span>
-                    </a>
-
-                    <!-- 2026-06-12: الثالوث المقدس .. ثلاثة اصوات .. ونشيد اسمه الاردن (خبرني) -->
-                    <a href="https://www.khaberni.com/news/818254" target="_blank" rel="noopener" class="article-row" data-title="الثالوث المقدس" data-genre="سياسة">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>الثالوث المقدس .. ثلاثة اصوات .. ونشيد اسمه الاردن</h3>
-                            <p>الجلوس والجيش والثورة.. ثلاثة مواعيد لا تتزاحم بل تتكامل.</p>
-                        </div>
-                        <span class="article-genre">سياسة</span>
-                    </a>
-
-                    <!-- 2026-05-12: إبستين الاردن: المشرط الذي شق عمان! (رأي اليوم) -->
-                    <a href="https://www.raialyoum.com/إبستين-الاردن/" target="_blank" rel="noopener" class="article-row" data-title="إبستين الاردن المشرط الذي شق عمان" data-genre="سياسة">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>إبستين الاردن: المشرط الذي شق عمان!</h3>
-                            <p>صنعناه بأيدينا..وتبرأنا منه بأفواهنا! "إبستين عمّان" — الجريمة التي ارتكبناها قبله!</p>
-                        </div>
-                        <span class="article-genre">سياسة</span>
-                    </a>
-
-                    <!-- 2026-05-07: هاني شاكر لم يمت — نحن من مات فيه (نبأ الأردن) -->
-                    <a href="https://nabaajordan.com/articles/494681" target="_blank" rel="noopener" class="article-row" data-title="هاني شاكر لم يمت نحن من مات فيه" data-genre="ثقافة">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>هاني شاكر لم يمت — نحن من مات فيه</h3>
-                            <p>لم يمت هاني شاكر! لكن شيئًا مات فينا نحن — حين سمعنا الخبر!</p>
-                        </div>
-                        <span class="article-genre">ثقافة</span>
-                    </a>
-
-                    <!-- 2026-05-07: جنازة الفن الجميل: هاني شاكر يرحل… والطبقة الوسطى تشيَّع معه! (خبرني) -->
-                    <a href="https://www.khaberni.com/news/806782" target="_blank" rel="noopener" class="article-row" data-title="جنازة الفن الجميل هاني شاكر" data-genre="ثقافة">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>جنازة الفن الجميل: هاني شاكر يرحل… والطبقة الوسطى تشيَّع معه!</h3>
-                            <p>لم يمت هاني شاكر! جملة مريحة… لكنها ناقصة! الأدق: لم يمت الصوت… الذي مات هو الإنسان القادر على سماعه!</p>
-                        </div>
-                        <span class="article-genre">ثقافة</span>
-                    </a>
-
-                    <!-- 2026-05-06: كنتَ آخر دليل! (رأي اليوم) -->
-                    <a href="https://www.raialyoum.com/كنت-آخر-دليل/" target="_blank" rel="noopener" class="article-row" data-title="كنت آخر دليل" data-genre="أدب">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>كنتَ آخر دليل!</h3>
-                            <p>نص شخصي عن رحيل شخصية مهمة كانت دليلاً في الحياة.</p>
-                        </div>
-                        <span class="article-genre">أدب</span>
-                    </a>
-
-                    <!-- 2026-05-05: يا دكتور جواد العناني.. الأردني لا يتقشف.. هو يُستهلَك! (رأي اليوم) -->
-                    <a href="https://www.raialyoum.com/يا-دكتور-جواد-العناني/" target="_blank" rel="noopener" class="article-row" data-title="يا دكتور جواد العناني" data-genre="اقتصاد">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>يا دكتور جواد العناني.. الأردني لا يتقشف.. هو يُستهلَك!</h3>
-                            <p>رسالة مفتوحة لرئيس الوزراء الأسبق حول السياسات الاقتصادية.</p>
-                        </div>
-                        <span class="article-genre">اقتصاد</span>
-                    </a>
-
-                    <!-- 2026-05-02: يا عمال الأردن… هذا ليس عيدكم! (خبرني) -->
-                    <a href="https://www.khaberni.com/news/805626" target="_blank" rel="noopener" class="article-row" data-title="يا عمال الأردن هذا ليس عيدكم" data-genre="اجتماعي">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>يا عمال الأردن… هذا ليس عيدكم!</h3>
-                            <p>كتبتُ هذا النص في الأول من مايو. أرسلته… ولم يُنشر. وهذا — وحده — كافٍ ليكون مقدمةً صادقة لكل ما سيأتي!</p>
-                        </div>
-                        <span class="article-genre">اجتماعي</span>
-                    </a>
-
-                    <!-- 2026-04-28: نُحارب المخدرات بالدم... ونحرق الخرز بالفتوى! (نبأ الأردن) -->
-                    <a href="https://nabaajordan.com/articles/نحارب-المخدرات-بالدم/" target="_blank" rel="noopener" class="article-row" data-title="نحارب المخدرات بالدم" data-genre="سياسة">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>نُحارب المخدرات بالدم... ونحرق الخرز بالفتوى!</h3>
-                            <p>الغد أقل قسوة. وستصل الخرزة الزرقاء التالية. في لعبة أطفال من SHEIN.</p>
-                        </div>
-                        <span class="article-genre">سياسة</span>
-                    </a>
-
-                    <!-- 2026-04-22: حزب الأمة.. أيّ أمة؟ (رأي اليوم) -->
-                    <a href="https://www.raialyoum.com/حزب-الأمة-أي-أمة/" target="_blank" rel="noopener" class="article-row" data-title="حزب الأمة أي أمة" data-genre="سياسة">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>حزب الأمة.. أيّ أمة؟</h3>
-                            <p>عقد الإيجار الأردني الأطول: الإخوان والدولة بين الإخطار والإخلاء!</p>
-                        </div>
-                        <span class="article-genre">سياسة</span>
-                    </a>
-
-                    <!-- 2026-04-02: تشريع العَدَم! (نبأ الأردن) -->
-                    <a href="https://nabaajordan.com/articles/تشريع-العدم/" target="_blank" rel="noopener" class="article-row" data-title="تشريع العدم" data-genre="فكر">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>تشريع العَدَم!</h3>
-                            <p>نص فلسفي عن الفراغ التشريعي في بعض الملفات.</p>
-                        </div>
-                        <span class="article-genre">فكر</span>
-                    </a>
-
-                    <!-- 2026-03-30: الفيتو الملكي… حين تقول السيادة 'لا' (أخبارنا) -->
-                    <a href="https://akhbarna.net/article/الفيتو-الملكي" target="_blank" rel="noopener" class="article-row" data-title="الفيتو الملكي" data-genre="سياسة">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>الفيتو الملكي… حين تقول السيادة 'لا'</h3>
-                            <p>في الثلاثين من آذار 2026، لم يُخطئ الكنيست التقدير… بل ...</p>
-                        </div>
-                        <span class="article-genre">سياسة</span>
-                    </a>
-
-                    <!-- 2026-03-14: حين يصبح الجرح سلاحًا إيران (أخبارنا) -->
-                    <a href="https://akhbarna.net/article/حين-يصبح-الجرح-سلاحا-إيران" target="_blank" rel="noopener" class="article-row" data-title="حين يصبح الجرح سلاحا إيران" data-genre="سياسة">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>حين يصبح الجرح سلاحًا إيران: الرهينة التي تمسك بعنق البحر</h3>
-                            <p>لم يحدث في التاريخ ...</p>
-                        </div>
-                        <span class="article-genre">سياسة</span>
-                    </a>
-
-                    <!-- 2026-03-09: دمُهم لا يجف، ودمُك لا يكفي! (أخبارنا) -->
-                    <a href="https://akhbarna.net/article/336168" target="_blank" rel="noopener" class="article-row" data-title="دمهم لا يجف ودمك لا يكفي" data-genre="سياسة">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>دمُهم لا يجف، ودمُك لا يكفي!</h3>
-                            <p>الصمود ليس نصرًا، لكنه بات يكفي، وحين يكفي الصمود تنتهي الحرب من الداخل قبل أن تنتهي على الأرض.</p>
-                        </div>
-                        <span class="article-genre">سياسة</span>
-                    </a>
-
-                    <!-- 2026-03-06: هل نملك صباحنا كاملاً…؟! (خبرني) -->
-                    <a href="https://www.khaberni.com/news/788457" target="_blank" rel="noopener" class="article-row" data-title="هل نملك صباحنا كاملا" data-genre="فكر">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>هل نملك صباحنا كاملاً…؟!</h3>
-                            <p>تساؤل فلسفي عن مدى سيطرتنا على حياتنا اليومية.</p>
-                        </div>
-                        <span class="article-genre">فكر</span>
-                    </a>
-
-                    <!-- 2026-03-01: دولةٌ تحترف الموت ولا تُتقن الحياة! (أخبارنا) -->
-                    <a href="https://akhbarna.net/article/دولة-تحترف-الموت" target="_blank" rel="noopener" class="article-row" data-title="دولة تحترف الموت" data-genre="سياسة">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>دولةٌ تحترف الموت ولا تُتقن الحياة!</h3>
-                            <p>نقد للسياسات التي تهمش جودة الحياة.</p>
-                        </div>
-                        <span class="article-genre">سياسة</span>
-                    </a>
-
-                    <!-- 2026-02-10: "غرام وانتقام" على وقع "ثورة الشك" (خبرني) -->
-                    <a href="https://www.khaberni.com/news/غرام-وانتقام" target="_blank" rel="noopener" class="article-row" data-title="غرام وانتقام ثورة الشك" data-genre="أدب">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>"غرام وانتقام" على وقع "ثورة الشك" بين "الدوار" و"الشارع"!</h3>
-                            <p>العلاقة التي تربط الأردني بالحكومة لم تعد تخضع ...</p>
-                        </div>
-                        <span class="article-genre">أدب</span>
-                    </a>
-
-                    <!-- 2026-02-09: القفاز المخملي! (أخبارنا) -->
-                    <a href="https://akhbarna.net/article/القفاز-المخملي" target="_blank" rel="noopener" class="article-row" data-title="القفاز المخملي" data-genre="سياسة">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>القفاز المخملي!</h3>
-                            <p>قراءة في أدوات السلطة الناعمة.</p>
-                        </div>
-                        <span class="article-genre">سياسة</span>
-                    </a>
-
-                    <!-- 2026-02-01: في حب الملك! (أخبارنا) -->
-                    <a href="https://akhbarna.net/article/330185" target="_blank" rel="noopener" class="article-row" data-title="في حب الملك" data-genre="أدب">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>في حب الملك!</h3>
-                            <p>حين يتحول الانتماء من عاطفة عابرة إلى حكم تاريخي مكتمل الأركان.</p>
-                        </div>
-                        <span class="article-genre">أدب</span>
-                    </a>
-
-                    <!-- 2026-01-30: نحبُّه...! (خبرني) -->
-                    <a href="https://www.khaberni.com/news/نحبّه" target="_blank" rel="noopener" class="article-row" data-title="نحبه" data-genre="أدب">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>نحبُّه...!</h3>
-                            <p>وحين نقول نحبُّه، فإننا لا نُعلن عاطفة، بل نُصدر حكمًا تاريخيًا مكتمل الأركان!</p>
-                        </div>
-                        <span class="article-genre">أدب</span>
-                    </a>
-
-                    <!-- 2026-01-27: إنشقاق وعي الشباب بين الغيبوبة والغياب! (نبأ الأردن) -->
-                    <a href="https://nabaajordan.com/articles/484002" target="_blank" rel="noopener" class="article-row" data-title="إنشقاق وعي الشباب" data-genre="اجتماعي">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>إنشقاق وعي الشباب بين الغيبوبة والغياب!</h3>
-                            <p>ليس أخطر ما يمكن أن تخسره الأوطان أبناءها، بل أن تخسر قدرتهم على الاحتمال وهم ما زالوا فيها.</p>
-                        </div>
-                        <span class="article-genre">اجتماعي</span>
-                    </a>
-
-                    <!-- 2026-01-18: الأردن: السيادة لا تشرب مع القهوة (رأي اليوم) -->
-                    <a href="https://www.raialyoum.com/السيادة-لا-تشرب-مع-القهوة/" target="_blank" rel="noopener" class="article-row" data-title="السيادة لا تشرب مع القهوة" data-genre="فكر">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>الأردن: السيادة لا تشرب مع القهوة</h3>
-                            <p>خرافة القراءة الاستشراقية للعشيرة الأردنية.</p>
-                        </div>
-                        <span class="article-genre">فكر</span>
-                    </a>
-
-                    <!-- 2025-12-29: الهمس الذي يشيد صرحًا: جعفر حسان (أخبارنا) -->
-                    <a href="https://akhbarna.net/article/الهمس-الذي-يشيد-صرحا" target="_blank" rel="noopener" class="article-row" data-title="الهمس الذي يشيد صرحا جعفر حسان" data-genre="سياسة">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>الهمس الذي يشيد صرحًا: جعفر حسان ترجمان الدولة الأردنية</h3>
-                            <p>قراءة في شخصية رئيس الوزراء الأردني.</p>
-                        </div>
-                        <span class="article-genre">سياسة</span>
-                    </a>
-
-                    <!-- 2025-12-11: عندما وقفت عمّان وبغداد في خندق واحد (خبرني) -->
-                    <a href="https://www.khaberni.com/news/عندما-وقفت-عمان-وبغداد" target="_blank" rel="noopener" class="article-row" data-title="عمان وبغداد في خندق واحد" data-genre="سياسة">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>عندما وقفت عمّان وبغداد في خندق واحد</h3>
-                            <p>مباراة الغد التي ستلعب خارج الملعب.</p>
-                        </div>
-                        <span class="article-genre">سياسة</span>
-                    </a>
-
-                    <!-- 2025-12-05: المنتخب الوطني.. نشامى يعشقون الفوز (أخبارنا) -->
-                    <a href="https://akhbarna.net/article/المنتخب-الوطني-نشامى" target="_blank" rel="noopener" class="article-row" data-title="المنتخب الوطني نشامى" data-genre="رياضة">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>المنتخب الوطني.. نشامى يعشقون الفوز</h3>
-                            <p>قراءة في روح الفريق الوطني.</p>
-                        </div>
-                        <span class="article-genre">رياضة</span>
-                    </a>
-
-                    <!-- 2025-11-11: السر الخطير في حب الأمير! (خبرني) -->
-                    <a href="https://www.khaberni.com/news/السر-الخطير-في-حب-الأمير" target="_blank" rel="noopener" class="article-row" data-title="السر الخطير في حب الأمير" data-genre="سياسة">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>السر الخطير في حب الأمير!</h3>
-                            <p>عندما تتكاثر الشعارات ...</p>
-                        </div>
-                        <span class="article-genre">سياسة</span>
-                    </a>
-
-                    <!-- 2025-12-23: تأملات في عدالة تمشي على عجل! (خبرني) -->
-                    <a href="https://www.khaberni.com/news/تأملات-في-عدالة" target="_blank" rel="noopener" class="article-row" data-title="تأملات في عدالة" data-genre="فكر">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>تأملات في عدالة تمشي على عجل!</h3>
-                            <p>نص تأملي في مفهوم العدالة.</p>
-                        </div>
-                        <span class="article-genre">فكر</span>
-                    </a>
-
-                    <!-- ===== قيد النشر (بدون روابط، لأنها غير منشورة فعلياً) ===== -->
-                    <div class="archive-subhead">قيد النشر (أعمال جديدة)</div>
-
-                    <div class="article-row unpublished" data-title="الأردن النهر الذي بدأ حلما" data-genre="قيد النشر">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>الأردن... النهر الذي بدأ حلما!</h3>
-                            <p>معادلة الردع الأردنية أمام الاستهداف الهجين المتزامن، عبر رحلة حلم طفل يتحول إلى مشروع دولة.</p>
-                        </div>
-                        <span class="article-genre pending">قيد النشر</span>
-                    </div>
-
-                    <div class="article-row unpublished" data-title="عبد الله الثاني حين تصير الأوطان ملوكًا" data-genre="قيد النشر">
-                        <div class="article-tag">ع د</div>
-                        <div class="article-body">
-                            <h3>عبد الله الثاني... حين تصير الأوطان ملوكًا، ويصبح العدل سِمَة التاج</h3>
-                            <p>هنا لا أكتب عن ملك يحكم، بل عن رمزٍ ينهض. لا أصف رجلاً، بل أستدعي وطنًا في هيئة إنسان.</p>
-                        </div>
-                        <span class="article-genre pending">قيد النشر</span>
-                    </div>
-
-                </div>
+            <div style="font-size:0.8rem; color:#1a3b6b;">
+                <i class="fas fa-share-alt"></i> شارك
             </div>
         </div>
-    </section>
 
-    <div class="wrap"><div class="divider"></div></div>
+        <!-- عنوان المقالات -->
+        <div class="grid-title" data-aos="fade-right">
+            <i class="fas fa-archive"></i> أرشيف المقالات
+        </div>
 
-    <section id="contact">
-        <div class="wrap reveal">
-            <div class="contact-box">
-                <h2>مساحة للكلمة التي تصل</h2>
-                <p>للنشر، أو للرأي، أو لمن يريد أن يقول إنه قرأ.</p>
-                <a href="mailto:emadawoud@yahoo.com" class="mail-link">emadawoud@yahoo.com</a>
+        <!-- شبكة المقالات -->
+        <div class="articles-grid" id="articlesContainer">
+            <div class="loading">
+                <div><i class="fas fa-spinner fa-spin fa-3x"></i></div>
+                <p style="margin-top:15px;">جاري تحميل المقالات...</p>
             </div>
         </div>
-    </section>
 
-</main>
-
-<footer>
-    <div class="wrap">
-        عماد داود — جميع الحقوق محفوظة
+        <div class="footer">
+            <i class="fas fa-crown"></i> عماد داود &bull; جميع الحقوق محفوظة
+        </div>
     </div>
-</footer>
 
-<script>
-    (function() {
-        const searchInput = document.getElementById('searchInput');
-        const allArticles = document.querySelectorAll('.article-row');
-        const published = document.querySelectorAll('.article-row:not(.unpublished)');
-        const countSpan = document.getElementById('articleCount');
+    <!-- المكتبات الخارجية (JavaScript) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-        if (countSpan) countSpan.textContent = published.length;
+    <script>
+        // 1. تفعيل مكتبة ظهور العناصر عند التمرير (AOS)
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 50
+        });
 
-        if (searchInput) {
-            searchInput.addEventListener('input', function() {
-                const query = this.value.trim().toLowerCase();
-                allArticles.forEach(row => {
-                    const title = (row.getAttribute('data-title') || '').toLowerCase();
-                    const genre = (row.getAttribute('data-genre') || '').toLowerCase();
-                    const match = title.includes(query) || genre.includes(query);
-                    row.classList.toggle('hidden', !match && query !== '');
-                });
-            });
-        }
+        // 2. تأثير الكتابة المتحركة (Typing)
+        new Typed('#typing-text', {
+            strings: ['كاتب وصحفي', 'مؤرخ للحدث', 'راصد للحقيقة'],
+            typeSpeed: 80,
+            backSpeed: 50,
+            backDelay: 2000,
+            loop: true,
+            cursorChar: '|',
+            autoInsertCss: true,
+        });
 
-        const revealEls = document.querySelectorAll('.reveal');
-        if ('IntersectionObserver' in window) {
-            const io = new IntersectionObserver((entries) => {
-                entries.forEach(e => {
-                    if (e.isIntersecting) {
-                        e.target.classList.add('in');
+        // 3. شريط تقدم القراءة
+        window.addEventListener('scroll', function() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById('progress-bar').style.width = scrolled + '%';
+
+            // زر العودة للأعلى
+            var btn = document.getElementById('backToTop');
+            if (winScroll > 300) {
+                btn.classList.add('show');
+            } else {
+                btn.classList.remove('show');
+            }
+        });
+
+        // 4. زر العودة للأعلى (النقر)
+        document.getElementById('backToTop').addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // 5. جلب المقالات وعداد متحرك
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.getElementById('articlesContainer');
+            const countSpan = document.getElementById('articleCount');
+            const updateSpan = document.getElementById('lastUpdate');
+
+            fetch('data/articles.json')
+                .then(response => {
+                    if (!response.ok) throw new Error('ملف المقالات غير موجود');
+                    return response.json();
+                })
+                .then(articles => {
+                    container.innerHTML = '';
+                    if (!articles || articles.length === 0) {
+                        container.innerHTML = `<div class="no-articles"><i class="fas fa-folder-open fa-3x"></i><p style="margin-top:15px;">لا توجد مقالات متاحة حالياً.</p></div>`;
+                        countSpan.textContent = '0';
+                        return;
                     }
+
+                    // تحديث الوقت
+                    const now = new Date();
+                    updateSpan.textContent = now.toLocaleDateString('ar-EG', { year: 'numeric', month: 'long', day: 'numeric' });
+
+                    // عداد متحرك (يبدأ من 0 إلى العدد الفعلي)
+                    const targetCount = articles.length;
+                    let currentCount = 0;
+                    const counterInterval = setInterval(() => {
+                        currentCount += Math.ceil(targetCount / 30);
+                        if (currentCount >= targetCount) {
+                            currentCount = targetCount;
+                            clearInterval(counterInterval);
+                        }
+                        countSpan.textContent = currentCount;
+                    }, 30);
+
+                    // عرض المقالات
+                    articles.forEach((article, index) => {
+                        const card = document.createElement('div');
+                        card.className = 'card';
+                        card.setAttribute('data-aos', 'fade-up');
+                        card.setAttribute('data-aos-delay', (index % 5) * 50);
+
+                        const title = article.title || 'بدون عنوان';
+                        const link = article.link || '#';
+                        const source = article.source || 'مصدر';
+                        let date = article.date || 'تاريخ غير محدد';
+                        try { const d = new Date(date); if (!isNaN(d)) date = d.toLocaleDateString('ar-EG', { year: 'numeric', month: 'short', day: 'numeric' }); } catch(e) {}
+
+                        card.innerHTML = `
+                            <div class="source-badge"><i class="fas fa-globe"></i> ${source}</div>
+                            <h3><a href="${link}" target="_blank" rel="noopener">${title}</a></h3>
+                            <div class="card-footer">
+                                <span><i class="far fa-calendar-alt"></i> ${date}</span>
+                                <a href="${link}" target="_blank" rel="noopener" class="read-more">قراءة <i class="fas fa-arrow-left"></i></a>
+                            </div>
+                        `;
+                        container.appendChild(card);
+                    });
+
+                    // إعادة تفعيل AOS للعناصر الجديدة
+                    AOS.refresh();
+                })
+                .catch(error => {
+                    container.innerHTML = `
+                        <div class="no-articles">
+                            <i class="fas fa-exclamation-triangle" style="color:#e74c3c; font-size:2.5rem;"></i>
+                            <p style="margin-top:15px;">حدث خطأ في تحميل المقالات. تأكد من تشغيل بوت التحديث.</p>
+                            <p style="font-size:0.8rem; margin-top:10px; color:#94a3b8;">${error.message}</p>
+                        </div>
+                    `;
+                    countSpan.textContent = '0';
+                    updateSpan.textContent = 'غير متاح';
                 });
-            }, { threshold: 0.1 });
-            revealEls.forEach(el => io.observe(el));
-        } else {
-            revealEls.forEach(el => el.classList.add('in'));
-        }
-    })();
-</script>
+        });
+    </script>
 
 </body>
 </html>
