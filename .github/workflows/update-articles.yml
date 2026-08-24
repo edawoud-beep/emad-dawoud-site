@@ -218,5 +218,6 @@ jobs:
             echo "لا توجد مقالات جديدة."
           else
             git commit -m "تحديث أرشيف مقالات عماد داود"
+            git pull origin main --rebase
             git push
           fi
