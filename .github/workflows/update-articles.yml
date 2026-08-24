@@ -48,8 +48,10 @@ jobs:
               '"الصحفي عماد داود"'
           ]
 
-          # مصادر ظهرت فيها مقالات الكاتب
+          # مصادر ظهرت فيها مقالات الكاتب (أضفت موقعك القديم هنا)
           known_domains = [
+              "emad-dawoud.netlify.app",
+              "alrai.com",
               "khaberni.com",
               "akhbarna.net",
               "nabaajordan.com",
@@ -210,7 +212,7 @@ jobs:
       - name: حفظ التحديث
         run: |
           git config user.name "Emad Dawoud Archive Bot"
-          git config.user.email "actions@users.noreply.github.com"
+          git config user.email "actions@users.noreply.github.com"
 
           git add data/articles.json
 
