@@ -192,17 +192,15 @@
       border: 4px solid var(--gold);
       box-shadow: 0 0 40px rgba(201, 168, 76, 0.2);
       margin-bottom: 24px;
-      transition: 0.4s;
-      background: var(--gold);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Aref Ruqaa', serif;
-      font-size: 40px;
-      font-weight: 700;
-      color: var(--ink);
+      transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      object-fit: cover;
+      background: var(--ink-light);
     }
-    .hero-avatar:hover { transform: scale(1.05) rotate(-4deg); border-color: var(--gold-bright); }
+    .hero-avatar:hover {
+      transform: scale(1.08) rotate(-3deg);
+      border-color: var(--gold-bright);
+      box-shadow: 0 0 60px rgba(201, 168, 76, 0.4);
+    }
 
     .seal-wrapper {
       display: flex;
@@ -297,21 +295,31 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: var(--gold);
-      font-family: 'Aref Ruqaa', serif;
-      font-size: 48px;
-      font-weight: 700;
-      color: var(--ink);
+      background: var(--ink-light);
       position: relative;
+      object-fit: cover;
+    }
+    .about-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.4s;
+    }
+    .about-photo:hover img {
+      transform: scale(1.03);
     }
     .about-photo::after {
       content: '';
       position: absolute;
       inset: 12px;
-      border: 1px solid var(--ink);
+      border: 1px solid var(--gold);
       border-radius: 16px;
-      opacity: 0.2;
+      opacity: 0.3;
       pointer-events: none;
+      transition: 0.3s;
+    }
+    .about-photo:hover::after {
+      opacity: 0.6;
     }
     .about-text p {
       font-size: 18px;
@@ -548,7 +556,8 @@
         <div class="tagline">كاتب وصحفي أردني</div>
         <h1>كلمة <em>لا تُستعار</em><br>وموقف لا يُقلَّد</h1>
         <p class="sub">كلمة لا تُستعار من أحد، وموقف لا يُشترى بثمن. كل نص هنا معركة صغيرة مع النسيان.</p>
-        <div class="hero-avatar">عماد</div>
+        <!-- الصورة الشخصية -->
+        <img src="https://scontent.famm2-3.fna.fbcdn.net/v/t39.99422-6/726016504_28010714998529997_8287561975676322683_n.png?stp=dst-jpg_tt6&cstp=mx1280x1155&ctp=s565x565&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGsX406ZtveXvXpvY_dpRgX6gkIwCTL6M3qCQjAJMvozb0P7XXSlew7-qvDodxxfmw7VFXMZK7ifL9SMD43nHVa&_nc_ohc=lBH3ZVZdisoQ7kNvwF9n5TH&_nc_oc=AdocOmEUnxfYswrxRjYk1HMetpTgwmCC8KmPjI8uwDzQHAsTosgHH6CGN1B_58nS-P4&_nc_zt=14&_nc_ht=scontent.famm2-3.fna&_nc_gid=9FXtXaFZoHmEf38GmCoR_g&_nc_ss=7d2a8&oh=00_AQGZZzvZgUs_sxSAOCrs1miKdrTbzBeEZySQQXaVjz-fzQ&oe=6A95ABCE" alt="عماد داود" class="hero-avatar" />
         <div class="typed-wrap">
           <i class="fas fa-feather-alt"></i>
           <span id="typed-text"></span>
@@ -578,7 +587,9 @@
 
   <section id="about">
     <div class="container about-grid" data-aos="fade-up">
-      <div class="about-photo">عماد داود</div>
+      <div class="about-photo">
+        <img src="https://scontent.famm2-3.fna.fbcdn.net/v/t39.99422-6/726016504_28010714998529997_8287561975676322683_n.png?stp=dst-jpg_tt6&cstp=mx1280x1155&ctp=s565x565&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGsX406ZtveXvXpvY_dpRgX6gkIwCTL6M3qCQjAJMvozb0P7XXSlew7-qvDodxxfmw7VFXMZK7ifL9SMD43nHVa&_nc_ohc=lBH3ZVZdisoQ7kNvwF9n5TH&_nc_oc=AdocOmEUnxfYswrxRjYk1HMetpTgwmCC8KmPjI8uwDzQHAsTosgHH6CGN1B_58nS-P4&_nc_zt=14&_nc_ht=scontent.famm2-3.fna&_nc_gid=9FXtXaFZoHmEf38GmCoR_g&_nc_ss=7d2a8&oh=00_AQGZZzvZgUs_sxSAOCrs1miKdrTbzBeEZySQQXaVjz-fzQ&oe=6A95ABCE" alt="عماد داود" />
+      </div>
       <div class="about-text">
         <span class="sec-num">عن الكاتب</span>
         <p><strong>كلمة لا تُستعار من أحد، وموقف لا يُشترى بثمن.</strong> عماد داود كاتب وصحفي أردني، يمتد حضوره في المشهد الإعلامي بين التحليل السياسي العميق والنقد الاجتماعي الساخر. كتب في صحف ومواقع إلكترونية عربية، من أبرزها <span class="highlight">خبرني، رأي اليوم، نبأ الأردن، أخبارنا، وبانيت</span>.</p>
@@ -610,7 +621,7 @@
       <div class="section-head" data-aos="fade-right">
         <span class="sec-num">الأرشيف الكامل</span>
         <h2>جميع المقالات</h2>
-        <p>أكثر من 85 مقالاً منشوراً في أبرز المواقع الإخبارية العربية.</p>
+        <p>أكثر من 85 مقالاً منشوراً في أبرز المواقع الإخبارية العربية. يتم تحديثها تلقائياً.</p>
       </div>
 
       <div class="archive-tools" data-aos="fade-up">
@@ -626,7 +637,12 @@
         </div>
       </div>
 
-      <div class="articles-grid" id="articlesContainer" data-aos="fade-up"></div>
+      <div class="articles-grid" id="articlesContainer" data-aos="fade-up">
+        <div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--parchment-dim);">
+          <i class="fas fa-spinner fa-spin fa-2x" style="color:var(--gold);"></i>
+          <p style="margin-top:12px;">جاري تحميل المقالات...</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -671,90 +687,8 @@
       quotesGrid.appendChild(div);
     });
 
-    const articlesData = [
-      { title: "الهاشمية.. فيزياء البقاء في شرق أوسط متغير!", link: "https://www.khaberni.com/news/747307", source: "خبرني", date: "2026-08-26", cat: "سياسة" },
-      { title: "الإنسان الأخير في حضرة الحمير", link: "https://www.khaberni.com/news/745966", source: "خبرني", date: "2026-08-25", cat: "ساخر" },
-      { title: "الملك عبد الله الثاني: القيادة التي تلامس القلب وتخاطب الضمير", link: "https://www.khaberni.com/news/744942", source: "خبرني", date: "2026-08-24", cat: "سياسة" },
-      { title: "السر الخطير في حب الأمير!", link: "https://www.khaberni.com/news/750313", source: "خبرني", date: "2026-08-23", cat: "سياسة" },
-      { title: "المنتخب الوطني… دخيلك شو عملت بقلوبنا!", link: "https://www.khaberni.com/news/758353", source: "خبرني", date: "2026-08-22", cat: "رياضة" },
-      { title: "بين الشبكة والخلية: لماذا تنتصر ممالك الحكمة على جمهوريات الخوف؟!", link: "https://www.khaberni.com/news/759430", source: "خبرني", date: "2026-08-21", cat: "ثقافة" },
-      { title: "عندما وقفت عمّان وبغداد في خندق واحد", link: "https://www.khaberni.com/news/760234", source: "خبرني", date: "2026-08-20", cat: "سياسة" },
-      { title: "ماذا لو عاد منتصرا؟", link: "https://www.khaberni.com/news/762500", source: "خبرني", date: "2026-08-19", cat: "سياسة" },
-      { title: "جعفر حسان… ترجمان الدولة الأردنية!", link: "https://www.khaberni.com/news/765655", source: "خبرني", date: "2026-08-18", cat: "سياسة" },
-      { title: "بورك الماء المسفوح يا كرك!", link: "https://www.khaberni.com/news/766391", source: "خبرني", date: "2026-08-17", cat: "اقتصاد" },
-      { title: "لو إني أعرف خاتمتي… ما كنت بدأت!", link: "https://www.khaberni.com/news/769574", source: "خبرني", date: "2026-08-16", cat: "فكر" },
-      { title: "If I Knew My End… I Would Not Have Started!", link: "https://www.khaberni.com/news/769575", source: "خبرني", date: "2026-08-16", cat: "فكر" },
-      { title: "بلدة طيبة.. ورب غفور!", link: "https://www.khaberni.com/news/767929", source: "خبرني", date: "2026-08-15", cat: "اقتصاد" },
-      { title: "محراب الأردن المفتوح: على عتبة العام الجديد", link: "https://www.khaberni.com/news/767127", source: "خبرني", date: "2026-08-14", cat: "سياسة" },
-      { title: "صوتان وأردن!", link: "https://www.khaberni.com/news/770395", source: "خبرني", date: "2026-08-13", cat: "سياسة" },
-      { title: "من «غرفة الإنعاش» إلى زمن البناء", link: "https://www.khaberni.com/news/771108", source: "خبرني", date: "2026-08-12", cat: "سياسة" },
-      { title: "من أرض الخير: إعلان وفاة الدولة الموسمية!", link: "https://www.khaberni.com/news/773848", source: "خبرني", date: "2026-08-11", cat: "ساخر" },
-      { title: "لماذا تغيّر لون الكاز؟!!", link: "https://www.khaberni.com/news/774693", source: "خبرني", date: "2026-08-10", cat: "اقتصاد" },
-      { title: "عندما يصير الوعي جريمة يُعاقب عليها بالغيبوبة؟!!", link: "https://www.khaberni.com/news/775700", source: "خبرني", date: "2026-08-09", cat: "ثقافة" },
-      { title: "على مكتب رئيس الوزراء.. مشروع أول حقيبة وزارية للسعادة والفرفشة الوطنية!", link: "https://www.khaberni.com/news/776281", source: "خبرني", date: "2026-08-08", cat: "ساخر" },
-      { title: "الأردن بين هدوء الاستقرار وقلق الانتظار (1-5)", link: "https://www.khaberni.com/news/777690", source: "خبرني", date: "2026-08-07", cat: "سياسة" },
-      { title: "الأردن بين هدوء الاستقرار وقلق الانتظار (2-5)", link: "https://www.khaberni.com/news/778884", source: "خبرني", date: "2026-08-06", cat: "سياسة" },
-      { title: "عندما تتحوّل القوادة إلى أداة حكم!", link: "https://www.khaberni.com/news/779657", source: "خبرني", date: "2026-08-05", cat: "ساخر" },
-      { title: "العجز إذ يحاول عبثًا ملامسة المستحيل!", link: "https://www.khaberni.com/news/780514", source: "خبرني", date: "2026-08-04", cat: "اقتصاد" },
-      { title: "السردية الأردنية: البحث عن راوٍ!", link: "https://www.khaberni.com/news/781900", source: "خبرني", date: "2026-08-03", cat: "ثقافة" },
-      { title: "بين قلمين: الكحل والحبر!", link: "https://www.khaberni.com/news/784675", source: "خبرني", date: "2026-08-02", cat: "ثقافة" },
-      { title: "رمضان تحت الإعلان!.. الجنة المُصطنعة تُبث مجانًا!", link: "https://www.khaberni.com/news/785973", source: "خبرني", date: "2026-08-01", cat: "ثقافة" },
-      { title: "يا هَـ(مَلالي)!", link: "https://www.khaberni.com/news/787712", source: "خبرني", date: "2026-07-31", cat: "ساخر" },
-      { title: "هل نملك صباحنا كاملاً…؟!", link: "https://www.khaberni.com/news/788457", source: "خبرني", date: "2026-07-30", cat: "فكر" },
-      { title: "حين يصبح الجرح سلاحًا.. إيران", link: "https://www.khaberni.com/news/790286", source: "خبرني", date: "2026-07-29", cat: "سياسة" },
-      { title: "في سوق الكلام: كل شيء للبيع إلا السؤال", link: "https://www.khaberni.com/news/791287", source: "خبرني", date: "2026-07-28", cat: "ثقافة" },
-      { title: "حين تُدمن الدولة صوتها: نظرية يلا تنام!", link: "https://www.khaberni.com/news/794914", source: "خبرني", date: "2026-07-27", cat: "ساخر" },
-      { title: "التقشف المستور: الدولة كما لم تُرَ من قبل!", link: "https://www.khaberni.com/news/796169", source: "خبرني", date: "2026-07-26", cat: "اقتصاد" },
-      { title: "شافوني قالوا متهني!", link: "https://www.khaberni.com/news/796981", source: "خبرني", date: "2026-07-25", cat: "ساخر" },
-      { title: "يُرفرف — ولا يُسأل!", link: "https://www.khaberni.com/news/800211", source: "خبرني", date: "2026-07-24", cat: "سياسة" },
-      { title: "تنوّعت القمصان… والعري واحد!", link: "https://www.khaberni.com/news/800937", source: "خبرني", date: "2026-07-23", cat: "ساخر" },
-      { title: "الأسامي هي هي… والقلوب تغيّرت!", link: "https://www.khaberni.com/news/802266", source: "خبرني", date: "2026-07-22", cat: "سياسة" },
-      { title: "عايش ومش عايش! الأردن على حافة الاعتياد", link: "https://www.khaberni.com/news/802735", source: "خبرني", date: "2026-07-21", cat: "سياسة" },
-      { title: "Living and Not Living!", link: "https://www.khaberni.com/news/802736", source: "خبرني", date: "2026-07-21", cat: "فكر" },
-      { title: "In the Holy Market — Everyone Sells!", link: "https://www.khaberni.com/news/804783", source: "خبرني", date: "2026-07-20", cat: "ساخر" },
-      { title: "يا عمال الأردن… هذا ليس عيدكم!", link: "https://www.khaberni.com/news/805626", source: "خبرني", date: "2026-07-19", cat: "اقتصاد" },
-      { title: "بدّنا نروق!", link: "https://www.khaberni.com/news/810918", source: "خبرني", date: "2026-07-18", cat: "ساخر" },
-      { title: "لماذا تترجمون الوزير — لا بل ترجمونه؟!", link: "https://www.khaberni.com/news/811750", source: "خبرني", date: "2026-07-17", cat: "ساخر" },
-      { title: "هذا التراب لا يركع!", link: "https://www.khaberni.com/news/813001", source: "خبرني", date: "2026-07-16", cat: "سياسة" },
-      { title: "ماذا ترك الشارع فينا؟!", link: "https://www.khaberni.com/news/815164", source: "خبرني", date: "2026-07-15", cat: "سياسة" },
-      { title: "بلاغ إلى الصالح العام!", link: "https://www.khaberni.com/news/815575", source: "خبرني", date: "2026-07-14", cat: "سياسة" },
-      { title: "جواد العناني… جرح ثاني!", link: "https://www.khaberni.com/news/816314", source: "خبرني", date: "2026-07-13", cat: "سياسة" },
-      { title: "دولة الرئيس جعفر حسان... (المصاري مش كلشي)...!!", link: "https://www.khaberni.com/news/817488", source: "خبرني", date: "2026-07-12", cat: "اقتصاد" },
-      { title: "الثالوث المقدس.. ثلاثة أصوات.. ونشيد اسمه الأردن", link: "https://www.khaberni.com/news/818254", source: "خبرني", date: "2026-07-11", cat: "سياسة" },
-      { title: "الأردن والنشامى... جرح يُسدِّد!", link: "https://www.khaberni.com/news/819321", source: "خبرني", date: "2026-07-10", cat: "سياسة" },
-      { title: "الأردن والنشامى... حين نظرنا إلى أنفسنا في العالم!", link: "https://www.khaberni.com/news/820049", source: "خبرني", date: "2026-07-09", cat: "رياضة" },
-      { title: "جيل Z الأردني... عالق عند 99%", link: "https://www.khaberni.com/news/820864", source: "خبرني", date: "2026-07-08", cat: "ثقافة" },
-      { title: "المشكلة أننا صدّقنا حالنا!", link: "https://www.khaberni.com/news/821880", source: "خبرني", date: "2026-07-07", cat: "ساخر" },
-      { title: "The Problem Is That We Believed Ourselves!", link: "https://www.khaberni.com/news/821881", source: "خبرني", date: "2026-07-07", cat: "فكر" },
-      { title: "الطيبات... وقبر في السابعة والأربعين!", link: "https://www.khaberni.com/news/822887", source: "خبرني", date: "2026-07-06", cat: "اقتصاد" },
-      { title: "الحسين بن عبدالله... الكفة الثالثة!", link: "https://www.khaberni.com/news/823410", source: "خبرني", date: "2026-07-05", cat: "سياسة" },
-      { title: "افتح يا سمسم... ومليارات تحت الأرض!", link: "https://www.khaberni.com/news/824259", source: "خبرني", date: "2026-07-04", cat: "اقتصاد" },
-      { title: "هل تجري؟", link: "https://www.khaberni.com/news/827757", source: "خبرني", date: "2026-07-03", cat: "ساخر" },
-      { title: "الأردن لم يعد ممراً... صار هدفاً!", link: "https://www.khaberni.com/news/830974", source: "خبرني", date: "2026-07-02", cat: "سياسة" },
-      { title: "جرش تهتف لأبي وديع... والفن يبقى حيث تتهاوى العروش!", link: "https://www.khaberni.com/news/832217", source: "خبرني", date: "2026-07-01", cat: "ثقافة" },
-      { title: "الحريق يسأل عن الحطب... لا عن الجيران!", link: "https://www.khaberni.com/news/834061", source: "خبرني", date: "2026-06-30", cat: "ساخر" },
-      { title: "القماش الذي ابتلع النقاش!", link: "https://www.khaberni.com/news/835597", source: "خبرني", date: "2026-06-29", cat: "ساخر" },
-      { title: "وزارة التربية والتعليم تكبر... فهل تكبر شجاعة عزمي محافظة معها؟!", link: "https://www.khaberni.com/news/836293", source: "خبرني", date: "2026-06-28", cat: "سياسة" },
-      { title: "قديش جبت..؟!", link: "https://www.khaberni.com/news/836948", source: "خبرني", date: "2026-06-27", cat: "اقتصاد" },
-      { title: "الملك في بكين... لماذا الآن؟!", link: "https://www.khaberni.com/news/839139", source: "خبرني", date: "2026-06-26", cat: "سياسة" },
-      { title: "جعفر حسان وعبد الرؤوف الكسم... ماذا تفعل الدولة برئيس حكومتها؟", link: "https://www.khaberni.com/news/839898", source: "خبرني", date: "2026-06-25", cat: "سياسة" },
-      { title: "من يربح حين يخسر الجميع؟!", link: "https://www.khaberni.com/news/840688", source: "خبرني", date: "2026-06-24", cat: "سياسة" },
-      { title: "الليمونة كشفتنا!", link: "https://www.khaberni.com/news/841387", source: "خبرني", date: "2026-06-23", cat: "اقتصاد" },
-      { title: "الجنرال بلوط..!!", link: "https://www.khaberni.com/news/841973", source: "خبرني", date: "2026-06-22", cat: "ساخر" },
-      { title: "إنشقاق وعي الشباب بين الغيبوبة والغياب!", link: "https://nabaajordan.com/articles/484002", source: "نبأ الأردن", date: "2026-01-27", cat: "ثقافة" },
-      { title: "هاني شاكر لم يمت — نحن من مات فيه", link: "https://nabaajordan.com/articles/494681", source: "نبأ الأردن", date: "2026-05-07", cat: "ثقافة" },
-      { title: "بغداد والمغارة... حين أصبحت سرقة القرن عقيدة", link: "https://nabaajordan.com/articles/500345", source: "نبأ الأردن", date: "2026-07-02", cat: "سياسة" },
-      { title: "الأردن: بيان الدولة الدائمة ومبدأ الميدان", link: "https://akhbarna.net/article/328587", source: "أخبارنا", date: "2026-08-26", cat: "سياسة" },
-      { title: "الدولة الدائمة والميدان: إعادة تعريف القوة", link: "https://akhbarna.net/article/329266", source: "أخبارنا", date: "2026-08-26", cat: "سياسة" },
-      { title: "لا شيك مفتوح لأحد... الأمن الوطني الأردني هو الحَكَم الوحيد", link: "https://panet.com/index.php/story/4291152", source: "بانيت", date: "2026-08-03", cat: "سياسة" },
-      { title: "لو أني أعرف خاتمتي… هل كنت لأبدأ؟", link: "https://sa24.co/article/771947255/", source: "sa24.co", date: "2026-08-26", cat: "فكر" },
-      { title: "على مكتب دولة الرئيس جعفر حسان: تأملات في عدالة تمشي على عجل!", link: "https://sa24.co/article/771906026/", source: "sa24.co", date: "2026-08-26", cat: "سياسة" },
-      { title: "ما لا تعكسه المرايا!", link: "https://sa24.co/article/772050538/", source: "sa24.co", date: "2026-08-26", cat: "ثقافة" }
-    ];
-
     const container = document.getElementById('articlesContainer');
     const countSpan = document.getElementById('articleCount');
-    countSpan.textContent = articlesData.length;
 
     function shareArticle(link, title, platform) {
       const url = encodeURIComponent(link);
@@ -766,33 +700,34 @@
       if (shareUrl) window.open(shareUrl, '_blank', 'width=600,height=400');
     }
 
-    function renderArticles(cat = 'all') {
+    function renderArticles(articles) {
       container.innerHTML = '';
-      const filtered = cat === 'all' ? articlesData : articlesData.filter(a => a.cat === cat);
-      if (!filtered.length) {
-        container.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--parchment-dim);">لا توجد مقالات في هذا التصنيف.</div>`;
+      if (!articles || articles.length === 0) {
+        container.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--parchment-dim);">لا توجد مقالات حالياً.</div>`;
+        countSpan.textContent = '0';
         return;
       }
-      filtered.forEach(item => {
-        let dateStr = item.date;
+      countSpan.textContent = articles.length;
+      articles.forEach(item => {
+        let dateStr = item.date || 'تاريخ غير محدد';
         try { dateStr = new Date(item.date).toLocaleDateString('ar-EG', { year:'numeric', month:'short', day:'numeric' }); } catch(e) {}
         const card = document.createElement('div');
         card.className = 'card';
         card.innerHTML = `
           <div class="meta">
-            <span class="source">🌐 ${item.source}</span>
-            <span class="cat-tag">${item.cat}</span>
+            <span class="source">🌐 ${item.source || 'مصدر'}</span>
+            <span class="cat-tag">${item.cat || 'عام'}</span>
           </div>
-          <h3><a href="${item.link}" target="_blank" rel="noopener">${item.title}</a></h3>
+          <h3><a href="${item.link || '#'}" target="_blank" rel="noopener">${item.title}</a></h3>
           <div class="footer">
             <span>📅 ${dateStr}</span>
             <div style="display:flex;align-items:center;gap:12px;">
               <div class="share-icons">
-                <button onclick="shareArticle('${item.link}','${item.title}','fb')" title="شارك على فيسبوك"><i class="fab fa-facebook-f"></i></button>
-                <button onclick="shareArticle('${item.link}','${item.title}','tw')" title="شارك على إكس"><i class="fab fa-x-twitter"></i></button>
-                <button onclick="shareArticle('${item.link}','${item.title}','wa')" title="شارك على واتساب"><i class="fab fa-whatsapp"></i></button>
+                <button onclick="shareArticle('${item.link || '#'}','${item.title}','fb')" title="شارك على فيسبوك"><i class="fab fa-facebook-f"></i></button>
+                <button onclick="shareArticle('${item.link || '#'}','${item.title}','tw')" title="شارك على إكس"><i class="fab fa-x-twitter"></i></button>
+                <button onclick="shareArticle('${item.link || '#'}','${item.title}','wa')" title="شارك على واتساب"><i class="fab fa-whatsapp"></i></button>
               </div>
-              <a href="${item.link}" target="_blank" rel="noopener" class="read-link">قراءة →</a>
+              <a href="${item.link || '#'}" target="_blank" rel="noopener" class="read-link">قراءة →</a>
             </div>
           </div>
         `;
@@ -800,13 +735,49 @@
       });
     }
 
-    renderArticles('all');
+    function loadArticles() {
+      fetch('articles.json')
+        .then(res => {
+          if (!res.ok) throw new Error('articles.json غير موجود');
+          return res.json();
+        })
+        .then(data => {
+          renderArticles(data);
+        })
+        .catch(() => {
+          const fallback = [
+            { title: "الهاشمية.. فيزياء البقاء في شرق أوسط متغير!", link: "https://www.khaberni.com/news/747307", source: "خبرني", date: "2026-08-26", cat: "سياسة" },
+            { title: "الإنسان الأخير في حضرة الحمير", link: "https://www.khaberni.com/news/745966", source: "خبرني", date: "2026-08-25", cat: "ساخر" },
+            { title: "الملك عبد الله الثاني: القيادة التي تلامس القلب وتخاطب الضمير", link: "https://www.khaberni.com/news/744942", source: "خبرني", date: "2026-08-24", cat: "سياسة" }
+          ];
+          renderArticles(fallback);
+        });
+    }
+
+    let allArticles = [];
+    function filterArticles(cat) {
+      const filtered = cat === 'all' ? allArticles : allArticles.filter(a => a.cat === cat);
+      renderArticles(filtered);
+    }
+
+    const originalRender = renderArticles;
+    renderArticles = function(articles) {
+      allArticles = articles;
+      originalRender(articles);
+    };
+
+    loadArticles();
 
     document.getElementById('filterContainer').addEventListener('click', e => {
       if (!e.target.matches('.filter-btn')) return;
       document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
       e.target.classList.add('active');
-      renderArticles(e.target.dataset.cat);
+      const cat = e.target.dataset.cat;
+      if (allArticles.length > 0) {
+        filterArticles(cat);
+      } else {
+        loadArticles();
+      }
     });
 
     AOS.init({ duration: 800, once: true, offset: 50 });
