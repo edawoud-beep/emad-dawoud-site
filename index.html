@@ -2,14 +2,20 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
+  <!-- منع التخزين المؤقت نهائياً -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>عماد داود | الكاتب الأسطوري — الأرشيف الكامل</title>
-  <meta name="description" content="عماد داود، كاتب وصحفي أردني. أرشيف كامل لأكثر من 85 مقالاً." />
+  <meta name="description" content="عماد داود، كاتب وصحفي أردني. أرشيف كامل لـ 78 مقالاً." />
   <meta property="og:title" content="عماد داود — الكاتب الذي لا يُقلَّد" />
   <meta property="og:description" content="أرشيف كامل لمقالات الكاتب والصحفي الأردني عماد داود." />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✍️</text></svg>" />
   
+  <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet" />
@@ -42,20 +48,9 @@
     ::selection { background: var(--gold); color: var(--ink); }
     .container { max-width: 1200px; margin: 0 auto; padding: 0 28px; }
 
-    .bg-orbs {
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      pointer-events: none;
-      overflow: hidden;
-    }
-    .orb {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(90px);
-      opacity: 0.15;
-      animation: floatOrb 18s infinite alternate ease-in-out;
-    }
+    /* خلفية متحركة بالدوائر */
+    .bg-orbs { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+    .orb { position: absolute; border-radius: 50%; filter: blur(90px); opacity: 0.15; animation: floatOrb 18s infinite alternate ease-in-out; }
     .orb:nth-child(1) { width: 600px; height: 600px; top: -15%; right: -10%; background: var(--gold); animation-duration: 22s; }
     .orb:nth-child(2) { width: 400px; height: 400px; bottom: -10%; left: -10%; background: #4F46E5; animation-duration: 26s; animation-delay: -4s; }
     .orb:nth-child(3) { width: 300px; height: 300px; top: 40%; left: 30%; background: #7C3AED; animation-duration: 20s; animation-delay: -8s; opacity: 0.08; }
@@ -64,436 +59,95 @@
       100% { transform: translate(60px, -60px) scale(1.2); }
     }
 
-    header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 999;
-      padding: 16px 0;
-      background: rgba(11, 14, 20, 0.7);
-      backdrop-filter: blur(18px);
-      border-bottom: 1px solid rgba(255,255,255,0.04);
-    }
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 28px;
-    }
-    .wordmark {
-      font-family: 'Aref Ruqaa', serif;
-      font-size: 28px;
-      font-weight: 700;
-      color: var(--parchment);
-    }
+    header { position: fixed; top: 0; left: 0; right: 0; z-index: 999; padding: 16px 0; background: rgba(11, 14, 20, 0.7); backdrop-filter: blur(18px); border-bottom: 1px solid rgba(255,255,255,0.04); }
+    nav { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 28px; }
+    .wordmark { font-family: 'Aref Ruqaa', serif; font-size: 28px; font-weight: 700; color: var(--parchment); }
     .wordmark span { color: var(--gold); }
-    .nav-links {
-      display: flex;
-      gap: 32px;
-      font-size: 15px;
-      font-weight: 500;
-      color: var(--parchment-dim);
-    }
-    .nav-links a {
-      position: relative;
-      transition: 0.2s;
-      text-decoration: none;
-      color: inherit;
-    }
+    .nav-links { display: flex; gap: 32px; font-size: 15px; font-weight: 500; color: var(--parchment-dim); }
+    .nav-links a { position: relative; transition: 0.2s; text-decoration: none; color: inherit; }
     .nav-links a:hover { color: var(--gold-bright); }
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      right: 0; bottom: -4px;
-      width: 0; height: 2px;
-      background: var(--gold);
-      transition: 0.3s;
-    }
+    .nav-links a::after { content: ''; position: absolute; right: 0; bottom: -4px; width: 0; height: 2px; background: var(--gold); transition: 0.3s; }
     .nav-links a:hover::after { width: 100%; }
 
-    .hero {
-      position: relative;
-      z-index: 2;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding-top: 80px;
-    }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1fr 0.9fr;
-      gap: 60px;
-      align-items: center;
-      width: 100%;
-    }
-    .hero-content .tagline {
-      display: inline-block;
-      font-size: 13px;
-      letter-spacing: 3px;
-      color: var(--gold);
-      text-transform: uppercase;
-      margin-bottom: 20px;
-      border-right: 2px solid var(--gold);
-      padding-right: 16px;
-    }
-    .hero h1 {
-      font-family: 'Aref Ruqaa', serif;
-      font-size: clamp(44px, 7vw, 82px);
-      font-weight: 700;
-      line-height: 1.15;
-      margin-bottom: 20px;
-    }
+    /* Hero Section */
+    .hero { position: relative; z-index: 2; min-height: 100vh; display: flex; align-items: center; padding-top: 80px; }
+    .hero-grid { display: grid; grid-template-columns: 1fr 0.9fr; gap: 60px; align-items: center; width: 100%; }
+    .hero-content .tagline { display: inline-block; font-size: 13px; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; margin-bottom: 20px; border-right: 2px solid var(--gold); padding-right: 16px; }
+    .hero h1 { font-family: 'Aref Ruqaa', serif; font-size: clamp(44px, 7vw, 82px); font-weight: 700; line-height: 1.15; margin-bottom: 20px; }
     .hero h1 em { color: var(--gold); font-style: normal; }
-    .hero p.sub {
-      font-size: 20px;
-      color: var(--parchment-dim);
-      max-width: 500px;
-      font-weight: 300;
-      margin-bottom: 36px;
-    }
-    .hero .typed-wrap {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 22px;
-      color: var(--gold-bright);
-      margin-bottom: 30px;
-    }
+    .hero p.sub { font-size: 20px; color: var(--parchment-dim); max-width: 500px; font-weight: 300; margin-bottom: 36px; }
+    .hero .typed-wrap { display: flex; align-items: center; gap: 12px; font-size: 22px; color: var(--gold-bright); margin-bottom: 30px; }
     .hero .typed-wrap i { font-size: 28px; }
     #typed-text { font-weight: 700; min-width: 160px; }
-
     .btn-group { display: flex; gap: 16px; flex-wrap: wrap; }
-    .btn {
-      padding: 16px 36px;
-      border-radius: 60px;
-      font-weight: 700;
-      transition: 0.3s;
-      border: 1px solid transparent;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 16px;
-    }
-    .btn-primary {
-      background: var(--gold);
-      color: var(--ink);
-      box-shadow: 0 8px 24px rgba(201, 168, 76, 0.25);
-    }
+    .btn { padding: 16px 36px; border-radius: 60px; font-weight: 700; transition: 0.3s; border: 1px solid transparent; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; font-size: 16px; }
+    .btn-primary { background: var(--gold); color: var(--ink); box-shadow: 0 8px 24px rgba(201, 168, 76, 0.25); }
     .btn-primary:hover { background: var(--gold-bright); transform: translateY(-3px); box-shadow: 0 14px 30px rgba(201, 168, 76, 0.35); }
     .btn-ghost { border-color: var(--border-glass); color: var(--parchment-dim); }
     .btn-ghost:hover { border-color: var(--gold); color: var(--gold-bright); transform: translateY(-3px); }
 
-    .hero-avatar {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      border: 4px solid var(--gold);
-      box-shadow: 0 0 40px rgba(201, 168, 76, 0.2);
-      margin-bottom: 24px;
-      transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      object-fit: cover;
-      background: var(--ink-light);
-    }
-    .hero-avatar:hover {
-      transform: scale(1.08) rotate(-3deg);
-      border-color: var(--gold-bright);
-      box-shadow: 0 0 60px rgba(201, 168, 76, 0.4);
-    }
+    .hero-avatar { width: 140px; height: 140px; border-radius: 50%; border: 4px solid var(--gold); box-shadow: 0 0 40px rgba(201, 168, 76, 0.2); margin-bottom: 24px; transition: 0.4s; background: var(--gold); display: flex; align-items: center; justify-content: center; font-family: 'Aref Ruqaa', serif; font-size: 40px; font-weight: 700; color: var(--ink); }
+    .hero-avatar:hover { transform: scale(1.05) rotate(-4deg); border-color: var(--gold-bright); }
 
-    .seal-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    .seal-container {
-      width: min(320px, 65vw);
-      aspect-ratio: 1/1;
-      position: relative;
-      animation: spinSeal 20s linear infinite;
-      filter: drop-shadow(0 0 25px rgba(201, 168, 76, 0.2));
-    }
-    .seal-container .inner-ring {
-      position: absolute;
-      inset: 15%;
-      border: 2px solid var(--gold);
-      border-radius: 50%;
-      animation: spinReverse 15s linear infinite;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Aref Ruqaa', serif;
-      font-size: 28px;
-      color: var(--gold-bright);
-      background: rgba(201, 168, 76, 0.05);
-      box-shadow: inset 0 0 40px rgba(201, 168, 76, 0.05);
-    }
-    .seal-container .inner-ring span {
-      display: block;
-      text-align: center;
-      line-height: 1.3;
-    }
-    .seal-container .outer-text {
-      position: absolute;
-      inset: -8%;
-      animation: spinReverse 18s linear infinite;
-      font-family: 'Aref Ruqaa', serif;
-      font-size: 14px;
-      color: var(--gold);
-      letter-spacing: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .seal-container .outer-text svg {
-      width: 100%;
-      height: 100%;
-    }
+    .seal-wrapper { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    .seal-container { width: min(320px, 65vw); aspect-ratio: 1/1; position: relative; animation: spinSeal 20s linear infinite; filter: drop-shadow(0 0 25px rgba(201, 168, 76, 0.2)); }
+    .seal-container .inner-ring { position: absolute; inset: 15%; border: 2px solid var(--gold); border-radius: 50%; animation: spinReverse 15s linear infinite; display: flex; align-items: center; justify-content: center; font-family: 'Aref Ruqaa', serif; font-size: 28px; color: var(--gold-bright); background: rgba(201, 168, 76, 0.05); box-shadow: inset 0 0 40px rgba(201, 168, 76, 0.05); }
+    .seal-container .inner-ring span { display: block; text-align: center; line-height: 1.3; }
+    .seal-container .outer-text { position: absolute; inset: -8%; animation: spinReverse 18s linear infinite; font-family: 'Aref Ruqaa', serif; font-size: 14px; color: var(--gold); letter-spacing: 4px; display: flex; align-items: center; justify-content: center; }
+    .seal-container .outer-text svg { width: 100%; height: 100%; }
     @keyframes spinSeal { to { transform: rotate(360deg); } }
     @keyframes spinReverse { to { transform: rotate(-360deg); } }
 
-    section {
-      position: relative;
-      z-index: 2;
-      padding: 100px 0;
-    }
+    section { position: relative; z-index: 2; padding: 100px 0; }
     .section-divider { height: 1px; background: var(--border-glass); width: 100%; }
     .section-head { margin-bottom: 50px; }
-    .section-head span.sec-num {
-      font-size: 13px;
-      color: var(--gold);
-      letter-spacing: 4px;
-      display: block;
-      margin-bottom: 12px;
-    }
-    .section-head h2 {
-      font-family: 'Aref Ruqaa', serif;
-      font-size: clamp(32px, 4vw, 48px);
-      color: var(--parchment);
-    }
-    .section-head p {
-      color: var(--parchment-dim);
-      max-width: 600px;
-      margin-top: 10px;
-      font-weight: 300;
-    }
+    .section-head span.sec-num { font-size: 13px; color: var(--gold); letter-spacing: 4px; display: block; margin-bottom: 12px; }
+    .section-head h2 { font-family: 'Aref Ruqaa', serif; font-size: clamp(32px, 4vw, 48px); color: var(--parchment); }
+    .section-head p { color: var(--parchment-dim); max-width: 600px; margin-top: 10px; font-weight: 300; }
 
-    .about-grid {
-      display: grid;
-      grid-template-columns: 0.8fr 1.2fr;
-      gap: 50px;
-      align-items: center;
-    }
-    .about-photo {
-      width: 100%;
-      aspect-ratio: 4/5;
-      border-radius: var(--radius);
-      border: 2px solid var(--border-glass);
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--ink-light);
-      position: relative;
-      object-fit: cover;
-    }
-    .about-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: 0.4s;
-    }
-    .about-photo:hover img {
-      transform: scale(1.03);
-    }
-    .about-photo::after {
-      content: '';
-      position: absolute;
-      inset: 12px;
-      border: 1px solid var(--gold);
-      border-radius: 16px;
-      opacity: 0.3;
-      pointer-events: none;
-      transition: 0.3s;
-    }
-    .about-photo:hover::after {
-      opacity: 0.6;
-    }
-    .about-text p {
-      font-size: 18px;
-      color: var(--parchment-dim);
-      margin-bottom: 20px;
-      font-weight: 300;
-    }
+    .about-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 50px; align-items: center; }
+    .about-photo { width: 100%; aspect-ratio: 4/5; border-radius: var(--radius); border: 2px solid var(--border-glass); overflow: hidden; display: flex; align-items: center; justify-content: center; background: var(--gold); font-family: 'Aref Ruqaa', serif; font-size: 48px; font-weight: 700; color: var(--ink); position: relative; }
+    .about-photo::after { content: ''; position: absolute; inset: 12px; border: 1px solid var(--ink); border-radius: 16px; opacity: 0.2; pointer-events: none; }
+    .about-text p { font-size: 18px; color: var(--parchment-dim); margin-bottom: 20px; font-weight: 300; }
     .about-text strong { color: var(--parchment); font-weight: 600; }
     .about-text .highlight { color: var(--gold-bright); }
-    .source-pills {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 24px;
-    }
-    .source-pills a {
-      padding: 8px 18px;
-      border: 1px solid var(--border-glass);
-      border-radius: 40px;
-      font-size: 14px;
-      color: var(--parchment-dim);
-      text-decoration: none;
-      transition: 0.25s;
-    }
+    .source-pills { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+    .source-pills a { padding: 8px 18px; border: 1px solid var(--border-glass); border-radius: 40px; font-size: 14px; color: var(--parchment-dim); text-decoration: none; transition: 0.25s; }
     .source-pills a:hover { border-color: var(--gold); color: var(--gold-bright); background: rgba(201,168,76,0.05); }
 
-    .quotes-glass {
-      background: var(--glass);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--border-glass);
-      border-radius: var(--radius);
-      padding: 48px 40px;
-      margin-top: 40px;
-    }
-    .quotes-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 30px;
-      margin-top: 20px;
-    }
-    .quote-item {
-      border-right: 3px solid var(--gold);
-      padding-right: 20px;
-    }
-    .quote-item p {
-      font-size: 17px;
-      font-style: italic;
-      color: var(--parchment-dim);
-      line-height: 1.8;
-    }
-    .quote-item .ref {
-      font-size: 14px;
-      color: var(--gold);
-      font-style: normal;
-      margin-top: 10px;
-      font-weight: 500;
-    }
+    .quotes-glass { background: var(--glass); backdrop-filter: blur(12px); border: 1px solid var(--border-glass); border-radius: var(--radius); padding: 48px 40px; margin-top: 40px; }
+    .quotes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; margin-top: 20px; }
+    .quote-item { border-right: 3px solid var(--gold); padding-right: 20px; }
+    .quote-item p { font-size: 17px; font-style: italic; color: var(--parchment-dim); line-height: 1.8; }
+    .quote-item .ref { font-size: 14px; color: var(--gold); font-style: normal; margin-top: 10px; font-weight: 500; }
 
-    .archive-tools {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin-bottom: 30px;
-    }
-    .archive-tools .count {
-      font-size: 18px;
-      color: var(--gold);
-    }
+    .archive-tools { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; margin-bottom: 30px; }
+    .archive-tools .count { font-size: 18px; color: var(--gold); }
     .archive-tools .count span { font-size: 32px; font-weight: 800; font-family: 'Aref Ruqaa', serif; }
-
-    .filters {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    .filter-btn {
-      padding: 8px 22px;
-      border-radius: 40px;
-      border: 1px solid var(--border-glass);
-      background: transparent;
-      color: var(--parchment-dim);
-      font-family: 'Tajawal', sans-serif;
-      font-weight: 600;
-      font-size: 14px;
-      cursor: pointer;
-      transition: 0.25s;
-    }
+    .filters { display: flex; gap: 10px; flex-wrap: wrap; }
+    .filter-btn { padding: 8px 22px; border-radius: 40px; border: 1px solid var(--border-glass); background: transparent; color: var(--parchment-dim); font-family: 'Tajawal', sans-serif; font-weight: 600; font-size: 14px; cursor: pointer; transition: 0.25s; }
     .filter-btn:hover { border-color: var(--gold); color: var(--gold-bright); }
     .filter-btn.active { background: var(--gold); color: var(--ink); border-color: var(--gold); }
 
-    .articles-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-      gap: 30px;
-    }
-    .card {
-      background: var(--glass);
-      backdrop-filter: blur(8px);
-      border: 1px solid var(--border-glass);
-      border-radius: var(--radius);
-      padding: 28px 24px;
-      transition: 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.2);
-      display: flex;
-      flex-direction: column;
-    }
-    .card:hover {
-      transform: translateY(-10px);
-      border-color: var(--gold);
-      box-shadow: var(--shadow-gold);
-    }
+    .articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 30px; }
+    .card { background: var(--glass); backdrop-filter: blur(8px); border: 1px solid var(--border-glass); border-radius: var(--radius); padding: 28px 24px; transition: 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.2); display: flex; flex-direction: column; }
+    .card:hover { transform: translateY(-10px); border-color: var(--gold); box-shadow: var(--shadow-gold); }
     .card .meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 8px; }
     .card .source { font-size: 12px; color: var(--gold); font-weight: 700; }
     .card .cat-tag { font-size: 11px; padding: 4px 14px; border-radius: 20px; background: rgba(201,168,76,0.12); color: var(--gold-bright); }
-    .card h3 {
-      font-family: 'Aref Ruqaa', serif;
-      font-size: 20px;
-      font-weight: 700;
-      line-height: 1.6;
-      margin-bottom: 10px;
-      flex-grow: 1;
-    }
+    .card h3 { font-family: 'Aref Ruqaa', serif; font-size: 20px; font-weight: 700; line-height: 1.6; margin-bottom: 10px; flex-grow: 1; }
     .card h3 a { color: var(--parchment); text-decoration: none; transition: 0.2s; }
     .card h3 a:hover { color: var(--gold-bright); }
-    .card .footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 16px;
-      padding-top: 16px;
-      border-top: 1px solid var(--border-glass);
-      font-size: 14px;
-      color: var(--parchment-dim);
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .card .footer .share-icons {
-      display: flex;
-      gap: 8px;
-    }
-    .card .footer .share-icons button {
-      background: transparent;
-      border: none;
-      color: var(--parchment-dim);
-      cursor: pointer;
-      font-size: 16px;
-      transition: 0.2s;
-      padding: 4px;
-      border-radius: 50%;
-      width: 32px;
-      height: 32px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-    }
+    .card .footer { display: flex; justify-content: space-between; align-items: center; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border-glass); font-size: 14px; color: var(--parchment-dim); flex-wrap: wrap; gap: 8px; }
+    .card .footer .share-icons { display: flex; gap: 8px; }
+    .card .footer .share-icons button { background: transparent; border: none; color: var(--parchment-dim); cursor: pointer; font-size: 16px; transition: 0.2s; padding: 4px; border-radius: 50%; width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; }
     .card .footer .share-icons button:hover { background: var(--gold); color: var(--ink); transform: scale(1.1); }
     .card .footer .read-link { color: var(--gold); text-decoration: none; font-weight: 700; transition: 0.2s; }
     .card .footer .read-link:hover { color: var(--gold-bright); letter-spacing: 0.5px; }
 
-    .contact-box {
-      text-align: center;
-      padding: 70px 30px;
-      border: 1px solid var(--border-glass);
-      border-radius: var(--radius);
-      position: relative;
-    }
+    .contact-box { text-align: center; padding: 70px 30px; border: 1px solid var(--border-glass); border-radius: var(--radius); position: relative; }
     .contact-box .corners { position: absolute; inset: -1px; pointer-events: none; }
-    .contact-box .corners::before, .contact-box .corners::after {
-      content: '';
-      position: absolute;
-      width: 30px; height: 30px;
-      border: 2px solid var(--gold);
-    }
+    .contact-box .corners::before, .contact-box .corners::after { content: ''; position: absolute; width: 30px; height: 30px; border: 2px solid var(--gold); }
     .contact-box .corners::before { top: -1px; right: -1px; border-left: none; border-bottom: none; }
     .contact-box .corners::after { bottom: -1px; left: -1px; border-right: none; border-top: none; }
     .contact-box h2 { font-family: 'Aref Ruqaa', serif; font-size: 36px; margin-bottom: 16px; }
@@ -501,13 +155,7 @@
     .mail-link { color: var(--gold-bright); font-size: 24px; text-decoration: none; border-bottom: 2px solid var(--gold); padding-bottom: 6px; transition: 0.3s; }
     .mail-link:hover { letter-spacing: 2px; }
 
-    footer {
-      padding: 40px 0;
-      text-align: center;
-      color: var(--parchment-dim);
-      font-size: 14px;
-      border-top: 1px solid var(--border-glass);
-    }
+    footer { padding: 40px 0; text-align: center; color: var(--parchment-dim); font-size: 14px; border-top: 1px solid var(--border-glass); }
 
     @media (max-width: 900px) {
       .hero-grid { grid-template-columns: 1fr; text-align: center; }
@@ -556,8 +204,7 @@
         <div class="tagline">كاتب وصحفي أردني</div>
         <h1>كلمة <em>لا تُستعار</em><br>وموقف لا يُقلَّد</h1>
         <p class="sub">كلمة لا تُستعار من أحد، وموقف لا يُشترى بثمن. كل نص هنا معركة صغيرة مع النسيان.</p>
-        <!-- الصورة الشخصية -->
-        <img src="https://scontent.famm2-3.fna.fbcdn.net/v/t39.99422-6/726016504_28010714998529997_8287561975676322683_n.png?stp=dst-jpg_tt6&cstp=mx1280x1155&ctp=s565x565&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGsX406ZtveXvXpvY_dpRgX6gkIwCTL6M3qCQjAJMvozb0P7XXSlew7-qvDodxxfmw7VFXMZK7ifL9SMD43nHVa&_nc_ohc=lBH3ZVZdisoQ7kNvwF9n5TH&_nc_oc=AdocOmEUnxfYswrxRjYk1HMetpTgwmCC8KmPjI8uwDzQHAsTosgHH6CGN1B_58nS-P4&_nc_zt=14&_nc_ht=scontent.famm2-3.fna&_nc_gid=9FXtXaFZoHmEf38GmCoR_g&_nc_ss=7d2a8&oh=00_AQGZZzvZgUs_sxSAOCrs1miKdrTbzBeEZySQQXaVjz-fzQ&oe=6A95ABCE" alt="عماد داود" class="hero-avatar" />
+        <div class="hero-avatar">عماد</div>
         <div class="typed-wrap">
           <i class="fas fa-feather-alt"></i>
           <span id="typed-text"></span>
@@ -587,9 +234,7 @@
 
   <section id="about">
     <div class="container about-grid" data-aos="fade-up">
-      <div class="about-photo">
-        <img src="https://scontent.famm2-3.fna.fbcdn.net/v/t39.99422-6/726016504_28010714998529997_8287561975676322683_n.png?stp=dst-jpg_tt6&cstp=mx1280x1155&ctp=s565x565&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGsX406ZtveXvXpvY_dpRgX6gkIwCTL6M3qCQjAJMvozb0P7XXSlew7-qvDodxxfmw7VFXMZK7ifL9SMD43nHVa&_nc_ohc=lBH3ZVZdisoQ7kNvwF9n5TH&_nc_oc=AdocOmEUnxfYswrxRjYk1HMetpTgwmCC8KmPjI8uwDzQHAsTosgHH6CGN1B_58nS-P4&_nc_zt=14&_nc_ht=scontent.famm2-3.fna&_nc_gid=9FXtXaFZoHmEf38GmCoR_g&_nc_ss=7d2a8&oh=00_AQGZZzvZgUs_sxSAOCrs1miKdrTbzBeEZySQQXaVjz-fzQ&oe=6A95ABCE" alt="عماد داود" />
-      </div>
+      <div class="about-photo">عماد داود</div>
       <div class="about-text">
         <span class="sec-num">عن الكاتب</span>
         <p><strong>كلمة لا تُستعار من أحد، وموقف لا يُشترى بثمن.</strong> عماد داود كاتب وصحفي أردني، يمتد حضوره في المشهد الإعلامي بين التحليل السياسي العميق والنقد الاجتماعي الساخر. كتب في صحف ومواقع إلكترونية عربية، من أبرزها <span class="highlight">خبرني، رأي اليوم، نبأ الأردن، أخبارنا، وبانيت</span>.</p>
@@ -621,7 +266,7 @@
       <div class="section-head" data-aos="fade-right">
         <span class="sec-num">الأرشيف الكامل</span>
         <h2>جميع المقالات</h2>
-        <p>أكثر من 85 مقالاً منشوراً في أبرز المواقع الإخبارية العربية. يتم تحديثها تلقائياً.</p>
+        <p>أرشيف دقيق لـ 78 مقالاً منشوراً في أبرز المواقع الإخبارية العربية.</p>
       </div>
 
       <div class="archive-tools" data-aos="fade-up">
@@ -637,12 +282,7 @@
         </div>
       </div>
 
-      <div class="articles-grid" id="articlesContainer" data-aos="fade-up">
-        <div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--parchment-dim);">
-          <i class="fas fa-spinner fa-spin fa-2x" style="color:var(--gold);"></i>
-          <p style="margin-top:12px;">جاري تحميل المقالات...</p>
-        </div>
-      </div>
+      <div class="articles-grid" id="articlesContainer" data-aos="fade-up"></div>
     </div>
   </section>
 
@@ -670,6 +310,7 @@
 
 <script>
   (function() {
+    // --- 1. الأقوال ---
     const quotes = [
       { text: "الباب وحده يكشف الدولة. ليس الدستور ولا الخطاب ولا الصورة الرسمية.", ref: "— من مقال 'جعفر حسان وعبد الرؤوف الكسم'" },
       { text: "الدولة التي تسأل ماذا حدث تختلف جذرياً عن الدولة التي تسأل ماذا سيحدث.", ref: "— من مقال 'الليمونة كشفتنا'" },
@@ -687,47 +328,132 @@
       quotesGrid.appendChild(div);
     });
 
+    // --- 2. قاعدة البيانات (78 مقالاً) ---
+    const articlesData = [
+      { title: "الهاشمية.. فيزياء البقاء في شرق أوسط متغير!", link: "https://www.khaberni.com/news/747307", source: "خبرني", date: "2026-08-26", cat: "سياسة" },
+      { title: "الإنسان الأخير في حضرة الحمير", link: "https://www.khaberni.com/news/745966", source: "خبرني", date: "2026-08-25", cat: "ساخر" },
+      { title: "الملك عبد الله الثاني: القيادة التي تلامس القلب وتخاطب الضمير", link: "https://www.khaberni.com/news/744942", source: "خبرني", date: "2026-08-24", cat: "سياسة" },
+      { title: "السر الخطير في حب الأمير!", link: "https://www.khaberni.com/news/750313", source: "خبرني", date: "2026-08-23", cat: "سياسة" },
+      { title: "المنتخب الوطني… دخيلك شو عملت بقلوبنا!", link: "https://www.khaberni.com/news/758353", source: "خبرني", date: "2026-08-22", cat: "رياضة" },
+      { title: "بين الشبكة والخلية: لماذا تنتصر ممالك الحكمة على جمهوريات الخوف؟!", link: "https://www.khaberni.com/news/759430", source: "خبرني", date: "2026-08-21", cat: "ثقافة" },
+      { title: "عندما وقفت عمّان وبغداد في خندق واحد", link: "https://www.khaberni.com/news/760234", source: "خبرني", date: "2026-08-20", cat: "سياسة" },
+      { title: "ماذا لو عاد منتصرا؟", link: "https://www.khaberni.com/news/762500", source: "خبرني", date: "2026-08-19", cat: "سياسة" },
+      { title: "جعفر حسان… ترجمان الدولة الأردنية!", link: "https://www.khaberni.com/news/765655", source: "خبرني", date: "2026-08-18", cat: "سياسة" },
+      { title: "بورك الماء المسفوح يا كرك!", link: "https://www.khaberni.com/news/766391", source: "خبرني", date: "2026-08-17", cat: "اقتصاد" },
+      { title: "لو إني أعرف خاتمتي… ما كنت بدأت!", link: "https://www.khaberni.com/news/769574", source: "خبرني", date: "2026-08-16", cat: "فكر" },
+      { title: "If I Knew My End… I Would Not Have Started!", link: "https://www.khaberni.com/news/769575", source: "خبرني", date: "2026-08-16", cat: "فكر" },
+      { title: "بلدة طيبة.. ورب غفور!", link: "https://www.khaberni.com/news/767929", source: "خبرني", date: "2026-08-15", cat: "اقتصاد" },
+      { title: "محراب الأردن المفتوح: على عتبة العام الجديد", link: "https://www.khaberni.com/news/767127", source: "خبرني", date: "2026-08-14", cat: "سياسة" },
+      { title: "صوتان وأردن!", link: "https://www.khaberni.com/news/770395", source: "خبرني", date: "2026-08-13", cat: "سياسة" },
+      { title: "من «غرفة الإنعاش» إلى زمن البناء", link: "https://www.khaberni.com/news/771108", source: "خبرني", date: "2026-08-12", cat: "سياسة" },
+      { title: "من أرض الخير: إعلان وفاة الدولة الموسمية!", link: "https://www.khaberni.com/news/773848", source: "خبرني", date: "2026-08-11", cat: "ساخر" },
+      { title: "لماذا تغيّر لون الكاز؟!!", link: "https://www.khaberni.com/news/774693", source: "خبرني", date: "2026-08-10", cat: "اقتصاد" },
+      { title: "عندما يصير الوعي جريمة يُعاقب عليها بالغيبوبة؟!!", link: "https://www.khaberni.com/news/775700", source: "خبرني", date: "2026-08-09", cat: "ثقافة" },
+      { title: "على مكتب رئيس الوزراء.. مشروع أول حقيبة وزارية للسعادة والفرفشة الوطنية!", link: "https://www.khaberni.com/news/776281", source: "خبرني", date: "2026-08-08", cat: "ساخر" },
+      { title: "الأردن بين هدوء الاستقرار وقلق الانتظار (1-5)", link: "https://www.khaberni.com/news/777690", source: "خبرني", date: "2026-08-07", cat: "سياسة" },
+      { title: "الأردن بين هدوء الاستقرار وقلق الانتظار (2-5)", link: "https://www.khaberni.com/news/778884", source: "خبرني", date: "2026-08-06", cat: "سياسة" },
+      { title: "عندما تتحوّل القوادة إلى أداة حكم!", link: "https://www.khaberni.com/news/779657", source: "خبرني", date: "2026-08-05", cat: "ساخر" },
+      { title: "العجز إذ يحاول عبثًا ملامسة المستحيل!", link: "https://www.khaberni.com/news/780514", source: "خبرني", date: "2026-08-04", cat: "اقتصاد" },
+      { title: "السردية الأردنية: البحث عن راوٍ!", link: "https://www.khaberni.com/news/781900", source: "خبرني", date: "2026-08-03", cat: "ثقافة" },
+      { title: "بين قلمين: الكحل والحبر!", link: "https://www.khaberni.com/news/784675", source: "خبرني", date: "2026-08-02", cat: "ثقافة" },
+      { title: "رمضان تحت الإعلان!.. الجنة المُصطنعة تُبث مجانًا!", link: "https://www.khaberni.com/news/785973", source: "خبرني", date: "2026-08-01", cat: "ثقافة" },
+      { title: "يا هَـ(مَلالي)!", link: "https://www.khaberni.com/news/787712", source: "خبرني", date: "2026-07-31", cat: "ساخر" },
+      { title: "هل نملك صباحنا كاملاً…؟!", link: "https://www.khaberni.com/news/788457", source: "خبرني", date: "2026-07-30", cat: "فكر" },
+      { title: "حين يصبح الجرح سلاحًا.. إيران", link: "https://www.khaberni.com/news/790286", source: "خبرني", date: "2026-07-29", cat: "سياسة" },
+      { title: "في سوق الكلام: كل شيء للبيع إلا السؤال", link: "https://www.khaberni.com/news/791287", source: "خبرني", date: "2026-07-28", cat: "ثقافة" },
+      { title: "حين تُدمن الدولة صوتها: نظرية يلا تنام!", link: "https://www.khaberni.com/news/794914", source: "خبرني", date: "2026-07-27", cat: "ساخر" },
+      { title: "التقشف المستور: الدولة كما لم تُرَ من قبل!", link: "https://www.khaberni.com/news/796169", source: "خبرني", date: "2026-07-26", cat: "اقتصاد" },
+      { title: "شافوني قالوا متهني!", link: "https://www.khaberni.com/news/796981", source: "خبرني", date: "2026-07-25", cat: "ساخر" },
+      { title: "يُرفرف — ولا يُسأل!", link: "https://www.khaberni.com/news/800211", source: "خبرني", date: "2026-07-24", cat: "سياسة" },
+      { title: "تنوّعت القمصان… والعري واحد!", link: "https://www.khaberni.com/news/800937", source: "خبرني", date: "2026-07-23", cat: "ساخر" },
+      { title: "الأسامي هي هي… والقلوب تغيّرت!", link: "https://www.khaberni.com/news/802266", source: "خبرني", date: "2026-07-22", cat: "سياسة" },
+      { title: "عايش ومش عايش! الأردن على حافة الاعتياد", link: "https://www.khaberni.com/news/802735", source: "خبرني", date: "2026-07-21", cat: "سياسة" },
+      { title: "Living and Not Living!", link: "https://www.khaberni.com/news/802736", source: "خبرني", date: "2026-07-21", cat: "فكر" },
+      { title: "In the Holy Market — Everyone Sells!", link: "https://www.khaberni.com/news/804783", source: "خبرني", date: "2026-07-20", cat: "ساخر" },
+      { title: "يا عمال الأردن… هذا ليس عيدكم!", link: "https://www.khaberni.com/news/805626", source: "خبرني", date: "2026-07-19", cat: "اقتصاد" },
+      { title: "بدّنا نروق!", link: "https://www.khaberni.com/news/810918", source: "خبرني", date: "2026-07-18", cat: "ساخر" },
+      { title: "لماذا تترجمون الوزير — لا بل ترجمونه؟!", link: "https://www.khaberni.com/news/811750", source: "خبرني", date: "2026-07-17", cat: "ساخر" },
+      { title: "هذا التراب لا يركع!", link: "https://www.khaberni.com/news/813001", source: "خبرني", date: "2026-07-16", cat: "سياسة" },
+      { title: "ماذا ترك الشارع فينا؟!", link: "https://www.khaberni.com/news/815164", source: "خبرني", date: "2026-07-15", cat: "سياسة" },
+      { title: "بلاغ إلى الصالح العام!", link: "https://www.khaberni.com/news/815575", source: "خبرني", date: "2026-07-14", cat: "سياسة" },
+      { title: "جواد العناني… جرح ثاني!", link: "https://www.khaberni.com/news/816314", source: "خبرني", date: "2026-07-13", cat: "سياسة" },
+      { title: "دولة الرئيس جعفر حسان... (المصاري مش كلشي)...!!", link: "https://www.khaberni.com/news/817488", source: "خبرني", date: "2026-07-12", cat: "اقتصاد" },
+      { title: "الثالوث المقدس.. ثلاثة أصوات.. ونشيد اسمه الأردن", link: "https://www.khaberni.com/news/818254", source: "خبرني", date: "2026-07-11", cat: "سياسة" },
+      { title: "الأردن والنشامى... جرح يُسدِّد!", link: "https://www.khaberni.com/news/819321", source: "خبرني", date: "2026-07-10", cat: "سياسة" },
+      { title: "الأردن والنشامى... حين نظرنا إلى أنفسنا في العالم!", link: "https://www.khaberni.com/news/820049", source: "خبرني", date: "2026-07-09", cat: "رياضة" },
+      { title: "جيل Z الأردني... عالق عند 99%", link: "https://www.khaberni.com/news/820864", source: "خبرني", date: "2026-07-08", cat: "ثقافة" },
+      { title: "المشكلة أننا صدّقنا حالنا!", link: "https://www.khaberni.com/news/821880", source: "خبرني", date: "2026-07-07", cat: "ساخر" },
+      { title: "The Problem Is That We Believed Ourselves!", link: "https://www.khaberni.com/news/821881", source: "خبرني", date: "2026-07-07", cat: "فكر" },
+      { title: "الطيبات... وقبر في السابعة والأربعين!", link: "https://www.khaberni.com/news/822887", source: "خبرني", date: "2026-07-06", cat: "اقتصاد" },
+      { title: "الحسين بن عبدالله... الكفة الثالثة!", link: "https://www.khaberni.com/news/823410", source: "خبرني", date: "2026-07-05", cat: "سياسة" },
+      { title: "افتح يا سمسم... ومليارات تحت الأرض!", link: "https://www.khaberni.com/news/824259", source: "خبرني", date: "2026-07-04", cat: "اقتصاد" },
+      { title: "هل تجري؟", link: "https://www.khaberni.com/news/827757", source: "خبرني", date: "2026-07-03", cat: "ساخر" },
+      { title: "الأردن لم يعد ممراً... صار هدفاً!", link: "https://www.khaberni.com/news/830974", source: "خبرني", date: "2026-07-02", cat: "سياسة" },
+      { title: "جرش تهتف لأبي وديع... والفن يبقى حيث تتهاوى العروش!", link: "https://www.khaberni.com/news/832217", source: "خبرني", date: "2026-07-01", cat: "ثقافة" },
+      { title: "الحريق يسأل عن الحطب... لا عن الجيران!", link: "https://www.khaberni.com/news/834061", source: "خبرني", date: "2026-06-30", cat: "ساخر" },
+      { title: "القماش الذي ابتلع النقاش!", link: "https://www.khaberni.com/news/835597", source: "خبرني", date: "2026-06-29", cat: "ساخر" },
+      { title: "وزارة التربية والتعليم تكبر... فهل تكبر شجاعة عزمي محافظة معها؟!", link: "https://www.khaberni.com/news/836293", source: "خبرني", date: "2026-06-28", cat: "سياسة" },
+      { title: "قديش جبت..؟!", link: "https://www.khaberni.com/news/836948", source: "خبرني", date: "2026-06-27", cat: "اقتصاد" },
+      { title: "الملك في بكين... لماذا الآن؟!", link: "https://www.khaberni.com/news/839139", source: "خبرني", date: "2026-06-26", cat: "سياسة" },
+      { title: "جعفر حسان وعبد الرؤوف الكسم... ماذا تفعل الدولة برئيس حكومتها؟", link: "https://www.khaberni.com/news/839898", source: "خبرني", date: "2026-06-25", cat: "سياسة" },
+      { title: "من يربح حين يخسر الجميع؟!", link: "https://www.khaberni.com/news/840688", source: "خبرني", date: "2026-06-24", cat: "سياسة" },
+      { title: "الليمونة كشفتنا!", link: "https://www.khaberni.com/news/841387", source: "خبرني", date: "2026-06-23", cat: "اقتصاد" },
+      { title: "الجنرال بلوط..!!", link: "https://www.khaberni.com/news/841973", source: "خبرني", date: "2026-06-22", cat: "ساخر" },
+      { title: "إنشقاق وعي الشباب بين الغيبوبة والغياب!", link: "https://nabaajordan.com/articles/484002", source: "نبأ الأردن", date: "2026-01-27", cat: "ثقافة" },
+      { title: "هاني شاكر لم يمت — نحن من مات فيه", link: "https://nabaajordan.com/articles/494681", source: "نبأ الأردن", date: "2026-05-07", cat: "ثقافة" },
+      { title: "بغداد والمغارة... حين أصبحت سرقة القرن عقيدة", link: "https://nabaajordan.com/articles/500345", source: "نبأ الأردن", date: "2026-07-02", cat: "سياسة" },
+      { title: "الأردن: بيان الدولة الدائمة ومبدأ الميدان", link: "https://akhbarna.net/article/328587", source: "أخبارنا", date: "2026-08-26", cat: "سياسة" },
+      { title: "الدولة الدائمة والميدان: إعادة تعريف القوة", link: "https://akhbarna.net/article/329266", source: "أخبارنا", date: "2026-08-26", cat: "سياسة" },
+      { title: "لا شيك مفتوح لأحد... الأمن الوطني الأردني هو الحَكَم الوحيد", link: "https://panet.com/index.php/story/4291152", source: "بانيت", date: "2026-08-03", cat: "سياسة" },
+      { title: "لو أني أعرف خاتمتي… هل كنت لأبدأ؟", link: "https://sa24.co/article/771947255/", source: "sa24.co", date: "2026-08-26", cat: "فكر" },
+      { title: "على مكتب دولة الرئيس جعفر حسان: تأملات في عدالة تمشي على عجل!", link: "https://sa24.co/article/771906026/", source: "sa24.co", date: "2026-08-26", cat: "سياسة" },
+      { title: "ما لا تعكسه المرايا!", link: "https://sa24.co/article/772050538/", source: "sa24.co", date: "2026-08-26", cat: "ثقافة" }
+    ];
+
+    // --- 3. عرض المقالات مع أزرار المشاركة ---
     const container = document.getElementById('articlesContainer');
     const countSpan = document.getElementById('articleCount');
+    countSpan.textContent = articlesData.length;
 
     function shareArticle(link, title, platform) {
-      const url = encodeURIComponent(link);
-      const text = encodeURIComponent(`📰 "${title}" — مقال لعماد داود`);
-      let shareUrl = '';
-      if (platform === 'fb') shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
-      else if (platform === 'tw') shareUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}`;
-      else if (platform === 'wa') shareUrl = `https://api.whatsapp.com/send?text=${text}%20${url}`;
-      if (shareUrl) window.open(shareUrl, '_blank', 'width=600,height=400');
+      try {
+        const url = encodeURIComponent(link);
+        const text = encodeURIComponent(`📰 "${title}" — مقال لعماد داود`);
+        let shareUrl = '';
+        if (platform === 'fb') shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+        else if (platform === 'tw') shareUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}`;
+        else if (platform === 'wa') shareUrl = `https://api.whatsapp.com/send?text=${text}%20${url}`;
+        if (shareUrl) window.open(shareUrl, '_blank', 'width=600,height=400');
+      } catch(e) { console.log('Share error'); }
     }
 
-    function renderArticles(articles) {
+    function renderArticles(cat = 'all') {
       container.innerHTML = '';
-      if (!articles || articles.length === 0) {
-        container.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--parchment-dim);">لا توجد مقالات حالياً.</div>`;
-        countSpan.textContent = '0';
+      const filtered = cat === 'all' ? articlesData : articlesData.filter(a => a.cat === cat);
+      if (!filtered.length) {
+        container.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--parchment-dim);">لا توجد مقالات في هذا التصنيف.</div>`;
         return;
       }
-      countSpan.textContent = articles.length;
-      articles.forEach(item => {
-        let dateStr = item.date || 'تاريخ غير محدد';
+      filtered.forEach(item => {
+        let dateStr = item.date;
         try { dateStr = new Date(item.date).toLocaleDateString('ar-EG', { year:'numeric', month:'short', day:'numeric' }); } catch(e) {}
         const card = document.createElement('div');
         card.className = 'card';
         card.innerHTML = `
           <div class="meta">
-            <span class="source">🌐 ${item.source || 'مصدر'}</span>
-            <span class="cat-tag">${item.cat || 'عام'}</span>
+            <span class="source">🌐 ${item.source}</span>
+            <span class="cat-tag">${item.cat}</span>
           </div>
-          <h3><a href="${item.link || '#'}" target="_blank" rel="noopener">${item.title}</a></h3>
+          <h3><a href="${item.link}" target="_blank" rel="noopener">${item.title}</a></h3>
           <div class="footer">
             <span>📅 ${dateStr}</span>
             <div style="display:flex;align-items:center;gap:12px;">
               <div class="share-icons">
-                <button onclick="shareArticle('${item.link || '#'}','${item.title}','fb')" title="شارك على فيسبوك"><i class="fab fa-facebook-f"></i></button>
-                <button onclick="shareArticle('${item.link || '#'}','${item.title}','tw')" title="شارك على إكس"><i class="fab fa-x-twitter"></i></button>
-                <button onclick="shareArticle('${item.link || '#'}','${item.title}','wa')" title="شارك على واتساب"><i class="fab fa-whatsapp"></i></button>
+                <button onclick="shareArticle('${item.link}','${item.title}','fb')" title="شارك على فيسبوك"><i class="fab fa-facebook-f"></i></button>
+                <button onclick="shareArticle('${item.link}','${item.title}','tw')" title="شارك على إكس"><i class="fab fa-x-twitter"></i></button>
+                <button onclick="shareArticle('${item.link}','${item.title}','wa')" title="شارك على واتساب"><i class="fab fa-whatsapp"></i></button>
               </div>
-              <a href="${item.link || '#'}" target="_blank" rel="noopener" class="read-link">قراءة →</a>
+              <a href="${item.link}" target="_blank" rel="noopener" class="read-link">قراءة →</a>
             </div>
           </div>
         `;
@@ -735,51 +461,16 @@
       });
     }
 
-    function loadArticles() {
-      fetch('articles.json')
-        .then(res => {
-          if (!res.ok) throw new Error('articles.json غير موجود');
-          return res.json();
-        })
-        .then(data => {
-          renderArticles(data);
-        })
-        .catch(() => {
-          const fallback = [
-            { title: "الهاشمية.. فيزياء البقاء في شرق أوسط متغير!", link: "https://www.khaberni.com/news/747307", source: "خبرني", date: "2026-08-26", cat: "سياسة" },
-            { title: "الإنسان الأخير في حضرة الحمير", link: "https://www.khaberni.com/news/745966", source: "خبرني", date: "2026-08-25", cat: "ساخر" },
-            { title: "الملك عبد الله الثاني: القيادة التي تلامس القلب وتخاطب الضمير", link: "https://www.khaberni.com/news/744942", source: "خبرني", date: "2026-08-24", cat: "سياسة" }
-          ];
-          renderArticles(fallback);
-        });
-    }
-
-    let allArticles = [];
-    function filterArticles(cat) {
-      const filtered = cat === 'all' ? allArticles : allArticles.filter(a => a.cat === cat);
-      renderArticles(filtered);
-    }
-
-    const originalRender = renderArticles;
-    renderArticles = function(articles) {
-      allArticles = articles;
-      originalRender(articles);
-    };
-
-    loadArticles();
+    renderArticles('all');
 
     document.getElementById('filterContainer').addEventListener('click', e => {
       if (!e.target.matches('.filter-btn')) return;
       document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
       e.target.classList.add('active');
-      const cat = e.target.dataset.cat;
-      if (allArticles.length > 0) {
-        filterArticles(cat);
-      } else {
-        loadArticles();
-      }
+      renderArticles(e.target.dataset.cat);
     });
 
+    // --- 4. تفعيل الحركات ---
     AOS.init({ duration: 800, once: true, offset: 50 });
     new Typed('#typed-text', {
       strings: ['كاتب وصحفي أردني', 'محلل سياسي ساخر', 'راصد للواقع', 'مؤرخ للحظة'],
