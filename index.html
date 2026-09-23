@@ -1,430 +1,115 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>عماد داود | الأرشيف الرسمي</title>
-<meta name="description" content="الأرشيف الرقمي الرسمي للكاتب والصحفي الأردني عماد داود. مقالات سياسية، اجتماعية، وتحليلات منشورة في خبرني، رأي اليوم، صحيفة الرأي، أخبارنا، نبأ الأردن، وبانيت.">
-<meta name="keywords" content="عماد داود, كاتب أردني, مقالات, رأي اليوم, خبرني, صحيفة الرأي, تحليل سياسي, الأردن, فلسطين, السيادة">
-<meta name="author" content="عماد داود">
-<meta property="og:title" content="عماد داود | الأرشيف الرسمي">
-<meta property="og:description" content="الأرشيف الرقمي الرسمي للكاتب والصحفي الأردني عماد داود.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://emad-dawoud.netlify.app/">
-<meta property="og:image" content="https://alrai.com/alraijordan/uploads/authors/7231_1762200087.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مقالات عماد داود</title>
 <style>
-:root{--bg:#05070a;--paper:#f0ece1;--gold:#c69a52;--gold2:#e8c878;--line:rgba(198,154,82,.15);--max:1320px;--glass:rgba(255,255,255,.03)}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--paper);font-family:'Tajawal',sans-serif;line-height:1.9;overflow-x:hidden;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
-.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
-.bg-layer{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-.bg-gradient{position:absolute;inset:0;background:radial-gradient(ellipse at 20% 0%,rgba(198,154,82,.08),transparent 50%),radial-gradient(ellipse at 80% 100%,rgba(79,70,229,.06),transparent 50%),linear-gradient(180deg,#05070a,#080b10 50%,#05070a)}
-.orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.35;animation:orbFloat 25s infinite ease-in-out}
-.orb-1{width:500px;height:500px;background:radial-gradient(circle,rgba(198,154,82,.5),transparent 70%);top:-10%;right:-5%}
-.orb-2{width:400px;height:400px;background:radial-gradient(circle,rgba(79,70,229,.4),transparent 70%);bottom:-10%;left:-5%;animation-delay:-8s}
-@keyframes orbFloat{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(60px,-40px) scale(1.15)}66%{transform:translate(-40px,60px) scale(.9)}}
-.grid-dots{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(198,154,82,.08) 1px,transparent 1px);background-size:40px 40px;opacity:.4;mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%)}
-.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 0;transition:.4s;background:transparent}
-.navbar.scrolled{background:rgba(5,7,10,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--line);padding:14px 0}
-.nav-inner{display:flex;align-items:center;justify-content:space-between}
-.brand{font-family:'Amiri',serif;font-size:26px;font-weight:700}
-.brand span{color:var(--gold)}
-.nav-links{display:flex;gap:26px;font-size:15px;font-weight:500;color:#b0aaa0}
-.nav-links a:hover{color:var(--gold2)}
-.burger{display:none;font-size:22px;color:var(--gold2)}
-.hero{position:relative;z-index:2;min-height:92vh;display:flex;align-items:center;padding:120px 0 60px}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;width:100%}
-.hero-tag{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:24px;padding:8px 18px;border:1px solid var(--line);border-radius:40px;background:rgba(198,154,82,.04)}
-.hero h1{font-family:'Amiri',serif;font-size:clamp(38px,6vw,76px);font-weight:700;line-height:1.1;margin-bottom:24px}
-.hero h1 em{color:var(--gold);font-style:normal}
-.hero-lead{font-size:18px;color:#b0aaa0;font-weight:300;max-width:600px;margin-bottom:34px}
-.hero-lead strong{color:var(--gold2);font-weight:500}
-.hero-buttons{display:flex;gap:14px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:9px;padding:14px 28px;border-radius:60px;font-weight:700;font-size:14.5px;transition:.3s}
-.btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#0a0e14}
-.btn-primary:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(198,154,82,.4)}
-.btn-ghost{border:1px solid var(--line);color:#c4c0b5;background:rgba(255,255,255,.02)}
-.btn-ghost:hover{border-color:var(--gold);color:var(--gold2);transform:translateY(-3px)}
-.hero-portrait{display:flex;justify-content:center}
-.portrait-ring{position:relative;width:100%;max-width:340px;aspect-ratio:1/1;border-radius:50%;padding:4px;background:linear-gradient(135deg,var(--gold),transparent 40%,transparent 60%,var(--gold2))}
-.portrait-inner{width:100%;height:100%;border-radius:50%;background:linear-gradient(160deg,#11161f,#080b11);display:flex;align-items:center;justify-content:center;overflow:hidden}
-.portrait-inner img{width:100%;height:100%;object-fit:cover;display:block}
-.portrait-letter{font-family:'Amiri',serif;font-size:110px;color:var(--gold);font-weight:700}
-.marquee{position:relative;z-index:2;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0;overflow:hidden;background:rgba(198,154,82,.02)}
-.marquee-track{display:flex;gap:50px;animation:scroll 35s linear infinite;white-space:nowrap}
-.marquee-track span{font-family:'Amiri',serif;font-size:16px;color:#6e6b65;letter-spacing:2px;display:inline-flex;align-items:center;gap:50px}
-.marquee-track span::after{content:'◆';color:var(--gold);font-size:9px}
-@keyframes scroll{to{transform:translateX(50%)}}
-section{position:relative;z-index:2;padding:80px 0}
-.section-head{text-align:center;margin-bottom:44px}
-.section-kicker{color:var(--gold);font-size:12px;letter-spacing:4px;text-transform:uppercase;margin-bottom:14px;display:block}
-.section-title{font-family:'Amiri',serif;font-size:clamp(30px,4.5vw,50px);font-weight:700;margin-bottom:14px}
-.section-sub{color:#8f8a7f;font-size:15.5px;max-width:600px;margin:auto;font-weight:300}
-.controls{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px;justify-content:center}
-.search-box{position:relative;flex:1;max-width:480px;min-width:260px}
-.search-box input{width:100%;padding:15px 48px 15px 18px;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:60px;color:var(--paper);font-family:inherit;font-size:14.5px;outline:none}
-.search-box input:focus{border-color:var(--gold)}
-.search-box i{position:absolute;right:18px;top:50%;transform:translateY(-50%);color:var(--gold)}
-.filters{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:26px}
-.filter{padding:8px 18px;border:1px solid var(--line);border-radius:40px;font-size:12.5px;font-weight:600;color:#aaa69c;background:rgba(255,255,255,.02);transition:.25s}
-.filter:hover{color:var(--gold2);border-color:var(--gold)}
-.filter.active{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#0a0e14;border-color:var(--gold)}
-.articles{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
-.article{background:var(--glass);border:1px solid var(--line);border-radius:16px;padding:26px 24px;transition:.35s;display:flex;flex-direction:column;position:relative;overflow:hidden}
-.article::before{content:'';position:absolute;top:0;right:0;width:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent);transition:.5s}
-.article:hover::before{width:100%}
-.article:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 20px 50px -15px rgba(198,154,82,.22)}
-.article-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;font-size:12px}
-.article-source{color:var(--gold);font-weight:700;display:flex;align-items:center;gap:6px}
-.article-cat{padding:3px 12px;border-radius:20px;background:rgba(198,154,82,.12);color:var(--gold2);font-weight:600;font-size:11px}
-.article h3{font-family:'Amiri',serif;font-size:19px;font-weight:700;line-height:1.5;margin-bottom:10px;cursor:pointer}
-.article h3:hover{color:var(--gold2)}
-.article-desc{color:#8f8a7f;font-size:13.5px;line-height:1.7;flex-grow:1;margin-bottom:14px}
-.article-footer{display:flex;justify-content:space-between;align-items:center;padding-top:14px;border-top:1px solid var(--line);font-size:12.5px;color:#6e6b65}
-.article-actions{display:flex;gap:8px}
-.icon-btn{display:flex;align-items:center;gap:5px;color:var(--gold2);font-weight:700;font-size:12.5px;transition:.25s}
-.icon-btn:hover{letter-spacing:.4px}
-.article-body{display:none;margin-top:14px;padding-top:14px;border-top:1px dashed var(--line);font-size:14.5px;line-height:1.95;color:#d8d3c6}
-.article-body.open{display:block}
-.article-body p{margin:0 0 12px}
-.voice-box{background:linear-gradient(145deg,#11161f,#080b11);border:1px solid var(--line);border-radius:24px;padding:50px 40px;text-align:center}
-.voice-box h3{font-family:'Amiri',serif;font-size:32px;margin-bottom:12px}
-.voice-box p{color:#8f8a7f;margin-bottom:20px;font-size:14px}
-.wave{display:flex;align-items:center;justify-content:center;gap:4px;height:70px;margin:24px 0}
-.wave i{display:block;width:3px;background:linear-gradient(180deg,var(--gold),var(--gold2));border-radius:4px;opacity:.7}
-.play-btn{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#0a0e14;padding:15px 36px;border-radius:60px;font-weight:800;font-size:15px;display:inline-flex;align-items:center;gap:10px;transition:.3s}
-.play-btn:hover{transform:translateY(-3px)}
-.play-btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
-.voice-status{margin-top:16px;font-size:12.5px;color:#8f8a7f;min-height:18px}
-.contact-box{background:var(--glass);border:1px solid var(--line);border-radius:24px;padding:56px 30px;text-align:center}
-.contact-box h2{font-family:'Amiri',serif;font-size:34px;margin-bottom:12px}
-.contact-box p{color:#8f8a7f;margin-bottom:24px}
-.mail-link{display:inline-flex;align-items:center;gap:10px;color:var(--gold2);font-size:19px;font-weight:600;border-bottom:2px solid var(--gold);padding-bottom:6px}
-.footer{border-top:1px solid var(--line);padding:40px 0;text-align:center;color:#6e6b65;font-size:12.5px}
-.footer-links{display:flex;justify-content:center;gap:20px;margin-bottom:16px}
-.toast{position:fixed;bottom:26px;right:26px;z-index:2000;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#0a0e14;padding:14px 22px;border-radius:12px;font-weight:700;transform:translateY(120px);opacity:0;transition:.4s;max-width:380px;font-size:13.5px}
-.toast.show{transform:none;opacity:1}
-@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:40px;text-align:center}.hero-portrait{order:-1}.hero-buttons{justify-content:center}.hero-lead{margin-inline:auto}.nav-links{display:none}.nav-links.open{display:flex;flex-direction:column;position:absolute;top:64px;right:20px;left:20px;background:#0a0e14;border:1px solid var(--line);padding:22px;border-radius:16px;gap:16px}.burger{display:block}}
-@media(max-width:480px){.hero h1{font-size:36px}.articles{grid-template-columns:1fr}}
+  :root {
+    --bg: #faf8f5; --text: #1f1f1f; --accent: #7a1f1f; --muted: #6b6b6b; --card: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --bg:#141210; --text:#ece7e0; --accent:#d98b6a; --muted:#a6a09a; --card:#1e1b18; }
+  }
+  :root[data-theme="dark"] { --bg:#141210; --text:#ece7e0; --accent:#d98b6a; --muted:#a6a09a; --card:#1e1b18; }
+  * { box-sizing: border-box; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: "Traditional Arabic", "Amiri", Georgia, serif;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  header { padding: 40px 20px 20px; text-align: center; border-bottom: 1px solid rgba(122,31,31,0.15); }
+  header h1 { font-size: 2rem; margin: 0 0 6px; color: var(--accent); }
+  header p { color: var(--muted); margin: 0; font-size: 1rem; }
+  main { max-width: 760px; margin: 0 auto; padding: 24px 20px 60px; }
+  .article {
+    background: var(--card); border-radius: 10px; padding: 20px 22px; margin-bottom: 16px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06); border-inline-start: 4px solid var(--accent);
+  }
+  .article h2 { margin: 0 0 8px; font-size: 1.25rem; }
+  .article h2 a { color: var(--text); text-decoration: none; }
+  .article h2 a:hover { color: var(--accent); }
+  .article .date { color: var(--muted); font-size: 0.85rem; margin-bottom: 8px; }
+  .article p { margin: 0; color: var(--muted); line-height: 1.7; font-size: 0.95rem; }
+  footer { text-align: center; color: var(--muted); font-size: 0.8rem; padding: 20px; }
 </style>
 </head>
 <body>
-
-<div class="bg-layer"><div class="bg-gradient"></div><div class="grid-dots"></div><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
-
-<header class="navbar" id="navbar">
-<div class="wrap nav-inner">
-<a href="#top" class="brand">عماد <span>داود</span></a>
-<nav class="nav-links" id="navlinks">
-<a href="#own">مقالات جديدة</a>
-<a href="#archive">الأرشيف المنشور</a>
-<a href="#voice">صوت النص</a>
-<a href="#contact">تواصل</a>
-</nav>
-<button class="burger" id="burger"><i class="fas fa-bars"></i></button>
-</div>
+<header>
+  <h1>عماد داود</h1>
+  <p>مقالات رأي وتحليل — آخر أسبوعين</p>
 </header>
+<main>
 
-<main id="top">
-<section class="hero">
-<div class="wrap hero-grid">
-<div>
-<div class="hero-tag"><i class="fas fa-feather-alt"></i> الكاتب والصحفي الأردني</div>
-<h1>كلمة <em>لا تُستعار</em><br>وموقف لا يُقلَّد.</h1>
-<p class="hero-lead">أرشيف رقمي يجمع مقالاتي الجديدة كاملة النص، ومقالاتي المنشورة في الصحافة الأردنية والعربية. <strong>كلمة لا تُستعار، وموقف لا يُقلَّد.</strong></p>
-<div class="hero-buttons">
-<a href="#own" class="btn btn-primary"><i class="fas fa-book-open"></i> المقالات الجديدة</a>
-<a href="#archive" class="btn btn-ghost"><i class="fas fa-newspaper"></i> الأرشيف المنشور</a>
-</div>
-</div>
-<div class="hero-portrait">
-<div class="portrait-ring">
-<div class="portrait-inner">
-<img src="https://alrai.com/alraijordan/uploads/authors/7231_1762200087.jpg" alt="عماد داود" onerror="this.style.display='none';this.parentNode.innerHTML='<div class=&quot;portrait-letter&quot;>ع</div>';">
-</div>
-</div>
-</div>
-</div>
-</section>
+  <div class="article">
+    <h2><a href="./articles/khitab-almalik-alhibr.html">خطاب الملك في نيويورك.. الحبر لا يوقف الدم!</a></h2>
+    <div class="date">22 أيلول 2026</div>
+    <p>استعارة الانتباه كمورد جيوسياسي في خطاب الملك أمام الجمعية العامة، وربطها بمصير 300 طفل قُتلوا خلال 300 يوم من وقف إطلاق نار يحمل اسم السلام.</p>
+  </div>
 
-<div class="marquee"><div class="marquee-track">
-<span>الأردن</span><span>السيادة</span><span>فلسطين</span><span>الهوية</span><span>الدولة</span><span>الأدب</span><span>السياسة</span><span>الذاكرة</span><span>الأردن</span><span>السيادة</span><span>فلسطين</span><span>الهوية</span><span>الدولة</span><span>الأدب</span><span>السياسة</span><span>الذاكرة</span>
-</div></div>
+  <div class="article">
+    <h2><a href="./articles/balfour-abbas-adan.html">بلفور وعباس.. وعدن ومفتاح واحد لا يفتح؟!</a></h2>
+    <div class="date">18 أيلول 2026</div>
+    <p>وعد بلفور الذي لم تعتذر عنه بريطانيا بعد 109 أعوام، ومرسوم الانتخابات الفلسطينية وتأجيلاته المتكررة، بخيط واحد: من يملك قرار الباب المغلق.</p>
+  </div>
 
-<section id="own">
-<div class="wrap">
-<div class="section-head">
-<span class="section-kicker">كتبناها هذا الأسبوع</span>
-<h2 class="section-title">أحدث المقالات</h2>
-<p class="section-sub">أحدث ما كتبت، بين يديك.</p>
-</div>
-<div class="articles" id="ownArticles"></div>
-</div>
-</section>
+  <div class="article">
+    <h2><a href="./articles/falastin-man-yajru.html">فلسطين.. من يجرؤ على فتح هذا الملف؟!</a></h2>
+    <div class="date">17 أيلول 2026</div>
+    <p>مقارنة قانونية بين ملف الانتداب الفلسطيني وسابقة ناميبيا أمام محكمة العدل الدولية، وسؤال لم يُطرح من قبل بهذا الوضوح.</p>
+  </div>
 
-<section id="archive">
-<div class="wrap">
-<div class="section-head">
-<span class="section-kicker">موثّق رابطا برابط</span>
-<h2 class="section-title">الأرشيف المنشور فعليا</h2>
-<p class="section-sub">مقالات حقيقية منشورة باسمي في الصحافة الأردنية والعربية.</p>
-</div>
-<div class="controls">
-<div class="search-box"><input id="search" type="search" placeholder="ابحث في الأرشيف..."><i class="fas fa-search"></i></div>
-</div>
-<div class="filters" id="filters"></div>
-<div class="articles" id="articles"></div>
-</div>
-</section>
+  <div class="article">
+    <h2><a href="./articles/hal-i3tadharat-britanya.html">هل اعتذرت بريطانيا عن وعد بلفور؟</a></h2>
+    <div class="date">16 أيلول 2026</div>
+    <p>109 أعوام على وعد بلفور، وأزمة دبلوماسية بريطانية إسرائيلية حادة، وسؤال واحد ما زال بلا إجابة.</p>
+  </div>
 
-<section id="voice">
-<div class="wrap">
-<div class="section-head">
-<span class="section-kicker">صوت النص</span>
-<h2 class="section-title">الموقع يتحدث</h2>
-<p class="section-sub">استمع إلى مقالاتي بصوت واضح، مباشرة من متصفحك.</p>
-</div>
-<div class="voice-box">
-<h3>استمع إلى المقال</h3>
-<p>اضغط الزر لتسمع أحدث مقال بصوت هادئ.</p>
-<div class="wave" id="wave"></div>
-<button class="play-btn" id="speak"><i class="fas fa-play"></i> تشغيل أحدث مقال</button>
-<div class="voice-status" id="voiceStatus"></div>
-</div>
-</div>
-</section>
+  <div class="article">
+    <h2><a href="./articles/sanad-washaya.html">سند: حين يتحول زر التنبيه إلى وشاية بلا ضابط!</a></h2>
+    <div class="date">15 أيلول 2026</div>
+    <p>خدمة الإبلاغ عن المخالفات المرورية عبر تطبيق سند، وسؤال الخصوصية مقابل الرقابة المجتمعية.</p>
+  </div>
 
-<section id="contact">
-<div class="wrap">
-<div class="contact-box">
-<h2>تواصل معي</h2>
-<p>للنشر، أو للرأي، أو لمن يريد أن يقول إنه قرأ.</p>
-<a href="mailto:emadawoud@yahoo.com" class="mail-link"><i class="fas fa-envelope"></i> emadawoud@yahoo.com</a>
-</div>
-</div>
-</section>
+  <div class="article">
+    <h2><a href="./articles/salat-alghitha.html">سلة الغذاء وحدود النار</a></h2>
+    <div class="date">14 أيلول 2026</div>
+    <p>231 محاولة تهريب وتسلل عبر الحدود الشمالية خلال نصف عام، مقابل تضخم غذائي معتدل — مفارقة تستحق أن تُقال بصراحة.</p>
+  </div>
+
+  <div class="article">
+    <h2><a href="./articles/hudud-la-tura.html">حدود الأردن التي لا تُرى</a></h2>
+    <div class="date">14 أيلول 2026</div>
+    <p>حرب المعلومات المضادة والإشاعات المنظمة، وكيف تُقاس بالأرقام بدل أن تُوصف بالانطباع.</p>
+  </div>
+
+  <div class="article">
+    <h2><a href="./articles/albashawat-waslu.html">الباشوات وصلوا!</a></h2>
+    <div class="date">12 أيلول 2026</div>
+    <p>زيارة كبار مسؤولي الدولة لعائلات ضحايا حادث حافلة مكلفي خدمة العلم، وما تكشفه عن علاقة الدولة بالمواطن.</p>
+  </div>
+
+  <div class="article">
+    <h2><a href="./articles/junnat-adan.html">جُنّت عدن!</a></h2>
+    <div class="date">11-13 أيلول 2026</div>
+    <p>سيطرة الحوثيين الكاملة على باب المندب، وأثرها على الأردن والملاحة الدولية، وسابقة عمّان 1994 مع الوحدة اليمنية.</p>
+  </div>
+
+  <div class="article">
+    <h2><a href="./articles/kam-hisanan.html">الأردن.. كم حصانا ميتا ما زلنا نركب؟</a></h2>
+    <div class="date">11 أيلول 2026</div>
+    <p>نظرية الحصان الميت كإطار لتشريح سبعة ملفات في إدارة الدولة الأردنية، بأرقام محققة لا انطباعات.</p>
+  </div>
+
+  <div class="article">
+    <h2><a href="./articles/sa2khun-watani.html">سأخون وطني!</a></h2>
+    <div class="date">11 أيلول 2026</div>
+    <p>استعارة الجسد والأعصاب المخدَّرة لوصف الفساد الصامت، والسؤال: متى يستحق الوطن خوفا حقيقيا؟</p>
+  </div>
+
 </main>
-
-<footer class="footer">
-<div class="wrap">
-<div class="footer-links"><a href="#own">مقالات جديدة</a><a href="#archive">الأرشيف</a><a href="#voice">صوت النص</a><a href="#contact">تواصل</a></div>
-<div><strong>عماد داود</strong> · الأرشيف الرسمي · جميع الحقوق محفوظة © <span id="year"></span></div>
-</div>
-</footer>
-
-<div class="toast" id="toast"></div>
-
-<script>
-const OWN_ARTICLES=[
-{title:"الأردن.. لا تغيّروا السرج!",cat:"اقتصادي",excerpt:"نظرية الحصان الميت مسقطة على المشهد الأردني: الوظيفة الحكومية، التعليم، الدين، الهيئات المستقلة.",body:["هناك حكاية سياسية ساخرة تقول: إذا مات الحصان الذي تركبه، لا تنزل عنه. غيّر السرج. اشتر له علفا أفضل. شكّل لجنة لمعرفة سبب تعثره.","الأردن ليس دولة ميتة. اقتصاده ينمو. مؤسساته تعمل. لكن البطالة بين الأردنيين تقترب من 21 بالمئة، وترتفع بين النساء إلى أكثر من 30 بالمئة.","في موازنة 2026 وحدها، بلغ صافي عجز جميع الوحدات الحكومية نحو 671 مليون دينار. لا تغيّروا السرج. انزلوا عن الحصان!"]},
-{title:"جعفر حسان لا يحبنا!",cat:"سياسي",excerpt:"قراءة في استطلاعات الثقة والدين العام ومدينة عمرة عبر استعارة الحب السياسي.",body:["جعفر حسان لا يحبنا! وهذه، ربما، أجمل تهمة يمكن أن توجه إلى رئيس حكومة.","بعد نحو مئتي يوم من تشكيل حكومته، قال 74 بالمئة من الأردنيين إن الأمور تسير في الاتجاه الإيجابي، بحسب استطلاع مركز الدراسات الاستراتيجية في الجامعة الأردنية.","لا يحتاج جعفر حسان أن يقول إنه يحب الأردنيين. يكفي أن يترك وراءه شيئا يعيش بعده."]},
-{title:"الحمار كسب القضية!",cat:"ساخر",excerpt:"قضية «يا حمار» أمام القضاء الأردني، ومفارقة أن يكون الأكثر أذى في اللغة هو الأقل أذى في الحياة.",body:["خمسة وعشرون دينارا غرامة، وألف ومئتان دينار تعويضا عن الضرر المعنوي.","هنا يستحق الحمار أن يُستدعى شاهدا على الحكاية كلها. هو الطرف الوحيد فيها الذي ظل خارج وقائعها جميعا.","1225 دينارا ثمن كلمة. أما ثمن المال العام؟ فمن يضع الرقم؟"]},
-{title:"سأخون وطني!",cat:"فكر",excerpt:"الوطن جسدا حيا، والفساد والواسطة أعصابا مخدَّرة، والسؤال عصب لا يزال حيا.",body:["سأخون وطني. وسأبدأ الخيانة من مكان لا علاقة له بالرأي: من الجلد!","الجسد الحي يتألم حين يُجرح. هذا كل ما يعنيه الألم: أن شيئا هنا ما زال حيا، ما زال يشعر.","لا حين يصرخ. حين يصمت!"]},
-{title:"هل اعتذرت بريطانيا عن وعد بلفور؟؟",cat:"سياسي",excerpt:"من الرفض الرسمي 2017 إلى أزمة القدس هذا الأسبوع: توثيق كامل لكل مرة رفضت فيها بريطانيا الاعتذار.",body:["في 22 نيسان 2017 ردت الحكومة البريطانية رسميا بأنها فخورة بدورها في إقامة إسرائيل ولا تنوي الاعتذار.","في تموز 2026، اعتذر رئيس الوزراء كير ستارمر رسميا عن ممارسات التبني القسري التاريخية. إذن بريطانيا تعرف كيف تعتذر.","لكنها لم تقلها لبلفور، لا هذا الأسبوع ولا أي أسبوع قبله."]},
-];
-
-const articles=[
-{t:'جُنّت عدن!',d:'عدن اسم طالما ارتبط شعبيا بفكرة الفردوس، حتى صار الربط نفسه اليوم أقسى نكتة تعرفها الجغرافيا العربية.',g:'سياسة',date:'14-9-2026',s:'خبرني',u:'https://www.khaberni.com/news/847409'},
-{t:'عُمال الأردن.. هذه ليست عطلتكم!',d:'كتبت هذا النص في الأول من أيار. أرسلته.. ولم يُنشر.',g:'اجتماعي',date:'2-5-2026',s:'خبرني',u:'https://www.khaberni.com/news/800000'},
-{t:'د. جواد العناني... الأردني لا يمارس التقشف — بل يستهلك!',d:'فيروز لم تغنِّ عن الزحام! غنت عن الانتظار الذي لا يُجاب.',g:'فكر',date:'4-5-2026',s:'خبرني',u:'https://www.khaberni.com/news/800001'},
-{t:'هذا التراب لا يركع!',d:'في الذكرى الثمانين لاستقلال الأردن.',g:'وطن وسياسة',date:'25-5-2026',s:'خبرني',u:'https://www.khaberni.com/news/813299'},
-{t:'حين تُدمن الدولة صوتها: نظرية (يلا تنام)!',d:'عن الفرق بين الحقيقة التي تعالج والتطمين الذي يؤجل المشكلة.',g:'فكر',date:'30-3-2026',s:'خبرني',u:'https://www.khaberni.com/news/794914'},
-{t:'دمُهم لا يجف، ودمُك لا يكفي!',d:'نص عن الصمود بوصفه شكلا من أشكال الانتصار.',g:'فلسطين',date:'8-3-2026',s:'خبرني',u:'https://www.khaberni.com/news/788909'},
-{t:'يُرفرف ولا يُسأل',d:'قبل أن تكتمل الدولة رُسم علمها. ليس خطأً. ليس تسرعًا.',g:'سياسة',date:'16-4-2026',s:'خبرني',u:'https://www.khaberni.com/news/800002'},
-{t:'لو كان التوجيهي رجلا لقتلته!',d:'الساعة الثامنة مساء، يفتح موقع إلكتروني واحد، وتتوقف حياة بيوت كاملة عنده.',g:'اجتماعي',date:'10-8-2026',s:'خبرني',u:'https://www.khaberni.com/news/836948'},
-{t:'When Amman and Baghdad Stood in the Same Trench',d:'Tomorrow, when the stands of "Al Thumama" fill with voices and banners, we will not be at a football match.',g:'دولي',date:'11-12-2025',s:'خبرني',u:'https://www.khaberni.com/news/750000'},
-{t:'(Al Hashemiya).. The Physics of Remaining in a Changing Middle East!',d:'In the stormy field of geopolitics, the Hashemite Kingdom of Jordan emerges as a "super physical system".',g:'دولي',date:'3-11-2025',s:'خبرني',u:'https://www.khaberni.com/news/740000'},
-{t:'The Strategic Education Plan for Jordan 2026–2030',d:'Between Ambition and Challenges.',g:'دولي',date:'10-3-2026',s:'خبرني',u:'https://www.khaberni.com/news/790000'},
-{t:'الأردن: السيادة لا تشرب مع القهوة.. خرافة القراءة الاستشراقية للعشيرة!',d:'حين تجلس في ديوان عشيرة أردنية وأنت سفير غربي تحمل قرنا من الاستشراق.',g:'فكر',date:'18-1-2026',s:'رأي اليوم',u:'https://www.raialyoum.com/عماد-داود-الاردن-السيادة-لا-تشرب-مع-القهوة-خرافة-القراءة-الاستشراقية-للعشيرة/'},
-{t:'إبستين الأردن: المشرط الذي شق عمان!',d:'صنعناه بأيدينا.. وتبرأنا منه بأفواهنا!',g:'اجتماعي',date:'12-5-2026',s:'رأي اليوم',u:'https://www.raialyoum.com/عماد-داود-إبستين-الاردن-المشرط-الذي-شق-عمان/'},
-{t:'الأردن: الدولة تغيّر الميكروفون.. والثقة ماتت قبل أن يُفتح!',d:'في منتدى تواصل وأمام جمهور من الإعلاميين والمختصين، قال الدكتور محمد المومني ما قاله.',g:'سياسة',date:'21-5-2026',s:'رأي اليوم',u:'https://www.raialyoum.com/عماد-داود-الاردن-الدولة-تغير-الميكروفون-و/'},
-{t:'الأردن: أولادكم ليسوا لكم!',d:'السكين لم تبدأ في مزرعة الكرك. السكين كانت في البيت منذ زمن.',g:'اجتماعي',date:'27-4-2026',s:'رأي اليوم',u:'https://www.raialyoum.com/عماد-داود-الأردن-أولادكم-ليسوا-لكم/'},
-{t:'حلّوها… أو اعترفوا بالجريمة.. الجثّة في منتصف الغرفة.. والجميع يتحدّث عن البروتوكول!',d:'ثمّة لحظة في حياة كلّ مريض، يعرف فيها الطبيب الحقيقة كاملةً.',g:'فكر',date:'10-5-2026',s:'رأي اليوم',u:'https://www.raialyoum.com/عماد-داود-حلوها-أو-اعترفوا-بالجريمة-الج/'},
-{t:'الطيبات… وقبر في السابعة والأربعين!',d:'ضياء العوضي مات في السابعة والأربعين. جلطة قلبية.',g:'اجتماعي',date:'28-6-2026',s:'رأي اليوم',u:'https://www.raialyoum.com/عماد-داود-الطيبات-وقبر-في-السابعة-وال/'},
-{t:'لو أني أعرف خاتمتي… هل كنتُ لابدأ؟!',d:'لو أني أعرف أن العالم سيصل إلى هذا القدر من الخِفّة.',g:'فكر',date:'11-1-2026',s:'رأي اليوم',u:'https://www.raialyoum.com/عماد-داود-لو-أني-أعرف-خاتمتي-هل-كنت-ل/'},
-{t:'جرش تهتف لأبي وديع… والفن يبقى حيث تتهاوى العروش!',d:'المدرج الجنوبي في جرش، الليلة قبل الماضية، تحوّل إلى صالة عرض لمحرك عتيق يرفض التقاعد.',g:'ثقافة',date:'',s:'رأي اليوم',u:'https://www.raialyoum.com/عماد-داود-جرش-تهتف-لأبي-وديع-والفن-يبقى-حيث-تتهاوى-العروش/'},
-{t:'الأردن: لماذا لم تدقوا جدران الخزان!',d:'كاتب أردني.',g:'سياسة',date:'31-7-2026',s:'رأي اليوم',u:'https://www.raialyoum.com/عماد-داود-الأردن-لماذا-لم-تدقوا-جدران-الخزان/'},
-{t:'الأردن بين خصخصتين!',d:'قبل أيام.. الطلبة الأردنيين وحدهم أمام هواتفهم لحظة إعلان نتائج التوجيهي.',g:'سياسة',date:'14-8-2026',s:'رأي اليوم',u:'https://www.raialyoum.com/عماد-داود-الأردن-بين-خصخصتين/'},
-{t:'هرمز: من أغلق الباب يملك المفتاح',d:'أربعة وثمانون كيلومتراً. هذا هو هرمز.',g:'سياسة',date:'11-4-2026',s:'رأي اليوم',u:'https://www.raialyoum.com/عماد-داود-هرمز-من-اغلق-الباب-يملك-المفتاح/'},
-{t:'الأردن.. أنداري!',d:'لا افتتاح. لا تمهيد. فقط لحظة يتقدّم فيها الواقع على اللغة بخطوة قاتلة.',g:'سياسة',date:'',s:'رأي اليوم',u:'https://www.raialyoum.com/عماد-داود-الأردن-أنداري/'},
-{t:'لو كان التوجيهي رجلا لقتلته!',d:'الساعة الثامنة من مساء اليوم، يفتح موقع.. وتتوقف عنده حياة بيت كامل.',g:'اجتماعي',date:'11-8-2026',s:'رأي اليوم',u:'https://www.raialyoum.com/عماد-داود-لو-كان-التوجيهي-رجلا-لقتلته/'},
-{t:'حزب الأمة.. أيّ أمة؟ عقد الإيجار الأردني الأطول: الإخوان والدولة بين الإخطار والإخلاء!',d:'في القانون الأردني، المستأجر لا يُطرد بالقوة.',g:'سياسة',date:'22-4-2026',s:'رأي اليوم',u:'https://www.raialyoum.com/عماد-داود-حزب-الأمة-أي-أمة-عقد-الإيجار-الأردني-الأطول/'},
-{t:'على مكتب رئيس الوزراء الأردني مشروع أول حقيبة وزارية للسعادة والفرفشة الوطنية!',d:'دولة رئيس الوزراء، لا أكتب إليكم من موقع الاعتراض.',g:'ساخر',date:'30-1-2026',s:'رأي اليوم',u:'https://www.raialyoum.com/عماد-داود-على-مكتب-رئيس-الوزراء-الاردني-مشروع/'},
-{t:'سماؤنا لا نعيرها! ... في السيادة والوصاية ومعنى أن تكون دولة',d:'فإما أن تقبل أن للدولة العربية سيادة تصونها، أو أن تقول صراحة إن السيادة امتياز تُمنح لمن يستحق.',g:'سياسة',date:'29-3-2026',s:'رأي اليوم',u:'https://www.raialyoum.com/عماد-داود-سماؤنا-لا-نعيرها-في-السيادة-وال/'},
-{t:'ما لا تعكسه المرايا!',d:'لا تكذب الشاشة. الشاشة تحذف. والحذف في رمضان هذا العام، كما في كل عام.',g:'فكر',date:'26-2-2026',s:'رأي اليوم',u:'https://www.raialyoum.com/عماد-داود-ما-لا-تعكسه-المرايا/'},
-{t:'المنتخب الوطني.. نشامى يعشقون الفوز، لكن... يعشقون الأرض أكثر!',d:'فوز النشامى على الإمارات في كأس العرب كلحظة توقف فيها الزمن.',g:'رياضة',date:'4-12-2025',s:'صحيفة الرأي',u:'https://alrai.com/article/10933136/كتاب/المنتخب-الوطنينشامى-يعشقون-الفوز-لكنيعشقون-الأرض-أكثر'},
-{t:'الأردن: نبوءة الصمود في عصر العواصف!',d:'العظمة ليست في صخب الأحداث، بل في عمق السكون الذي يلي العاصفة.',g:'سياسة',date:'2-12-2025',s:'صحيفة الرأي',u:'https://alrai.com/article/10932820/كتاب/الأردن-نبوءة-الصمود-في-عصر-العواصف'},
-{t:'موسم الهجرة إلى الشرق: الأردن في قلب التحولات العالمية',d:'رؤية الأردن في إعادة التموضع الاستراتيجي وسط تحولات عالمية.',g:'سياسة',date:'18-11-2025',s:'صحيفة الرأي',u:'https://alrai.com/article/10930384/كتاب/موسم-الهجرة-إلى-الشرق-الأردن-في-قلب-التحولات-العالمية'},
-{t:'من الحكمة إلى المبادرة: ملامح القيادة الهاشمية في زمن التحول',d:'في زمن تتكاثر فيه الشعارات وتتناقص فيه الرؤى.',g:'سياسة',date:'11-11-2025',s:'صحيفة الرأي',u:'https://alrai.com/article/10929333/كتاب/من-الحكمة-إلى-المبادرة-ملامح-القيادة-الهاشمية-في-زمن-التحول'},
-{t:'الأردن: هندسة الاستقرار.. من التحدي إلى النموذج',d:'المملكة كنموذج استثنائي في فن إدارة الدولة.',g:'سياسة',date:'4-11-2025',s:'صحيفة الرأي',u:'https://alrai.com/article/10928147/كتاب/الأردن-هندسة-الاستقرار-من-التحدي-إلى-النموذج'},
-{t:'الملك عبد الله الثاني: القيادة التي تلامس القلب وتخاطب الضمير',d:'قائد يعيد للقيادة معناها الإنساني الأصيل.',g:'سياسة',date:'28-10-2025',s:'صحيفة الرأي',u:'https://alrai.com/article/10926753/كتاب/الملك-عبد-الله-الثاني-القيادة-التي-تلامس-القلب-وتخاطب-الضمير'},
-{t:'الأردن: صوت العدالة في زمن صاخب',d:'من يختار أن يعمل بصمت، ويقف حيث يقتضي الموقف.',g:'سياسة',date:'14-10-2025',s:'صحيفة الرأي',u:'https://alrai.com/article/10924171/كتاب/الأردن-صوت-العدالة-في-زمن-صاخب'},
-{t:'عبد الله الثاني: حين تلبس الأوطان تاجها ويصبح العدل سليل الملك',d:'لم أكتب من ظمأ إلى مجد، بل من علو لا يراه إلا من اختبر السقوط ورفضه.',g:'سياسة',date:'3-6-2025',s:'صحيفة الرأي',u:'https://alrai.com/article/10884486/كتاب/عبد-الله-الثاني-حين-تلبس-الأوطان-تاجها-ويصبح-العدل-سليل-الملك'},
-{t:'الدولة الدائمة والميدان: إعادة تعريف القوة',d:'ليست المسألة جيشًا يعيد ترتيب صفوفه، بل دولة تنظر إلى جسدها العميق.',g:'سياسة',date:'25-1-2026',s:'بانيت',u:'https://panet.com/index.php/story/4213919'},
-{t:'السردية الأردنية: البحث عن راوٍ!',d:'تُعد السردية بمفهومها العميق نظاما معرفيا يشكل وجدان الشعوب ويمنح الدول شرعية وجودها.',g:'فكر',date:'12-2-2026',s:'بانيت',u:'https://panet.com/story/4220855'},
-{t:'عبد الله الثاني... حين تصير الأوطان ملوكًا، ويصبح العدل سِمَة التاج',d:'هنا لا أكتب عن ملك يحكم، بل عن رمزٍ ينهض.',g:'سياسة',date:'16-6-2025',s:'بانيت',u:'https://panet.com/index.php/story/4213921'},
-{t:'الأردن: بيان الدولة الدائمة ومبدأ الميدان',d:'بيان الدولة الدائمة ومبدأ الميدان.',g:'سياسة',date:'21-1-2026',s:'بانيت',u:'https://panet.com/index.php/story/4213922'},
-{t:'إنشقاق وعي الشباب بين الغيبوبة والغياب! (بانيت)',d:'ليس أخطر ما يمكن أن تخسره الأوطان أبناءها، بل أن تخسر قدرتهم على الاحتمال.',g:'اجتماعي',date:'27-1-2026',s:'بانيت',u:'https://panet.com/index.php/story/4213923'},
-{t:'في حب الملك ! (بانيت)',d:'وحين نقول نحبُّه، فإننا لا نُعلن عاطفة، بل نُصدر حكمًا تاريخيًا مكتمل الأركان.',g:'سياسة',date:'31-1-2026',s:'بانيت',u:'https://panet.com/index.php/story/4213924'},
-{t:'جبهة العمل الإسلامي — ثمانية عقود في خدمة البقاء',d:'الثقافي الملكي وسط عمّان — وليس في قاعة خلفية متواضعة.',g:'سياسة',date:'22-4-2026',s:'بانيت',u:'https://panet.com/index.php/story/4213925'},
-{t:'لو أني أعرف خاتمتي… هل كنتُ لأبدأ؟ (بانيت)',d:'في هذا السياق الشائك بين الذاتي والموضوعي، أستحضر مكالمة غير متوقعة.',g:'فكر',date:'10-9-2026',s:'بانيت',u:'https://panet.com/index.php/story/4213926'},
-{t:'السقف لا يتفاوض!',d:'حين يعبر الصاروخ سماءك ولا تفعل شيئًا، لا تكون قد اخترت السلام.',g:'سياسة',date:'23-3-2026',s:'بانيت',u:'https://panet.com/index.php/story/4213927'},
-{t:'إنشقاق وعي الشباب بين الغيبوبة والغياب!',d:'ليس أخطر ما يمكن أن تخسره الأوطان أبناءها، بل أن تخسر قدرتهم على الاحتمال.',g:'اجتماعي',date:'27-1-2026',s:'نبأ الأردن',u:'https://nabaajordan.com/articles/484002'},
-{t:'الدولة تغيّر الميكروفون — والثقة ماتت قبل أن يُفتح!',d:'حكومات تحاول تحديث أدوات اتصالها في لحظة انهار فيها الرصيد.',g:'سياسة',date:'25-4-2026',s:'نبأ الأردن',u:'https://nabaajordan.com/articles/493484'},
-{t:'تشريع العَدَم!',d:'في الثلاثين من آذار 2026، لم يُشرِّع الكنيست قانوناً للإعدام.',g:'سياسة',date:'2-4-2026',s:'نبأ الأردن',u:'https://nabaajordan.com/articles/490781'},
-{t:'يُرفرف — ولا يُسأل! (نبأ الأردن)',d:'قبل أن تكتمل الدولة… رُسم علمها.',g:'سياسة',date:'16-4-2026',s:'نبأ الأردن',u:'https://nabaajordan.com/articles/492499'},
-{t:'جعفر حسان.. افعلها الآن!',d:'اضغط ثم "إضافة للشاشة الرئيسية".',g:'سياسة',date:'4-7-2026',s:'نبأ الأردن',u:'https://nabaajordan.com/articles/484006'},
-{t:'"جمعية فلسطين الدولية" ليست مجرد جمعية!',d:'عن الجمعية التي أسسها د. أسعد عبد الرحمن قبل 24 عاما ودورها الخيري في القضية الفلسطينية.',g:'فلسطين',date:'23-2-2025',s:'أخبارنا',u:'https://akhbarna.net/article/282525'},
-{t:'في حب الملك! (أخبارنا)',d:'وحين نقول نحبُّه، فإننا لا نُعلن عاطفة، بل نُصدر حكمًا تاريخيًا مكتمل الأركان.',g:'سياسة',date:'31-1-2026',s:'أخبارنا',u:'https://akhbarna.net/article/330185'},
-{t:'عبد الله الثاني... حين تصير الأوطان ملوكًا، ويصبح العدل سِمَة التاج (أخبارنا)',d:'أنا طالب لغة وأدب عربي على وشك التخرج، لم أُقْدِمْ على هذه السطور طمعًا ولا تزلّفًا.',g:'سياسة',date:'13-6-2025',s:'أخبارنا',u:'https://akhbarna.net/عماد-داود-عبد-الله-الثاني-حين-تصير-الأوطان-ملوكا/'},
-{t:'ماذا لو عاد منتصرًا؟',d:'ليس السؤال عن نتيجة مباراة، ولا عن كأس تُرفع أو ميدالية تُعلَّق.',g:'رياضة',date:'18-12-2025',s:'أخبارنا',u:'https://akhbarna.net/عماد-داود-ماذا-لو-عاد-منتصرا/'},
-{t:"الفيتو الملكي… حين تقول السيادة لا لتشريع الإعدام على الهوية",d:'في الثلاثين من آذار 2026، لم يُخطئ الكنيست التقدير… بل ارتكب اعترافًا.',g:'سياسة',date:'1-4-2026',s:'أخبارنا',u:'https://akhbarna.net/article/339914'},
-{t:'صوتان وأردن! أبو زيد والمومني: صهيل الهوية وهمس الحكمة',d:'تلك الحكمة العميقة التي تتوارثها الأمم الحية.',g:'فكر',date:'13-1-2026',s:'أخبارنا',u:'https://akhbarna.net/عماد-داود-صوتان-وأردن/'},
-{t:'من "موعود بالعذاب" حتى "وابتدأ المشوار": جعفر حسان يغير لغة الدولة!',d:'أكتب هذه الكلمات وأنا أستمع إلى صدى عبد الحليم: "موعود معايا بالعذاب..."',g:'سياسة',date:'14-1-2026',s:'أخبارنا',u:'https://akhbarna.net/عماد-داود-جعفر-حسان/'},
-{t:'من أغلق الباب يملك المفتاح...والجغرافيا دائما تكسب!',d:'قراءة في أزمة مضيق هرمز وكيف تحسم الجغرافيا ما لا تحسمه القوة.',g:'سياسة',date:'11-4-2026',s:'أخبارنا',u:'https://akhbarna.net/article/341456'},
-{t:'د. حسام زملط وموجة حب فلسطين التي تعالت مع زيارته للأردن',d:'عن زيارة السفير الفلسطيني حسام زملط للأردن وصداها الشعبي.',g:'فلسطين',date:'9-3-2024',s:'أخبارنا',u:'https://akhbarna.net/article/236581'},
-{t:'إبستين الأردن: المشرط الذي شق عمان! (صحافة 24)',d:'صنعناه بأيدينا وتبرأنا منه بأفواهنا.',g:'اجتماعي',date:'12-5-2026',s:'صحافة 24',u:'https://sa24.co/عماد-داود-إبستين-الاردن-المشرط-الذي-شق-عمان/'},
-{t:'حلّوها… أو اعترفوا بالجريمة (صحافة 24)',d:'ثمّة لحظة في حياة كلّ مريض، يعرف فيها الطبيب الحقيقة كاملةً.',g:'فكر',date:'10-5-2026',s:'صحافة 24',u:'https://sa24.co/عماد-داود-حلوها-أو-اعترفوا-بالجريمة/'},
-{t:'الأردن: أولادكم ليسوا لكم! (صحافة 24)',d:'السكين لم تبدأ في مزرعة الكرك. السكين كانت في البيت منذ زمن.',g:'اجتماعي',date:'27-4-2026',s:'صحافة 24',u:'https://sa24.co/عماد-داود-الأردن-أولادكم-ليسوا-لكم/'},
-{t:'الأردن.. أنداري! (صحافة 24)',d:'لا افتتاح. لا تمهيد. فقط لحظة يتقدّم فيها الواقع على اللغة بخطوة.',g:'سياسة',date:'13-5-2026',s:'صحافة 24',u:'https://sa24.co/عماد-داود-الأردن-أنداري/'},
-{t:'حلاوة البدايات: ما لم تقله العتبة..!',d:'العتبة لا تنتمي لأحد! لا للغرفة التي تركتها، ولا للغرفة التي لم تدخلها بعد!',g:'فكر',date:'11-3-2026',s:'صحافة 24',u:'https://sa24.co/عماد-داود-حلاوة-البدايات/'},
-{t:'ما لا تعكسه المرايا! (صحافة 24)',d:'لا تكذب الشاشة. الشاشة تحذف. والحذف في رمضان هذا العام، كما في كل عام.',g:'فكر',date:'26-2-2026',s:'صحافة 24',u:'https://sa24.co/عماد-داود-ما-لا-تعكسه-المرايا/'},
-{t:'حزب الأمة.. أيّ أمة؟ (صحافة 24)',d:'في القانون الأردني، المستأجر لا يُطرد بالقوة. يُخطَر. ثم يُنذَر. ثم يُخلى.',g:'سياسة',date:'22-4-2026',s:'صحافة 24',u:'https://sa24.co/عماد-داود-حزب-الأمة/'},
-{t:'على مكتب دولة الرئيس جعفر حسان: تأملات في عدالة تمشي على عجل!',d:'ليس في المشهد الأردني اليوم ما هو أبلغ من هذه المفارقة اليومية الصامتة.',g:'سياسة',date:'24-12-2025',s:'صحافة 24',u:'https://sa24.co/عماد-داود-على-مكتب-دولة-الرئيس-جعفر-حسان/'},
-{t:'حين يصبح الجرح سلاحًا: إيران، الرهينة التي تمسك بعنق البحر (صحافة 24)',d:'لم يحدث في التاريخ الحديث أن تحوّل جرحٌ إلى رهينة بهذه السرعة.',g:'دولي',date:'15-3-2026',s:'صحافة 24',u:'https://sa24.co/عماد-داود-حين-يصبح-الجرح-سلاحا/'},
-{t:'مقالات متنوعة',d:'مجموعة مقالات منشورة على صحيفة السوسنة الأردنية.',g:'متنوع',date:'',s:'صحيفة السوسنة',u:'https://www.assawsana.com/عماد-داود'},
-{t:'سماؤنا لا نعيرها! (22 الإعلامي)',d:'فإما أن تقبل أن للدولة العربية سيادة تصونها، أو أن تقول صراحة إن السيادة امتياز تُمنح لمن يستحق.',g:'سياسة',date:'29-3-2026',s:'22 الإعلامي',u:'https://22al.com/عماد-داود-سماؤنا-لا-نعيرها/'},
-{t:'11 سبتمبر: اليوم الذي لم تنزل فيه الطائرة أبدا',d:'قراءة في ربع قرن على هجمات سبتمبر وأثرها على العالم والمنطقة.',g:'فكر',date:'أيلول 2026',s:'خبرني',u:'https://www.khaberni.com/news/847409'},
-{t:'بن لادن.. الطائرة لا تزال فوقنا',d:'قراءة في إرث 11 سبتمبر بعد ربع قرن.',g:'فكر',date:'أيلول 2026',s:'رأي اليوم',u:'https://www.raialyoum.com/عماد-داود-بن-لادن-الطائرة-لا-تزال-فوقنا/'},
-];
-
-const yearEl=document.getElementById('year');if(yearEl)yearEl.textContent=new Date().getFullYear();
-
-function renderOwn(){
-const wrap=document.getElementById('ownArticles');
-wrap.innerHTML='';
-OWN_ARTICLES.forEach(a=>{
-const el=document.createElement('article');
-el.className='article';
-el.innerHTML=`<div class="article-meta"><span class="article-source"><i class="fas fa-pen-nib"></i> عماد داود</span><span class="article-cat">${a.cat}</span></div>
-<h3>${a.title}</h3>
-<p class="article-desc">${a.excerpt}</p>
-<div class="article-body"><p class="byline">عماد داود</p>${a.body.map(p=>'<p>'+p+'</p>').join('')}</div>
-<div class="article-footer"><div class="article-actions">
-<button class="icon-btn readBtn"><i class="fas fa-book-open"></i> اقرأ</button>
-<button class="icon-btn listenBtn"><i class="fas fa-play"></i> استمع</button>
-</div></div>`;
-const body=el.querySelector('.article-body');
-const readBtn=el.querySelector('.readBtn');
-const listenBtn=el.querySelector('.listenBtn');
-const h3=el.querySelector('h3');
-const toggle=()=>{body.classList.toggle('open');readBtn.innerHTML=body.classList.contains('open')?'<i class="fas fa-eye-slash"></i> إخفاء':'<i class="fas fa-book-open"></i> اقرأ';};
-h3.onclick=toggle;readBtn.onclick=toggle;
-listenBtn.onclick=()=>speakArticle(a.title+'. '+a.body.join(' '),listenBtn);
-wrap.appendChild(el);
-});
-}
-
-const articlesEl=document.getElementById('articles');
-const searchEl=document.getElementById('search');
-const filtersEl=document.getElementById('filters');
-let active='الكل';
-const cats=['الكل',...new Set(articles.map(a=>a.g))];
-cats.forEach(c=>{
-const b=document.createElement('button');
-b.className='filter'+(c==='الكل'?' active':'');
-b.textContent=c;
-b.onclick=()=>{active=c;document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');render();};
-filtersEl.appendChild(b);
-});
-
-function render(){
-const q=searchEl.value.trim().toLowerCase();
-articlesEl.innerHTML='';
-let shown=0;
-articles.forEach(a=>{
-const hay=(a.t+' '+a.d+' '+a.g+' '+a.s).toLowerCase();
-if((active==='الكل'||a.g===active)&&(!q||hay.includes(q))){
-shown++;
-const el=document.createElement('article');
-el.className='article';
-el.innerHTML=`<div class="article-meta"><span class="article-source"><i class="fas fa-newspaper"></i> ${a.s}</span><span class="article-cat">${a.g}</span></div><h3><a href="${a.u}" target="_blank" rel="noopener">${a.t}</a></h3><p class="article-desc">${a.d}</p><div class="article-footer"><span>${a.date?'<i class="far fa-calendar"></i> '+a.date:''}</span><a href="${a.u}" target="_blank" rel="noopener" class="icon-btn">قراءة <i class="fas fa-arrow-left"></i></a></div>`;
-articlesEl.appendChild(el);
-}
-});
-if(!shown)articlesEl.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:50px 20px;color:#888">لا توجد نتائج مطابقة.</div>';
-}
-searchEl.addEventListener('input',render);
-
-let currentUtter=null;
-let voicesReady=false;
-function ensureVoices(cb){
-if(!('speechSynthesis' in window)){cb([]);return;}
-const v=speechSynthesis.getVoices();
-if(v && v.length){voicesReady=true;cb(v);return;}
-speechSynthesis.onvoiceschanged=()=>{voicesReady=true;cb(speechSynthesis.getVoices());};
-setTimeout(()=>{if(!voicesReady)cb(speechSynthesis.getVoices());},400);
-}
-function speakArticle(text,btn){
-const statusEl=document.getElementById('voiceStatus');
-if(!('speechSynthesis' in window)){
-  if(statusEl)statusEl.textContent='متصفحك لا يدعم النطق الصوتي.';
-  showToast('متصفحك لا يدعم النطق الصوتي');
-  return;
-}
-speechSynthesis.cancel();
-document.querySelectorAll('.listenBtn').forEach(b=>b.innerHTML='<i class="fas fa-play"></i> استمع');
-ensureVoices((voices)=>{
-const u=new SpeechSynthesisUtterance(text);
-const ar=voices.find(v=>v.lang&&v.lang.startsWith('ar'));
-if(ar)u.voice=ar;
-u.lang='ar-SA';u.rate=.95;
-u.onstart=()=>{ if(statusEl)statusEl.textContent=''; };
-u.onend=()=>{ if(btn)btn.innerHTML='<i class="fas fa-play"></i> استمع'; };
-u.onerror=(e)=>{
-  const msg='تعذّر تشغيل الصوت. جرّب الضغط مرة أخرى، أو تأكد أن جهازك يحتوي صوت نطق عربيا مثبتا.';
-  if(statusEl)statusEl.textContent=msg;
-  showToast(msg);
-  if(btn)btn.innerHTML='<i class="fas fa-play"></i> استمع';
-};
-if(btn)btn.innerHTML='<i class="fas fa-pause"></i> إيقاف';
-currentUtter=u;
-speechSynthesis.speak(u);
-});
-}
-
-const burger=document.getElementById('burger');
-const navlinks=document.getElementById('navlinks');
-burger.onclick=()=>navlinks.classList.toggle('open');
-navlinks.querySelectorAll('a').forEach(a=>a.onclick=()=>navlinks.classList.remove('open'));
-const navbar=document.getElementById('navbar');
-window.addEventListener('scroll',()=>{ if(window.scrollY>50)navbar.classList.add('scrolled'); else navbar.classList.remove('scrolled'); });
-
-const wave=document.getElementById('wave');
-for(let i=0;i<60;i++){const x=document.createElement('i');const h=10+Math.abs(Math.sin(i*.55))*45+Math.random()*20;x.style.height=h+'px';wave.appendChild(x);}
-
-const speakBtn=document.getElementById('speak');
-if(!('speechSynthesis' in window)){
-  speakBtn.disabled=true;
-  speakBtn.innerHTML='<i class="fas fa-volume-mute"></i> النطق غير مدعوم في هذا المتصفح';
-}
-speakBtn.onclick=()=>{
-const a=OWN_ARTICLES[0];
-speakArticle(a.title+'. '+a.body.join(' '),null);
-showToast('بدأت قراءة: '+a.title);
-};
-
-function showToast(t){const x=document.getElementById('toast');x.textContent=t;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),3800);}
-
-renderOwn();
-render();
-</script>
+<footer>عماد داود — emadawoud@yahoo.com</footer>
 </body>
 </html>
